@@ -1,4 +1,4 @@
-package com.safetynet.controller;
+package com.safetynet.alertsystem;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -17,7 +17,7 @@ public class AlertController {
 		
 		Map<String, Object> model = new HashMap<String, Object>();
 		
-		model.put("person", 1234);
+		model.put("personInfo", 1234);
 		
 		return new ModelAndView(viewName, model);
 	}
