@@ -1,4 +1,4 @@
-package com.safetynet.alertsystem;
+package Model;
 
 public class PersonalInformation {
 	
@@ -9,9 +9,10 @@ public class PersonalInformation {
 	private String zip;
 	private String phone;
 	private String email;
+	private int Id;
 	
 	public PersonalInformation(String firstName, String lasttName, String adress, String city, String zip, String phone,
-			String email) {
+			String email, int id) {
 		super();
 		this.firstName = firstName;
 		this.lasttName = lasttName;
@@ -20,8 +21,9 @@ public class PersonalInformation {
 		this.zip = zip;
 		this.phone = phone;
 		this.email = email;
+		Id = id;
 	}
-	
+
 	public String getFirstName() {
 		return firstName;
 	}
@@ -77,5 +79,14 @@ public class PersonalInformation {
 	public void setEmail(String email) {
 		this.email = email;
 	}
+
+	public int getId() {
+		return Id;
+	}
+
+	public void setId(int id) {
+		Id = id;
+	}
+
 
 }
