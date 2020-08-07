@@ -7,11 +7,11 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
 public class AlertsystemApplication {
-	
-	private static final Logger logger = LogManager.getLogger("App");
 
+	private static final Logger logger = LogManager.getLogger("App");
+	
 	public static void main(String[] args) {
-		logger.info("Initializing SafetyNet App");
+		logger.info("Initializing SafetyNet app");
 		SpringApplication.run(AlertsystemApplication.class, args);
 	}
 
