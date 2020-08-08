@@ -5,10 +5,12 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
 
 import org.json.simple.JSONArray;
+import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
 import org.json.simple.parser.ParseException;
 import org.springframework.stereotype.Controller;
@@ -40,31 +42,32 @@ public class AlertController {
 		return new ModelAndView(viewName, model);
 	}
 	
-	public List<PersonalInformation> getJsonData() {
+	public JSONObject getJsonData() {
 		
-		// JSON parser object to parse read file
-		JSONParser jsonParser = new JSONParser();
+		JSONObject personalInfoList = null;
 		
-		try (FileReader reader = new FileReader("https://s3-eu-west-1.amazonaws.com/course.oc-static.com/projects/DA+Java+EN/P5+/data.json")) {
-			
-			// Read JSON file
-			Object obj = jsonParser.parse(reader);
-			
-			JSONArray personalInfoList = (JSONArray) obj;
-			System.out.println(personalInfoList);
-			
-		} catch (FileNotFoundException e) {
-			// TODO add a logger to all the exceptions with a good text location
-			
-		} catch (IOException e) {
+		  //JSON parser object to parse read file
+        JSONParser jsonParser = new JSONParser();
+         
+        try (FileReader reader = new FileReader("data.json"))
+        {
+            //Read JSON file
+            Object obj = jsonParser.parse(reader);
+ 
+            personalInfoList = (JSONObject) obj; 
+             
+		} catch (FileNotFoundException e1) {
 			// TODO Auto-generated catch block
-			e.printStackTrace();
-			
-		} catch (ParseException e) {
+			e1.printStackTrace();
+		} catch (IOException e1) {
 			// TODO Auto-generated catch block
-			e.printStackTrace();
+			e1.printStackTrace();
+		} catch (ParseException e1) {
+			// TODO Auto-generated catch block
+			e1.printStackTrace();
 		}
-		return null;
+       
+		return personalInfoList;
 	}
-
+	
 }
