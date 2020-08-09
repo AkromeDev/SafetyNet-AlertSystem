@@ -17,7 +17,7 @@ public class NetworkDAO {
 	 * @throws IOException if we have any trouble making the network call.
 	 */
 	
-	public String request(String uri) throws IOException {
+	public static String request(String uri) throws IOException {
 		// declare our return variable.
 		String result = "";
 		
