@@ -4,19 +4,19 @@ public class PersonalInformation {
 	
 	private String firstName;
 	private String lasttName;
-	private String adress;
+	private String address;
 	private String city;
 	private String zip;
 	private String phone;
 	private String email;
 	private int Id;
 	
-	public PersonalInformation(String firstName, String lasttName, String adress, String city, String zip, String phone,
+	public PersonalInformation(String firstName, String lastName, String address, String city, String zip, String phone,
 			String email, int id) {
 		super();
 		this.firstName = firstName;
-		this.lasttName = lasttName;
-		this.adress = adress;
+		this.lasttName = lastName;
+		this.address = address;
 		this.city = city;
 		this.zip = zip;
 		this.phone = phone;
@@ -41,11 +41,11 @@ public class PersonalInformation {
 	}
 
 	public String getAdress() {
-		return adress;
+		return address;
 	}
 
-	public void setAdress(String adress) {
-		this.adress = adress;
+	public void setAdress(String address) {
+		this.address = address;
 	}
 
 	public String getCity() {
