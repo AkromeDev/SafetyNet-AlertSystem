@@ -26,13 +26,13 @@ class AlertControllerTests {
 	void tearDown() throws Exception {
 	}
 
-	@Test
-	void test() {
-		//ARRANGE
-		AlertController alert = new AlertController();
-		
-		//ACT & ASSERT
-		System.out.println(alert.getJsonData());
-		assertNotNull(alert.getJsonData());
-	}
+//	@Test
+//	void test() {
+//		//ARRANGE
+//		AlertController alert = new AlertController();
+//		
+//		//ACT & ASSERT
+//		System.out.println(alert.getJsonData());
+//		assertNotNull(alert.getJsonData());
+//	}
 }

@@ -13,6 +13,12 @@ import Model.PersonalInformation;
 
 public class ModelDAO {
 	
+	/**
+	 * @return a populated ArrayList of PersonalInformation
+	 * @throws ClientProtocolException if we have problem with network call (connection problem)
+	 * @throws IOException if we have problem with network call (connection problem)
+	 */
+	
 	public ArrayList<PersonalInformation> fetchPersonalInformation(String searchFilter) throws ClientProtocolException, IOException {
 		
 		ArrayList<PersonalInformation> personalInformation = new ArrayList<PersonalInformation>();

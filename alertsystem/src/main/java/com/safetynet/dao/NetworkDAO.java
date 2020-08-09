@@ -2,6 +2,7 @@ package com.safetynet.dao;
 
 import java.io.IOException;
 
+import org.apache.http.client.ClientProtocolException;
 import org.apache.http.client.HttpClient;
 import org.apache.http.client.ResponseHandler;
 import org.apache.http.client.methods.HttpGet;
@@ -15,9 +16,10 @@ public class NetworkDAO {
 	 * @param uri the URI that we wish to invoke, using the GET method.
 	 * @return the data from the URI
 	 * @throws IOException if we have any trouble making the network call.
+	 * @throws ClientProtocolException if we have any trouble making the network call.
 	 */
 	
-	public static String request(String uri) throws IOException {
+	public static String request(String uri) throws IOException, ClientProtocolException {
 		// declare our return variable.
 		String result = "";
 		
@@ -36,6 +38,5 @@ public class NetworkDAO {
 		
 		return result;
 	}
-	
 	
 }
