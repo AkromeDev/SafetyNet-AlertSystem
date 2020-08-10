@@ -3,7 +3,7 @@ package Model;
 public class PersonalInformation {
 	
 	private String firstName;
-	private String lasttName;
+	private String lastName;
 	private String address;
 	private String city;
 	private String zip;
@@ -15,7 +15,7 @@ public class PersonalInformation {
 			String email, int id) {
 		super();
 		this.firstName = firstName;
-		this.lasttName = lastName;
+		this.lastName = lastName;
 		this.address = address;
 		this.city = city;
 		this.zip = zip;
@@ -32,19 +32,19 @@ public class PersonalInformation {
 		this.firstName = firstName;
 	}
 
-	public String getLasttName() {
-		return lasttName;
+	public String getLastName() {
+		return lastName;
 	}
 
-	public void setLasttName(String lasttName) {
-		this.lasttName = lasttName;
+	public void setLastName(String lasttName) {
+		this.lastName = lasttName;
 	}
 
-	public String getAdress() {
+	public String getAddress() {
 		return address;
 	}
 
-	public void setAdress(String address) {
+	public void setAddress(String address) {
 		this.address = address;
 	}
 

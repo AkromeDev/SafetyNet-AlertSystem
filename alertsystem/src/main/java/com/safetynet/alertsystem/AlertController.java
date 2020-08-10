@@ -10,7 +10,9 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.servlet.ModelAndView;
 
+import com.safetynet.constants.URIDataConstants;
 import com.safetynet.dao.ModelDAO;
+import com.safetynet.dao.NetworkDAO;
 
 import Model.PersonalInformation;
 
@@ -26,13 +28,15 @@ public class AlertController {
 		
 		ModelDAO modelDao = new ModelDAO();
 		
-		personalInfo = modelDao.fetchPersonalInformation("one");
+		// TODO: ask Nick where the code that chooses the data source should be implemented
+		personalInfo = modelDao.fetchPersonalInformation(NetworkDAO.request(URIDataConstants.LINK_JASON_DATA));
 		
-		String viewName = "person";
+		String viewName = "personalInfo";
 		
 		Map<String, Object> model = new HashMap<String, Object>();
 		
-		model.put("personInfo", 1234);
+		model.put("personalInfo", personalInfo);
+		model.put("numberToSave", personalInfo.size());
 		
 		return new ModelAndView(viewName, model);
 	}
