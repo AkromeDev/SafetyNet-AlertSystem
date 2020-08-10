@@ -23,6 +23,18 @@ public class AlertController {
 	private List<PersonalInformation> medicalRecords;
 	private List<PersonalInformation> firestations;
 	
+	@GetMapping("/addPersonForm")
+	public ModelAndView showPersonInfoForm() {
+		
+		String viewName = "addPersonForm";
+		
+		Map<String, Object> model = new HashMap<String, Object>();
+		
+		model.put("personInfo", new PersonalInformation());
+		
+		return new ModelAndView(viewName, model);
+	}
+	
 	@GetMapping("/person")
 	public ModelAndView getPersonalInfo() throws ClientProtocolException, IOException {
 		
