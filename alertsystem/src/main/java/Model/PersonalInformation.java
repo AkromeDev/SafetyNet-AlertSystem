@@ -24,6 +24,10 @@ public class PersonalInformation {
 		Id = id;
 	}
 
+	public PersonalInformation() {
+		// empty constructor for the addPersonInfoForm() method
+	}
+
 	public String getFirstName() {
 		return firstName;
 	}
