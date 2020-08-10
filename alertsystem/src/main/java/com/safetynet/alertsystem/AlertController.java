@@ -19,24 +19,24 @@ import Model.PersonalInformation;
 @Controller
 public class AlertController {
 	
-	private List<PersonalInformation> personalInfo;
+	private List<PersonalInformation> person;
 	private List<PersonalInformation> medicalRecords;
 	private List<PersonalInformation> firestations;
 	
-	@GetMapping("/personalInfo")
+	@GetMapping("/person")
 	public ModelAndView getPersonalInfo() throws ClientProtocolException, IOException {
 		
 		ModelDAO modelDao = new ModelDAO();
 		
 		// TODO: ask Nick where the code that chooses the data source should be implemented
-		personalInfo = modelDao.fetchPersonalInformation(NetworkDAO.request(URIDataConstants.LINK_JASON_DATA));
+		person = modelDao.fetchPersonalInformation(NetworkDAO.request(URIDataConstants.LINK_JASON_DATA));
 		
-		String viewName = "personalInfo";
+		String viewName = "person";
 		
 		Map<String, Object> model = new HashMap<String, Object>();
 		
-		model.put("personalInfo", personalInfo);
-		model.put("numberToSave", personalInfo.size());
+		model.put("person", person);
+		model.put("numberToSave", person.size());
 		
 		return new ModelAndView(viewName, model);
 	}
