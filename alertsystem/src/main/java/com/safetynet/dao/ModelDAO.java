@@ -19,11 +19,9 @@ public class ModelDAO {
 	 * @throws IOException if we have problem with network call (connection problem)
 	 */
 	
-	public ArrayList<PersonalInformation> fetchPersonalInformation(String searchFilter) throws ClientProtocolException, IOException {
+	public ArrayList<PersonalInformation> fetchPersonalInformation(String rawJson) throws ClientProtocolException, IOException {
 		
 		ArrayList<PersonalInformation> personalInformation = new ArrayList<PersonalInformation>();
-		
-		String rawJson = NetworkDAO.request(URIDataConstants.LINK_JASON_DATA);
 		
 		JSONObject json = new JSONObject(rawJson);
 		
@@ -47,8 +45,8 @@ public class ModelDAO {
 			
 			// populate our model class with the information above
 			personInfo.setFirstName(firstName);
-			personInfo.setLasttName(lastName);
-			personInfo.setAdress(address);
+			personInfo.setLastName(lastName);
+			personInfo.setAddress(address);
 			personInfo.setCity(city);
 			personInfo.setZip(zip);
 			personInfo.setPhone(phone);
