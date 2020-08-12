@@ -1,38 +1,38 @@
 package com.safetynet.alertsystem;
 
-import static org.junit.jupiter.api.Assertions.*;
-
-import org.junit.jupiter.api.AfterAll;
-import org.junit.jupiter.api.AfterEach;
-import org.junit.jupiter.api.BeforeAll;
-import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.extension.ExtendWith;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
+import org.springframework.test.context.junit.jupiter.SpringExtension;
+import org.springframework.test.web.servlet.MockMvc;
 
+import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.*;
+import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.*;
+
+@WebMvcTest
+@ExtendWith(SpringExtension.class)
 class AlertControllerTests {
 
-	@BeforeAll
-	static void setUpBeforeClass() throws Exception {
+	@Autowired
+	MockMvc mockMvc;
+	
+	@Test
+	public void testShowPersonInfoForm() throws Exception {
+		
+		mockMvc.perform(get("/addPersonForm"))
+		.andExpect(status().is2xxSuccessful())
+		.andExpect(view().name("addPersonForm"))
+		.andExpect(model().size(1))
+		.andExpect(model().attributeExists("personInfo"));
+	}
+	
+	@Test
+	public void testSubmitPersonInfoForm() throws Exception {
+		
+		mockMvc.perform(post("/addPersonForm"))
+		.andExpect(status().is3xxRedirection())
+		.andExpect(redirectedUrl("/person"));
 	}
 
-	@AfterAll
-	static void tearDownAfterClass() throws Exception {
-	}
-
-	@BeforeEach
-	void setUp() throws Exception {
-	}
-
-	@AfterEach
-	void tearDown() throws Exception {
-	}
-
-//	@Test
-//	void test() {
-//		//ARRANGE
-//		AlertController alert = new AlertController();
-//		
-//		//ACT & ASSERT
-//		System.out.println(alert.getJsonData());
-//		assertNotNull(alert.getJsonData());
-//	}
 }

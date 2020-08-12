@@ -48,7 +48,7 @@ public class AlertController {
 	}
 	
 	@GetMapping("/addPersonForm")
-	public ModelAndView showPersonInfoForm(@RequestParam (required = false) Integer id) {
+	public ModelAndView showPersonInfoForm(@RequestParam(required = false) Integer id) {
 		
 		String viewName = "addPersonForm";
 		
