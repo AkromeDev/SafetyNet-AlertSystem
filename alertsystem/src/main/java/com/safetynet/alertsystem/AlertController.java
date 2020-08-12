@@ -10,6 +10,7 @@ import org.apache.http.client.ClientProtocolException;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 import org.springframework.web.servlet.view.RedirectView;
 
@@ -47,22 +48,53 @@ public class AlertController {
 	}
 	
 	@GetMapping("/addPersonForm")
-	public ModelAndView showPersonInfoForm() {
+	public ModelAndView showPersonInfoForm(@RequestParam (required = false) Integer id) {
 		
 		String viewName = "addPersonForm";
 		
 		Map<String, Object> model = new HashMap<String, Object>();
 		
-		model.put("personInfo", new PersonalInformation());
+		PersonalInformation personToUpdate = findExistingPerson(id);
+		
+		if (personToUpdate == null) {
+			model.put("personInfo", new PersonalInformation());	
+			
+		} else {
+			model.put("personInfo", personToUpdate);
+		}
 		
 		return new ModelAndView(viewName, model);
 	}
 	
+	private PersonalInformation findExistingPerson(Integer id) {
+		
+		for(PersonalInformation person: person) {
+			// TODO: Question to Nick: Should I always use Integer instead of int, Integer seems to has built in methods.
+			if(person.getId().equals(id)) {
+				return person;
+			}
+		}
+		return null;
+	}
+
 	@PostMapping("/addPersonForm")
 	public ModelAndView submitPersonInfoForm(PersonalInformation personInfo) {
 		
-		personInfo.setId(person.size() + 1);
-		person.add(personInfo);
+		PersonalInformation existingPerson = findExistingPerson(personInfo.getId());
+		
+		if (existingPerson == null) {
+			personInfo.setId(person.size() + 1);
+			person.add(personInfo);
+			
+		} else {
+			existingPerson.setFirstName(personInfo.getFirstName());
+			existingPerson.setLastName(personInfo.getLastName());
+			existingPerson.setAddress(personInfo.getFirstName());
+			existingPerson.setCity(personInfo.getFirstName());
+			existingPerson.setZip(personInfo.getFirstName());
+			existingPerson.setPhone(personInfo.getFirstName());
+			existingPerson.setEmail(personInfo.getFirstName());
+		}
 		
 		RedirectView redirect = new RedirectView();
 		redirect.setUrl("/person");

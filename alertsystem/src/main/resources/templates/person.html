@@ -53,7 +53,7 @@
 		            <td th:text="${person.lastName}">from the system</td>
 		            <td th:text="${person.address}">have not been</td>
 		            <td th:text="${person.phone}">loaded to the page</td>
-					<td><a href="#" class="btn btn-info" role="button">Send SMS</a></td>
+					<td><a th:href="@{/addPersonForm(id=${person.id})}" href="#" class="btn btn-info" role="button">Send SMS</a></td>
 				</tr>
 			</tbody>
 		</table>
