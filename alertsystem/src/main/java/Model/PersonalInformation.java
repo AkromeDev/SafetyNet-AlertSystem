@@ -9,10 +9,10 @@ public class PersonalInformation {
 	private String zip;
 	private String phone;
 	private String email;
-	private int Id;
+	private Integer Id;
 	
 	public PersonalInformation(String firstName, String lastName, String address, String city, String zip, String phone,
-			String email, int id) {
+			String email, Integer id) {
 		super();
 		this.firstName = firstName;
 		this.lastName = lastName;
@@ -84,11 +84,11 @@ public class PersonalInformation {
 		this.email = email;
 	}
 
-	public int getId() {
+	public Integer getId() {
 		return Id;
 	}
 
-	public void setId(int id) {
+	public void setId(Integer id) {
 		Id = id;
 	}
 
