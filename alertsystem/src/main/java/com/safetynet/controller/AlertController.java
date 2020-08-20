@@ -1,4 +1,4 @@
-package com.safetynet.alertsystem;
+package com.safetynet.controller;
 
 import java.io.IOException;
 import java.util.ArrayList;
