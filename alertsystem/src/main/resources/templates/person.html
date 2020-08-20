@@ -43,7 +43,10 @@
 		            <th class="text-left">First Name</th>
 		            <th class="text-left">Last Name</th>
 		            <th class="text-left">Address</th>
+		            <th class="text-left">City</th>
+		            <th class="text-left">Zip</th>
 		            <th class="text-left">Phone</th>
+		            <th class="text-left">E-Mail</th>
 		            <th class="text-left"></th>
 		        </tr>
 		    </thead>
@@ -52,8 +55,11 @@
 		            <td th:text="${person.firstName}">The data</td>
 		            <td th:text="${person.lastName}">from the system</td>
 		            <td th:text="${person.address}">have not been</td>
+		            <td th:text="${person.city}">have not been</td>
+		            <td th:text="${person.zip}">have not been</td>
 		            <td th:text="${person.phone}">loaded to the page</td>
-					<td><a th:href="@{/addPersonForm(id=${person.id})}" href="#" class="btn btn-info" role="button">Send SMS</a></td>
+		            <td th:text="${person.email}">have not been</td>
+					<td><a th:href="@{/addPersonForm(id=${person.id})}" href="#" class="btn btn-info" role="button">Update</a></td>
 				</tr>
 			</tbody>
 		</table>
