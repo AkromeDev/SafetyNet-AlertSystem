@@ -1,7 +1,14 @@
 package com.safetynet.repository;
 
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
+
+import org.apache.http.client.ClientProtocolException;
+
+import com.safetynet.constants.URIDataConstants;
+import com.safetynet.dao.ModelDAO;
+import com.safetynet.dao.NetworkDAO;
 
 import Model.PersonalInformation;
 
@@ -25,12 +32,26 @@ public class AlertRepository {
 	
 	public PersonalInformation findExistingPerson(Integer index) {
 		for(PersonalInformation person: people) {
-			// TODO: Question to Nick: Should I always use Integer instead of int, Integer seems to has built in methods.
-			if(person.getId().equals(id)) {
+			if(person.getId().equals(index)) {
 				return person;
 			}
 		}
 		return null;
+	}
+	
+	public Integer setId() {
+		return id++;
+	}
+	
+	public List<PersonalInformation> addDataFromJson() throws ClientProtocolException, IOException {
+		ModelDAO modelDao = new ModelDAO();
+		
+		if (people.size() < 1 ) {
+		// TODO: use property file to use the code
+		people = modelDao.fetchPersonalInformation(NetworkDAO.request(URIDataConstants.LINK_JASON_DATA));
+		}
+		
+		return people;
 	}
 
 }
