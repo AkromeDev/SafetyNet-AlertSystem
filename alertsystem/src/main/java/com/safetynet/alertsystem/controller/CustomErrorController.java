@@ -1,4 +1,4 @@
-package com.safetynet.controller;
+package com.safetynet.alertsystem.controller;
 
 import javax.servlet.http.HttpServletResponse;
 

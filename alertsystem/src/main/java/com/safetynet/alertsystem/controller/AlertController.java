@@ -1,4 +1,4 @@
-package com.safetynet.controller;
+package com.safetynet.alertsystem.controller;
 
 import java.io.IOException;
 import java.util.HashMap;
@@ -8,6 +8,7 @@ import java.util.Map;
 import javax.validation.Valid;
 
 import org.apache.http.client.ClientProtocolException;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -17,9 +18,8 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 import org.springframework.web.servlet.view.RedirectView;
 
-import com.safetynet.service.AlertService;
-
-import Model.PersonalInformation;
+import com.safetynet.alertsystem.model.PersonalInformation;
+import com.safetynet.alertsystem.service.AlertService;
 
 @Controller
 public class AlertController {
@@ -27,8 +27,14 @@ public class AlertController {
 	private List<PersonalInformation> medicalRecords;
 	private List<PersonalInformation> firestations;
 	
-	private AlertService alertService = new AlertService();
+	private AlertService alertService;
 	
+	@Autowired
+	public AlertController(AlertService alertService) {
+		super();
+		this.alertService = alertService;
+	}
+
 	@GetMapping("/person")
 	public ModelAndView getPersonalInfo() throws ClientProtocolException, IOException {
 		

@@ -1,19 +1,28 @@
-package com.safetynet.service;
+package com.safetynet.alertsystem.service;
 
 import java.io.IOException;
 import java.util.List;
 
 import org.apache.http.client.ClientProtocolException;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 import org.springframework.web.servlet.view.RedirectView;
 
-import com.safetynet.repository.AlertRepository;
+import com.safetynet.alertsystem.model.PersonalInformation;
+import com.safetynet.alertsystem.repository.AlertRepository;
 
-import Model.PersonalInformation;
 
+@Service
 public class AlertService {
 
-	AlertRepository alertRepo = new AlertRepository();
+	AlertRepository alertRepo;
 	
+	@Autowired
+	public AlertService(AlertRepository alertRepo) {
+		super();
+		this.alertRepo = alertRepo;
+	}
+
 	public Integer getListSize() {
 		return alertRepo.getListSize();
 	}

@@ -16,9 +16,10 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
-import com.safetynet.constants.URIDataConstants;
-
-import Model.PersonalInformation;
+import com.safetynet.alertsystem.constants.URIDataConstants;
+import com.safetynet.alertsystem.dao.ModelDAO;
+import com.safetynet.alertsystem.dao.NetworkDAO;
+import com.safetynet.alertsystem.model.PersonalInformation;
 
 class ModelDAOTest {
 	

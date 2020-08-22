@@ -1,17 +1,18 @@
-package com.safetynet.repository;
+package com.safetynet.alertsystem.repository;
 
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
 import org.apache.http.client.ClientProtocolException;
+import org.springframework.stereotype.Repository;
 
-import com.safetynet.constants.URIDataConstants;
-import com.safetynet.dao.ModelDAO;
-import com.safetynet.dao.NetworkDAO;
+import com.safetynet.alertsystem.constants.URIDataConstants;
+import com.safetynet.alertsystem.dao.ModelDAO;
+import com.safetynet.alertsystem.dao.NetworkDAO;
+import com.safetynet.alertsystem.model.PersonalInformation;
 
-import Model.PersonalInformation;
-
+@Repository
 public class AlertRepository {
 	
 	private List<PersonalInformation> people = new ArrayList<PersonalInformation>();

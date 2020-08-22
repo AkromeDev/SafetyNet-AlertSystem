@@ -6,10 +6,9 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.ComponentScan;
 
-import com.safetynet.controller.AlertController;
+import com.safetynet.alertsystem.controller.AlertController;
 
 @SpringBootApplication
-@ComponentScan(basePackageClasses = AlertController.class)
 public class AlertsystemApplication {
 
 	private static final Logger logger = LogManager.getLogger("App");

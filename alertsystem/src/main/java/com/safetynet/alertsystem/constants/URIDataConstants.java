@@ -1,4 +1,4 @@
-package com.safetynet.constants;
+package com.safetynet.alertsystem.constants;
 
 public class URIDataConstants {
 

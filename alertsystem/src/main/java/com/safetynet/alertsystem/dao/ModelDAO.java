@@ -1,4 +1,4 @@
-package com.safetynet.dao;
+package com.safetynet.alertsystem.dao;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -7,9 +7,7 @@ import org.apache.http.client.ClientProtocolException;
 import org.json.JSONArray;
 import org.json.JSONObject;
 
-import com.safetynet.constants.URIDataConstants;
-
-import Model.PersonalInformation;
+import com.safetynet.alertsystem.model.PersonalInformation;
 
 public class ModelDAO {
 	

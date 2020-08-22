@@ -1,4 +1,4 @@
-package com.safetynet.dao;
+package com.safetynet.alertsystem.dao;
 
 import java.io.IOException;
 
