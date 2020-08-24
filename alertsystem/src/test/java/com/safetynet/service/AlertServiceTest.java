@@ -1,6 +1,7 @@
 package com.safetynet.service;
 
 import static org.junit.jupiter.api.Assertions.assertTrue;
+import static org.mockito.Mockito.when;
 
 import java.util.Arrays;
 import java.util.List;
@@ -9,9 +10,7 @@ import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
-import org.mockito.Mockito;
 import org.mockito.junit.jupiter.MockitoExtension;
-
 
 import com.safetynet.alertsystem.model.PersonalInformation;
 import com.safetynet.alertsystem.repository.AlertRepository;
@@ -36,13 +35,15 @@ class AlertServiceTest {
 		
 		List<PersonalInformation> mockPersons = Arrays.asList(person1, person2);
 		
-		Mockito.when(alerRepositoryMock.getPeopleList()).thenReturn(mockPersons);
+		when(alerRepositoryMock.getPeopleList()).thenReturn(mockPersons);
 		
 		//Act
 		List<PersonalInformation> result = alertServiceMock.getPeopleList();
 		
 		//Assert
 		assertTrue(result.size() == 2);
+		assertTrue(result.get(0).getFirstName().equals("John"));
+		assertTrue(result.get(1).getFirstName().equals("Johna"));
 	}
 
 }
