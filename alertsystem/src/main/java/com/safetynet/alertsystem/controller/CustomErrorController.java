@@ -23,7 +23,7 @@ public class CustomErrorController implements ErrorController {
 	public ModelAndView handleError(HttpServletResponse response) {
 		int code = response.getStatus();
 		
-		logger.error("Error with the code " + code + "happened! damn...");
+		logger.error("Error with the code {} happened! damn...", code);
 		
 		return new ModelAndView("error");
 	}

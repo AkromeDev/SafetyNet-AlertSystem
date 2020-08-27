@@ -30,7 +30,7 @@
             <AppenderRef ref="RollingFile" />
         </Root>
  
-        <!-- LOG "com.baeldung*" at TRACE level -->
+        <!-- LOG at TRACE level -->
         <Logger name="com.safetynet.alertsystem" level="trace"></Logger>
     </Loggers>
  

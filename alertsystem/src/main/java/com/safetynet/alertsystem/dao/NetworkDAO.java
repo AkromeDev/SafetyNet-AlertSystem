@@ -8,8 +8,12 @@ import org.apache.http.client.ResponseHandler;
 import org.apache.http.client.methods.HttpGet;
 import org.apache.http.impl.client.BasicResponseHandler;
 import org.apache.http.impl.client.HttpClientBuilder;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 public class NetworkDAO {
+	
+	private static final Logger logger = LogManager.getLogger("NetworkDAO");
 
 	/**
 	 * Make a network call to the URI, and return the data that results.
@@ -20,6 +24,7 @@ public class NetworkDAO {
 	 */
 	
 	public static String request(String uri) throws IOException, ClientProtocolException {
+		
 		// declare our return variable.
 		String result = "";
 		
@@ -35,6 +40,7 @@ public class NetworkDAO {
 		// send the URI to the get method, and have the response handler parse it and return a 
 		// result to us.
 		result = client.execute(request, responseHandler);
+		logger.debug("Fectching data from the OC web page : {}", result);
 		
 		return result;
 	}

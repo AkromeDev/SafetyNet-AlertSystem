@@ -8,6 +8,8 @@ import java.util.Map;
 import javax.validation.Valid;
 
 import org.apache.http.client.ClientProtocolException;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.validation.BindingResult;
@@ -24,6 +26,8 @@ import com.safetynet.alertsystem.service.AlertService;
 @Controller
 public class AlertController {
 	
+	private static final Logger logger = LogManager.getLogger("AlertController");
+	
 	private List<PersonalInformation> medicalRecords;
 	private List<PersonalInformation> firestations;
 	
@@ -38,6 +42,8 @@ public class AlertController {
 	@GetMapping("/person")
 	public ModelAndView getPersonalInfo() throws ClientProtocolException, IOException {
 		
+		logger.info("HTTP GET request recieved at /person URL");
+		
 		String viewName = "person";
 		
 		Map<String, Object> model = new HashMap<String, Object>();
@@ -50,6 +56,8 @@ public class AlertController {
 	
 	@GetMapping("/addPersonForm")
 	public ModelAndView showPersonInfoForm(@RequestParam(required = false) Integer id) {
+		
+		logger.info("HTTP GET request recieved at /addPersonForm URL");
 		
 		String viewName = "addPersonForm";
 		
@@ -70,6 +78,8 @@ public class AlertController {
 
 	@PostMapping("/addPersonForm")
 	public ModelAndView submitPersonInfoForm(@Valid @ModelAttribute("personInfo") PersonalInformation personInfo, BindingResult bindingResult) {
+		
+		logger.info("HTTP POST request recieved at /addPersonForm URL");
 		
 		if (bindingResult.hasErrors()) {
 			return new ModelAndView("addPersonForm");
