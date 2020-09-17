@@ -7,6 +7,8 @@ import org.apache.http.client.ClientProtocolException;
 import org.json.JSONArray;
 import org.json.JSONObject;
 
+import com.safetynet.alertsystem.model.FireStations;
+import com.safetynet.alertsystem.model.MedicalRecords;
 import com.safetynet.alertsystem.model.PersonalInformation;
 
 public class ModelDAO {
@@ -38,8 +40,6 @@ public class ModelDAO {
 			String zip = jsonPerson.getString("zip");
 			String phone = jsonPerson.getString("phone");
 			String email = jsonPerson.getString("email");
-			int id = i + 1;
-			
 			
 			// populate our model class with the information above
 			personInfo.setFirstName(firstName);
@@ -49,13 +49,74 @@ public class ModelDAO {
 			personInfo.setZip(zip);
 			personInfo.setPhone(phone);
 			personInfo.setEmail(email);
-			personInfo.setId(id);
+			personInfo.setId(i);
+			// TODO the setId implementation has been changed (we used a id = i + 1 formula that did not really make sense) check that it did not create some new bug
 			
 			personalInformation.add(personInfo);
-			
 		}
 		
 		return personalInformation;
 	}
+	
+public ArrayList<FireStations> fetchFireStations(String rawJson) throws ClientProtocolException, IOException {
+		
+		ArrayList<FireStations> fireStations = new ArrayList<FireStations>();
+		
+		JSONObject json = new JSONObject(rawJson);
+		
+		JSONArray jsonFireStation = json.getJSONArray("firestations");
+		
+		for(int i = 0; i < jsonFireStation.length(); i++) {
+			JSONObject jsonPerson = jsonFireStation.getJSONObject(i);
+			
+			FireStations fireStation = new FireStations(null, null, i);
+			
+			String address = jsonPerson.getString("address");
+			String station = jsonPerson.getString("station");
+			
+			// populate our fire station model class with the information above
+			fireStation.setAddress(address);
+			fireStation.setStation(station);
+			fireStation.setId(i);
+			
+			fireStations.add(fireStation);
+			
+		}
+		
+		return fireStations;
+	}
 
+	public ArrayList<MedicalRecords> fetchMedicalRecords(String rawJson) throws ClientProtocolException, IOException {
+		
+		ArrayList<MedicalRecords> medicalRecordsList = new ArrayList<MedicalRecords>();
+		
+		JSONObject json = new JSONObject(rawJson);
+		
+		JSONArray jsonMedicalRecords = json.getJSONArray("firestations");
+		
+		for(int i = 0; i < jsonMedicalRecords.length(); i++) {
+			JSONObject jsonMedicalRecord = jsonMedicalRecords.getJSONObject(i);
+			
+			MedicalRecords medicalRecord = new MedicalRecords(null, null, null, null, null, i);
+			
+			String firstName = jsonMedicalRecord.getString("firstName");
+			String lastName = jsonMedicalRecord.getString("lastName");
+			String birthdate = jsonMedicalRecord.getString("birthdate");
+			String medications = jsonMedicalRecord.getString("medications");
+			String allergies = jsonMedicalRecord.getString("allergies");
+			
+			// populate our medical record model class with the information above
+			medicalRecord.setFirstName(firstName);
+			medicalRecord.setLasttName(lastName);
+			medicalRecord.setBirthdate(birthdate);
+			medicalRecord.setMedications(medications);
+			medicalRecord.setAllergies(allergies);
+			medicalRecord.setId(i);
+			
+			medicalRecordsList.add(medicalRecord);
+			
+		}
+		
+		return medicalRecordsList;
+	}
 }

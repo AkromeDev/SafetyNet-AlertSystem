@@ -2,23 +2,23 @@ package com.safetynet.alertsystem.model;
 
 public class FireStations {
 	
-	private String adress;
+	private String address;
 	private String station;
 	private int id;
 	
-	public FireStations(String adress, String station, int id) {
+	public FireStations(String address, String station, int id) {
 		super();
-		this.adress = adress;
+		this.address = address;
 		this.station = station;
 		this.id = id;
 	}
 
-	public String getAdress() {
-		return adress;
+	public String getAddress() {
+		return address;
 	}
 
-	public void setAdress(String adress) {
-		this.adress = adress;
+	public void setAddress(String address) {
+		this.address = address;
 	}
 
 	public String getStation() {
