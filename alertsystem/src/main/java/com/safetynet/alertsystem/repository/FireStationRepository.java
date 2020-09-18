@@ -23,12 +23,13 @@ public class FireStationRepository {
 	List<PersonalInformation> peopleFromStationList;
 	List<FireStations> fireStationList;
 
-	public List<PersonalInformation> getPeopleFromStation(int station) throws ClientProtocolException, IOException {
+	public List<PersonalInformation> getPeopleFromStation(String station) throws ClientProtocolException, IOException {
 		
-		peopleFromStationList = modelDAO.fetchPersonalInformationFromJson();
 		fireStationList = modelDAO.fetchFireStationsFromJson();
 		
+		FireStations fireStation = findFireStationByNumber(station);
 		
+		peopleFromStationList = getPeopleInFireStationArea(fireStation.getAddress());
 		
 		return peopleFromStationList;
 	}
@@ -46,6 +47,7 @@ public class FireStationRepository {
 		
 		return null;
 		// TODO ask Nick if this kind of method is at it's right place in this class! thanks Nick!
+		// TODO Ninick should I test as I create code or should I wait until my code is approximately ready?
 	}
 	
 	public List<PersonalInformation> getPeopleInFireStationArea(String address) {
