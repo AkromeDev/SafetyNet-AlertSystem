@@ -1,4 +1,3 @@
-2020-09-16 11:59:11,857 ERROR c.s.a.c.CustomErrorController [http-nio-8080-exec-8] Error with the code 404 happened! damn...
-2020-09-16 12:14:15,462 INFO c.s.a.c.AlertController [http-nio-8080-exec-1] HTTP GET request recieved at /addPersonForm URL
-2020-09-16 12:14:16,827 INFO c.s.a.c.AlertController [http-nio-8080-exec-2] HTTP GET request recieved at /person URL
-2020-09-16 12:14:23,303 INFO c.s.a.c.AlertController [http-nio-8080-exec-4] HTTP GET request recieved at /person URL
+2020-09-17 18:09:21,530 INFO c.s.a.c.AlertController [http-nio-8080-exec-7] HTTP GET request recieved at /addPersonForm URL
+2020-09-17 18:09:27,257 INFO c.s.a.c.AlertController [http-nio-8080-exec-8] HTTP POST request recieved at /addPersonForm URL
+2020-09-17 18:09:27,273 INFO c.s.a.c.AlertController [http-nio-8080-exec-9] HTTP GET request recieved at /person URL
