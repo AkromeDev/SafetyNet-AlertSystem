@@ -8,9 +8,8 @@ import org.json.JSONArray;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.safetynet.alertsystem.model.PersonalInformation;
@@ -32,28 +31,34 @@ public class FireStationController {
 		this.fireStationService = fireStationService;
 	}
 	
+//	@ResponseBody
+//	@RequestMapping(value="/firestation/{station}", method=RequestMethod.GET)
+//	public ResponseEntity<JSONArray> getPeopleFromFireStations(@PathVariable("station") String station) {
+//		
+//		logger.info("HTTP GET request recieved at /firestation/{station} URL");
+//		
+//		List<PersonalInformation> peopleList = fireStationService.getPeopleFromStation(station);
+//		
+//		JSONArray jsonPeopleArray = new JSONArray(peopleList);
+//		 
+//		ResponseEntity<JSONArray> peopleFromFireStation = ResponseEntity.ok(jsonPeopleArray);
+//		
+//		return peopleFromFireStation;
+//	}
+	
 	@ResponseBody
-	@RequestMapping(value="/firestation/{station}", method=RequestMethod.GET)
-	public ResponseEntity<JSONArray> getPeopleFromFireStations(@PathVariable("station") String station) {
+	@GetMapping(value="/firestation")
+	public JSONArray getPeopleFromFireStations2(@RequestParam String station) {
 		
 		logger.info("HTTP GET request recieved at /firestation/{station} URL");
 		
-		ResponseEntity<JSONArray> peopleFromFireStation = null;
+		List<PersonalInformation> peopleList = fireStationService.getPeopleFromStation(station);
 		
-		JSONArray jsonPeople = fireStationService.getPeopleFromStation(station);
+		JSONArray jsonPeopleArray = new JSONArray(peopleList);
+		 
+//		ResponseEntity<JSONArray> peopleFromFireStation = ResponseEntity.ok(jsonPeopleArray);
 		
-		peopleFromFireStation = ResponseEntity.ok(jsonPeople);
-		
-		return peopleFromFireStation;
+		return jsonPeopleArray;
 	}
 	
-//	@PostMapping(value = "/content", produces = MediaType.APPLICATION_JSON_VALUE)
-//	@ResponseBody
-//	public ResponseTransfer postResponseJsonContent(
-//			
-//	  @RequestBody LoginForm loginForm) {
-//		
-//	    return new ResponseTransfer("JSON Content!");
-//	}
-
 }

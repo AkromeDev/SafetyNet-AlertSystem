@@ -1,9 +1,11 @@
 package com.safetynet.alertsystem.service;
 
-import org.json.JSONArray;
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import com.safetynet.alertsystem.model.PersonalInformation;
 import com.safetynet.alertsystem.repository.FireStationRepository;
 
 @Service
@@ -18,9 +20,8 @@ public class FireStationService {
 		this.fireStationRepo = fireStationRepo;
 	}
 
-	public JSONArray getPeopleFromStation(String station) {
+	public List<PersonalInformation> getPeopleFromStation(String station) {
 		
-//		return fireStationRepo.getPeopleFromStation(station);
-		return null;
+		return fireStationRepo.getPeopleFromStation(station);
 	}
 }

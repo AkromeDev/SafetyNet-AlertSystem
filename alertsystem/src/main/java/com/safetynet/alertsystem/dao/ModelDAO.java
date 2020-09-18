@@ -4,7 +4,10 @@ import java.io.IOException;
 import java.util.ArrayList;
 
 import org.apache.http.client.ClientProtocolException;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.json.JSONArray;
+import org.json.JSONException;
 import org.json.JSONObject;
 
 import com.safetynet.alertsystem.constants.URIDataConstants;
@@ -13,6 +16,8 @@ import com.safetynet.alertsystem.model.MedicalRecords;
 import com.safetynet.alertsystem.model.PersonalInformation;
 
 public class ModelDAO {
+	
+	private static final Logger logger = LogManager.getLogger("ModelDAO");
 	
 	/**
 	 * @return a populated ArrayList of PersonalInformation
@@ -25,6 +30,7 @@ public class ModelDAO {
 		ArrayList<PersonalInformation> personalInformation = new ArrayList<PersonalInformation>();
 		
 		JSONObject json = new JSONObject(NetworkDAO.request(URIDataConstants.LINK_JASON_DATA));
+		// TODO: use property file to use the code
 		
 		JSONArray persons = json.getJSONArray("persons");
 		
@@ -58,32 +64,46 @@ public class ModelDAO {
 		return personalInformation;
 	}
 	
-public ArrayList<FireStations> fetchFireStationsFromJson() throws ClientProtocolException, IOException {
+public ArrayList<FireStations> fetchFireStationsFromJson() {
 		
-		ArrayList<FireStations> fireStations = new ArrayList<FireStations>();
+		ArrayList<FireStations> fireStationsList = new ArrayList<FireStations>();
 		
-		JSONObject json = new JSONObject(NetworkDAO.request(URIDataConstants.LINK_JASON_DATA));
+		JSONObject json = new JSONObject();
+		
+		try {
+			json = new JSONObject(NetworkDAO.request(URIDataConstants.LINK_JASON_DATA));
+		} catch (JSONException e) {
+			logger.error("JSONException while fetching the fire stations from json link", e);
+			e.printStackTrace();
+		} catch (ClientProtocolException e) {
+			logger.error("ClientProtocolException while fetching the fire stations from json link", e);
+			e.printStackTrace();
+		} catch (IOException e) {
+			logger.error("IOException while fetching the fire stations from json link", e);
+			e.printStackTrace();
+		}
 		
 		JSONArray jsonFireStation = json.getJSONArray("firestations");
 		
 		for(int i = 0; i < jsonFireStation.length(); i++) {
-			JSONObject jsonPerson = jsonFireStation.getJSONObject(i);
+			JSONObject jsonObject = jsonFireStation.getJSONObject(i);
 			
 			FireStations fireStation = new FireStations();
 			
-			String address = jsonPerson.getString("address");
-			String station = jsonPerson.getString("station");
+			String address = jsonObject.getString("address");
+			String station = jsonObject.getString("station");
 			
 			// populate our fire station model class with the information above
 			fireStation.setAddress(address);
 			fireStation.setStation(station);
 			fireStation.setId(i);
+			// TODO try it with i + 1! who knows!
 			
-			fireStations.add(fireStation);
+			fireStationsList.add(fireStation);
 			
 		}
 		
-		return fireStations;
+		return fireStationsList;
 	}
 
 	public ArrayList<MedicalRecords> fetchMedicalRecords() throws ClientProtocolException, IOException {

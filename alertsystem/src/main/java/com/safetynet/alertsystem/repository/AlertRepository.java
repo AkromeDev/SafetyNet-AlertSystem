@@ -48,7 +48,6 @@ public class AlertRepository {
 		ModelDAO modelDao = new ModelDAO();
 		
 		if (people.size() < 1 ) {
-		// TODO: use property file to use the code
 		people = modelDao.fetchPersonalInformationFromJson();
 		}
 		

@@ -1,6 +1,7 @@
 package com.safetynet.alertsystem.repository;
 
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.List;
 
 import org.apache.http.client.ClientProtocolException;
@@ -20,16 +21,16 @@ public class FireStationRepository {
 	ModelDAO modelDAO;
 	
 	List<PersonalInformation> habitantsList;
-	List<PersonalInformation> peopleFromStationList;
-	List<FireStations> fireStationList;
+	ArrayList<PersonalInformation> peopleFromStationList;
+	ArrayList<FireStations> fireStationList;
 
-	public List<PersonalInformation> getPeopleFromStation(String station) throws ClientProtocolException, IOException {
+	public ArrayList<PersonalInformation> getPeopleFromStation(String station) {
 		
 		fireStationList = modelDAO.fetchFireStationsFromJson();
 		
 		FireStations fireStation = findFireStationByNumber(station);
 		
-		peopleFromStationList = getPeopleInFireStationArea(fireStation.getAddress());
+		peopleFromStationList = findPeopleInFireStationAreaByAddress(fireStation.getAddress());
 		
 		return peopleFromStationList;
 	}
@@ -50,7 +51,7 @@ public class FireStationRepository {
 		// TODO Ninick should I test as I create code or should I wait until my code is approximately ready?
 	}
 	
-	public List<PersonalInformation> getPeopleInFireStationArea(String address) {
+	public ArrayList<PersonalInformation> findPeopleInFireStationAreaByAddress(String address) {
 		
 		peopleFromStationList.clear();
 		
