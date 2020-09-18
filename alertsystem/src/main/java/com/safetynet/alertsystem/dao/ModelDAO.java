@@ -19,7 +19,7 @@ public class ModelDAO {
 	 * @throws IOException if we have problem with network call (connection problem)
 	 */
 	
-	public ArrayList<PersonalInformation> fetchPersonalInformation(String rawJson) throws ClientProtocolException, IOException {
+	public ArrayList<PersonalInformation> fetchPersonalInformationFromJson(String rawJson) throws ClientProtocolException, IOException {
 		
 		ArrayList<PersonalInformation> personalInformation = new ArrayList<PersonalInformation>();
 		
@@ -30,8 +30,7 @@ public class ModelDAO {
 		for(int i = 0; i < persons.length(); i++) {
 			JSONObject jsonPerson = persons.getJSONObject(i);
 			
-			// TODO: Ask Nick if there is a way not to call the constructor in order not to have this list of null
-			PersonalInformation personInfo = new PersonalInformation(null, null, null, null, null, null, null, i);
+			PersonalInformation personInfo = new PersonalInformation();
 			
 			String firstName = jsonPerson.getString("firstName");
 			String lastName = jsonPerson.getString("lastName");
@@ -58,18 +57,19 @@ public class ModelDAO {
 		return personalInformation;
 	}
 	
-public ArrayList<FireStations> fetchFireStations(String rawJson) throws ClientProtocolException, IOException {
+public ArrayList<FireStations> fetchFireStationsFromJson(String rawJson) throws ClientProtocolException, IOException {
 		
 		ArrayList<FireStations> fireStations = new ArrayList<FireStations>();
 		
 		JSONObject json = new JSONObject(rawJson);
+		// TODO replace rawJson with the code from the alertRepository
 		
 		JSONArray jsonFireStation = json.getJSONArray("firestations");
 		
 		for(int i = 0; i < jsonFireStation.length(); i++) {
 			JSONObject jsonPerson = jsonFireStation.getJSONObject(i);
 			
-			FireStations fireStation = new FireStations(null, null, i);
+			FireStations fireStation = new FireStations();
 			
 			String address = jsonPerson.getString("address");
 			String station = jsonPerson.getString("station");
@@ -97,6 +97,7 @@ public ArrayList<FireStations> fetchFireStations(String rawJson) throws ClientPr
 		for(int i = 0; i < jsonMedicalRecords.length(); i++) {
 			JSONObject jsonMedicalRecord = jsonMedicalRecords.getJSONObject(i);
 			
+			// TODO you know what to do
 			MedicalRecords medicalRecord = new MedicalRecords(null, null, null, null, null, i);
 			
 			String firstName = jsonMedicalRecord.getString("firstName");

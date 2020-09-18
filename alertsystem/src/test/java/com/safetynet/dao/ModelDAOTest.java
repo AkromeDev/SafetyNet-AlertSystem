@@ -29,7 +29,7 @@ class ModelDAOTest {
 	static void setUpBeforeClass() throws Exception {
 		ModelDAO modelDao = new ModelDAO();
 		
-		personalList = modelDao.fetchPersonalInformation(NetworkDAO.request(URIDataConstants.LINK_JASON_DATA));
+		personalList = modelDao.fetchPersonalInformationFromJson(NetworkDAO.request(URIDataConstants.LINK_JASON_DATA));
 	}
 
 	@AfterAll
@@ -79,7 +79,7 @@ class ModelDAOTest {
 		
 		// ACT
 		ArrayList<PersonalInformation> personalList = 
-				modelDao.fetchPersonalInformation(NetworkDAO.request(URIDataConstants.LINK_JASON_DATA));
+				modelDao.fetchPersonalInformationFromJson(NetworkDAO.request(URIDataConstants.LINK_JASON_DATA));
 		
 		//ASSERT
 		assertThat(personalList, contains(hasProperty("firstName", is("John")), hasProperty("lastName", is("Boyd"))));
