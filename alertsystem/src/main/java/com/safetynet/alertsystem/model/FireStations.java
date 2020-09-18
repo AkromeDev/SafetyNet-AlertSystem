@@ -12,6 +12,10 @@ public class FireStations {
 		this.station = station;
 		this.id = id;
 	}
+	
+	public FireStations() {
+		super();
+	}
 
 	public String getAddress() {
 		return address;
