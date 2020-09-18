@@ -7,6 +7,7 @@ import org.apache.http.client.ClientProtocolException;
 import org.json.JSONArray;
 import org.json.JSONObject;
 
+import com.safetynet.alertsystem.constants.URIDataConstants;
 import com.safetynet.alertsystem.model.FireStations;
 import com.safetynet.alertsystem.model.MedicalRecords;
 import com.safetynet.alertsystem.model.PersonalInformation;
@@ -19,11 +20,11 @@ public class ModelDAO {
 	 * @throws IOException if we have problem with network call (connection problem)
 	 */
 	
-	public ArrayList<PersonalInformation> fetchPersonalInformationFromJson(String rawJson) throws ClientProtocolException, IOException {
+	public ArrayList<PersonalInformation> fetchPersonalInformationFromJson() throws ClientProtocolException, IOException {
 		
 		ArrayList<PersonalInformation> personalInformation = new ArrayList<PersonalInformation>();
 		
-		JSONObject json = new JSONObject(rawJson);
+		JSONObject json = new JSONObject(NetworkDAO.request(URIDataConstants.LINK_JASON_DATA));
 		
 		JSONArray persons = json.getJSONArray("persons");
 		
@@ -57,12 +58,11 @@ public class ModelDAO {
 		return personalInformation;
 	}
 	
-public ArrayList<FireStations> fetchFireStationsFromJson(String rawJson) throws ClientProtocolException, IOException {
+public ArrayList<FireStations> fetchFireStationsFromJson() throws ClientProtocolException, IOException {
 		
 		ArrayList<FireStations> fireStations = new ArrayList<FireStations>();
 		
-		JSONObject json = new JSONObject(rawJson);
-		// TODO replace rawJson with the code from the alertRepository
+		JSONObject json = new JSONObject(NetworkDAO.request(URIDataConstants.LINK_JASON_DATA));
 		
 		JSONArray jsonFireStation = json.getJSONArray("firestations");
 		
@@ -86,11 +86,11 @@ public ArrayList<FireStations> fetchFireStationsFromJson(String rawJson) throws 
 		return fireStations;
 	}
 
-	public ArrayList<MedicalRecords> fetchMedicalRecords(String rawJson) throws ClientProtocolException, IOException {
+	public ArrayList<MedicalRecords> fetchMedicalRecords() throws ClientProtocolException, IOException {
 		
 		ArrayList<MedicalRecords> medicalRecordsList = new ArrayList<MedicalRecords>();
 		
-		JSONObject json = new JSONObject(rawJson);
+		JSONObject json = new JSONObject(NetworkDAO.request(URIDataConstants.LINK_JASON_DATA));
 		
 		JSONArray jsonMedicalRecords = json.getJSONArray("firestations");
 		

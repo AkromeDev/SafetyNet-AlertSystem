@@ -49,7 +49,7 @@ public class AlertRepository {
 		
 		if (people.size() < 1 ) {
 		// TODO: use property file to use the code
-		people = modelDao.fetchPersonalInformationFromJson(NetworkDAO.request(URIDataConstants.LINK_JASON_DATA));
+		people = modelDao.fetchPersonalInformationFromJson();
 		}
 		
 		return people;

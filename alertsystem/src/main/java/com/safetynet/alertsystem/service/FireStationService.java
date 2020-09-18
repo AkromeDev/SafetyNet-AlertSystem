@@ -18,8 +18,9 @@ public class FireStationService {
 		this.fireStationRepo = fireStationRepo;
 	}
 
-	public JSONArray getPeopleFromStation(int station) {
+	public JSONArray getPeopleFromStation(String station) {
 		
-		return fireStationRepo.getPeopleFromStation(station);
+//		return fireStationRepo.getPeopleFromStation(station);
+		return null;
 	}
 }

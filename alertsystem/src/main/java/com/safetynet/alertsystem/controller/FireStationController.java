@@ -34,7 +34,7 @@ public class FireStationController {
 	
 	@ResponseBody
 	@RequestMapping(value="/firestation/{station}", method=RequestMethod.GET)
-	public ResponseEntity<JSONArray> getPeopleFromFireStations(@PathVariable("station") int station) {
+	public ResponseEntity<JSONArray> getPeopleFromFireStations(@PathVariable("station") String station) {
 		
 		logger.info("HTTP GET request recieved at /firestation/{station} URL");
 		
