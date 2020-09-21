@@ -16,23 +16,24 @@ import com.safetynet.alertsystem.model.PersonalInformation;
 public class AlertRepository {
 	
 	private List<PersonalInformation> people = new ArrayList<PersonalInformation>();
+	private ModelDAO modelDAO = new ModelDAO();
 	private static Integer id = 1;
 	
 	public List<PersonalInformation> getPeopleList() {
-		return people;
+		return modelDAO.getPeopleFromJson();
 	}
 	
 	public void addPerson(PersonalInformation personalInfo) {
-		personalInfo.setId(id++);
-		people.add(personalInfo);
+		personalInfo.setId(modelDAO.getFireStationFromJson().size() + 1);
+		modelDAO.addPersonToList(personalInfo);
 	}
 	
 	public Integer getListSize() {
-		return people.size();
+		return modelDAO.getPeopleFromJson().size();
 	}
 	
 	public PersonalInformation findExistingPerson(Integer index) {
-		for(PersonalInformation person: people) {
+		for(PersonalInformation person: modelDAO.getPeopleFromJson()) {
 			if(person.getId().equals(index)) {
 				return person;
 			}
@@ -41,17 +42,20 @@ public class AlertRepository {
 	}
 	
 	public Integer setId() {
+		// TODO this is not used and does not make so much sense, check it up and delete it if needed
+		// don't forget to delete the global variable index too! up there.
+		
 		return id++;
 	}
 	
-	public List<PersonalInformation> addDataFromJson() throws ClientProtocolException, IOException {
-		ModelDAO modelDao = new ModelDAO();
+	public ArrayList<PersonalInformation> addDataFromJson() throws ClientProtocolException, IOException {
 		
-		if (people.size() < 1 ) {
-		people = modelDao.fetchPersonalInformationFromJson();
+		if (modelDAO.getPeopleFromJson().size() < 1 ) {
+		people = ModelDAO.fetchPersonalInformationFromJson();
 		}
+		// TODO I did some modifications here, it might not make sense
 		
-		return people;
+		return modelDAO.getPeopleFromJson();
 	}
 
 }

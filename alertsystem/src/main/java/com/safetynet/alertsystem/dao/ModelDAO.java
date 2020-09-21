@@ -19,13 +19,17 @@ public class ModelDAO {
 	
 	private static final Logger logger = LogManager.getLogger("ModelDAO");
 	
+	
+	ArrayList<PersonalInformation> peopleFromJson = new ArrayList<PersonalInformation>();
+	ArrayList<FireStations> fireStationFromJson = new ArrayList<FireStations>();
+
 	/**
 	 * @return a populated ArrayList of PersonalInformation
 	 * @throws ClientProtocolException if we have problem with network call (connection problem)
 	 * @throws IOException if we have problem with network call (connection problem)
 	 */
 	
-	public ArrayList<PersonalInformation> fetchPersonalInformationFromJson() throws ClientProtocolException, IOException {
+	public static ArrayList<PersonalInformation> fetchPersonalInformationFromJson() throws ClientProtocolException, IOException {
 		
 		ArrayList<PersonalInformation> personalInformation = new ArrayList<PersonalInformation>();
 		
@@ -64,7 +68,7 @@ public class ModelDAO {
 		return personalInformation;
 	}
 	
-public ArrayList<FireStations> fetchFireStationsFromJson() {
+	public static ArrayList<FireStations> fetchFireStationsFromJson() {
 		
 		ArrayList<FireStations> fireStationsList = new ArrayList<FireStations>();
 		
@@ -91,7 +95,7 @@ public ArrayList<FireStations> fetchFireStationsFromJson() {
 			FireStations fireStation = new FireStations();
 			
 			String address = jsonObject.getString("address");
-			String station = jsonObject.getString("station");
+			int station = jsonObject.getInt("station");
 			
 			// populate our fire station model class with the information above
 			fireStation.setAddress(address);
@@ -106,7 +110,7 @@ public ArrayList<FireStations> fetchFireStationsFromJson() {
 		return fireStationsList;
 	}
 
-	public ArrayList<MedicalRecords> fetchMedicalRecords() throws ClientProtocolException, IOException {
+	public static ArrayList<MedicalRecords> fetchMedicalRecords() throws ClientProtocolException, IOException {
 		
 		ArrayList<MedicalRecords> medicalRecordsList = new ArrayList<MedicalRecords>();
 		
@@ -139,5 +143,29 @@ public ArrayList<FireStations> fetchFireStationsFromJson() {
 		}
 		
 		return medicalRecordsList;
+	}
+	
+	public ArrayList<PersonalInformation> getPeopleFromJson() {
+		return peopleFromJson;
+	}
+
+	public void setPeopleFromJson(ArrayList<PersonalInformation> peopleFromJson) {
+		this.peopleFromJson = peopleFromJson;
+	}
+	
+	public void addPersonToList(PersonalInformation person) {
+		peopleFromJson.add(person);
+	}
+
+	public ArrayList<FireStations> getFireStationFromJson() {
+		return fireStationFromJson;
+	}
+
+	public void setFireStationFromJson(ArrayList<FireStations> fireStationFromJson) {
+		this.fireStationFromJson = fireStationFromJson;
+	}
+	
+	public void addStationToList(FireStations station) {
+		fireStationFromJson.add(station);
 	}
 }
