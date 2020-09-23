@@ -1,15 +1,17 @@
 package com.safetynet.alertsystem.model;
 
+import java.util.ArrayList;
+
 public class MedicalRecords {
 	
 	private String firstName;
 	private String lastName;
 	private String birthdate;
-	private String medications;
-	private String allergies;
+	private ArrayList<String> medications;
+	private ArrayList<String> allergies;
 	private int id;
 	
-	public MedicalRecords(String firstName, String lastName, String birthdate, String medications, String allergies, int id) {
+	public MedicalRecords(String firstName, String lastName, String birthdate, ArrayList<String> medications, ArrayList<String> allergies, int id) {
 		super();
 		this.firstName = firstName;
 		this.lastName = lastName;
@@ -17,6 +19,10 @@ public class MedicalRecords {
 		this.medications = medications;
 		this.allergies = allergies;
 		this.id = id;
+	}
+	
+	public MedicalRecords() {
+		super();
 	}
 
 	public String getFirstName() {
@@ -43,20 +49,20 @@ public class MedicalRecords {
 		this.birthdate = birthdate;
 	}
 
-	public String getMedications() {
+	public ArrayList<String> getMedications() {
 		return medications;
 	}
 
-	public void setMedications(String medications) {
+	public void setMedications(ArrayList<String> medications) {
 		this.medications = medications;
 	}
 	
-	public String getAllergies() {
+	public ArrayList<String> getAllergies() {
 		return allergies;
 	}
 
-	public void setAllergies(String allergies) {
-		this.allergies = allergies;
+	public void setAllergies(ArrayList<String> allergiesList) {
+		this.allergies = allergiesList;
 	}
 
 	public int getId() {

@@ -28,9 +28,6 @@ public class AlertController {
 	
 	private static final Logger logger = LogManager.getLogger("AlertController");
 	
-	private List<PersonalInformation> medicalRecords;
-	private List<PersonalInformation> firestations;
-	
 	private AlertService alertService;
 	
 	@Autowired
@@ -38,7 +35,7 @@ public class AlertController {
 		super();
 		this.alertService = alertService;
 	}
-
+	
 	@GetMapping("/person")
 	public ModelAndView getPersonalInfo() throws ClientProtocolException, IOException {
 		
