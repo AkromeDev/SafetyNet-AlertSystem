@@ -1,11 +1,13 @@
 package com.safetynet.alertsystem.controller;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.json.JSONArray;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -20,7 +22,8 @@ public class FireStationController {
 	
 	private static final Logger logger = LogManager.getLogger("FireStationController");
 	
-	private List<PersonalInformation> firestations;
+	private ArrayList<PersonalInformation> firestations;
+	// firestations what is the role of that
 	
 	private FireStationService fireStationService;
 	
@@ -31,34 +34,19 @@ public class FireStationController {
 		this.fireStationService = fireStationService;
 	}
 	
-//	@ResponseBody
-//	@RequestMapping(value="/firestation/{station}", method=RequestMethod.GET)
-//	public ResponseEntity<JSONArray> getPeopleFromFireStations(@PathVariable("station") String station) {
-//		
-//		logger.info("HTTP GET request recieved at /firestation/{station} URL");
-//		
-//		List<PersonalInformation> peopleList = fireStationService.getPeopleFromStation(station);
-//		
-//		JSONArray jsonPeopleArray = new JSONArray(peopleList);
-//		 
-//		ResponseEntity<JSONArray> peopleFromFireStation = ResponseEntity.ok(jsonPeopleArray);
-//		
-//		return peopleFromFireStation;
-//	}
-	
 	@ResponseBody
 	@GetMapping(value="/firestation")
-	public JSONArray getPeopleFromFireStations2(@RequestParam String station) {
+	public ResponseEntity<String> getPeopleFromFireStations2(@RequestParam Integer station) {
 		
-		logger.info("HTTP GET request recieved at /firestation/{station} URL");
+		logger.info("HTTP GET request recieved at /firestation?station=X URL");
 		
-		List<PersonalInformation> peopleList = fireStationService.getPeopleFromStation(station);
+		ArrayList<PersonalInformation> peopleList = fireStationService.getPeopleFromStation(station);
 		
 		JSONArray jsonPeopleArray = new JSONArray(peopleList);
-		 
-//		ResponseEntity<JSONArray> peopleFromFireStation = ResponseEntity.ok(jsonPeopleArray);
 		
-		return jsonPeopleArray;
+		jsonPeopleArray = fireStationService.deleteCityZipEmailFromJson(jsonPeopleArray);
+		
+		return new ResponseEntity<String>(jsonPeopleArray.toString(), HttpStatus.OK);
 	}
 	
 }
