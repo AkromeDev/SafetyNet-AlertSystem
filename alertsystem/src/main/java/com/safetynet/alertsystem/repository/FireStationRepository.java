@@ -1,10 +1,8 @@
 package com.safetynet.alertsystem.repository;
 
-import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
-import org.apache.http.client.ClientProtocolException;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.springframework.stereotype.Repository;
@@ -18,48 +16,53 @@ public class FireStationRepository {
 	
 	private static final Logger logger = LogManager.getLogger("FireStationRepository");
 	
-	ModelDAO modelDAO;
+	ModelDAO modelDAO = new ModelDAO();
+	// TODO: Ask Nick why I had to instantiate the modelDAO variable in order not to have a NullPointerExceptions
 	
-	List<PersonalInformation> habitantsList;
-	ArrayList<PersonalInformation> peopleFromStationList;
-	ArrayList<FireStations> fireStationList;
+	ArrayList<PersonalInformation> habitantsList = new ArrayList<PersonalInformation>();
+	ArrayList<PersonalInformation> peopleFromStationList = new ArrayList<PersonalInformation>();
+	ArrayList<FireStations> fireStationList = new ArrayList<FireStations>();
 
-	public ArrayList<PersonalInformation> getPeopleFromStation(String station) {
+	public ArrayList<PersonalInformation> getPeopleFromStation(Integer station) {
 		
-		fireStationList = modelDAO.fetchFireStationsFromJson();
+		fireStationList = ModelDAO.fetchFireStationsFromJson();
 		
-		FireStations fireStation = findFireStationByNumber(station);
+		ArrayList<FireStations> fireStations = findFireStationAreasByNumber(station);
 		
-		peopleFromStationList = findPeopleInFireStationAreaByAddress(fireStation.getAddress());
+ 		habitantsList = modelDAO.getPeopleFromJson();
+		
+		peopleFromStationList = findPeopleInFireStationAreaByAddress(fireStations);
 		
 		return peopleFromStationList;
 	}
 	
-	public FireStations findFireStationByNumber(String station) {
+	public ArrayList<FireStations> findFireStationAreasByNumber(Integer station) {
+		
+		ArrayList<FireStations> chosenFireStation = new ArrayList<FireStations>();
 		
 		for (FireStations fireStation : fireStationList) {
 			if (fireStation.getStation().equals(station)) {
-				return fireStation;
-			} else {
-				logger.error("The fire station number does not exist please try another number.");
-				throw new IllegalArgumentException("Station number is not available.");
-			}
+				chosenFireStation.add(fireStation);
+			} 
 		}
-		
-		return null;
+		return chosenFireStation;
 		// TODO ask Nick if this kind of method is at it's right place in this class! thanks Nick!
 		// TODO Ninick should I test as I create code or should I wait until my code is approximately ready?
 	}
 	
-	public ArrayList<PersonalInformation> findPeopleInFireStationAreaByAddress(String address) {
+	public ArrayList<PersonalInformation> findPeopleInFireStationAreaByAddress(ArrayList<FireStations> fireStations) {
 		
 		peopleFromStationList.clear();
-		
-		for(PersonalInformation personInArea : habitantsList) {
-			if (personInArea.getAddress().equals(address)) {
-				peopleFromStationList.add(personInArea);
+			
+		for(FireStations fireSta: fireStations) {
+			String address = fireSta.getAddress();
+			for(PersonalInformation personInArea : habitantsList) {
+				if (personInArea.getAddress().equals(address)) {
+					peopleFromStationList.add(personInArea);
+				}
 			}
 		}
+		
 		return peopleFromStationList;
 	}
 }
