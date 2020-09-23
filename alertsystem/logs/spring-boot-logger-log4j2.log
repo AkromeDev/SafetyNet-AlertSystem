@@ -1,25 +1,22 @@
-2020-09-23 10:36:20,095 INFO c.s.a.AlertsystemApplication [main] Initializing SafetyNet app
-2020-09-23 10:36:20,428 INFO o.h.v.i.u.Version [background-preinit] HV000001: Hibernate Validator 6.1.5.Final
-2020-09-23 10:36:20,469 INFO o.s.b.StartupInfoLogger [main] Starting AlertsystemApplication using Java 1.8.0_251 on JCs-MacBook-Pro with PID 35934 (/Users/j.c./git/AlertSystem/alertsystem/target/classes started by j.c. in /Users/j.c./git/AlertSystem/alertsystem)
-2020-09-23 10:36:20,472 DEBUG o.s.b.StartupInfoLogger [main] Running with Spring Boot v2.4.0-SNAPSHOT, Spring v5.3.0-RC1
-2020-09-23 10:36:20,472 INFO o.s.b.SpringApplication [main] No active profile set, falling back to default profiles: default
-2020-09-23 10:36:21,401 INFO o.s.b.w.e.t.TomcatWebServer [main] Tomcat initialized with port(s): 8080 (http)
-2020-09-23 10:36:21,416 INFO o.a.j.l.DirectJDKLog [main] Initializing ProtocolHandler ["http-nio-8080"]
-2020-09-23 10:36:21,417 INFO o.a.j.l.DirectJDKLog [main] Starting service [Tomcat]
-2020-09-23 10:36:21,417 INFO o.a.j.l.DirectJDKLog [main] Starting Servlet engine: [Apache Tomcat/9.0.38]
-2020-09-23 10:36:21,477 INFO o.a.j.l.DirectJDKLog [main] Initializing Spring embedded WebApplicationContext
-2020-09-23 10:36:21,477 INFO o.s.b.w.s.c.ServletWebServerApplicationContext [main] Root WebApplicationContext: initialization completed in 966 ms
-2020-09-23 10:36:21,755 INFO o.s.s.c.ExecutorConfigurationSupport [main] Initializing ExecutorService 'applicationTaskExecutor'
-2020-09-23 10:36:21,817 INFO o.s.b.a.w.s.WelcomePageHandlerMapping [main] Adding welcome page template: index
-2020-09-23 10:36:22,056 INFO o.s.b.a.e.w.EndpointLinksResolver [main] Exposing 5 endpoint(s) beneath base path '/actuator'
-2020-09-23 10:36:22,080 INFO o.a.j.l.DirectJDKLog [main] Starting ProtocolHandler ["http-nio-8080"]
-2020-09-23 10:36:22,108 INFO o.s.b.w.e.t.TomcatWebServer [main] Tomcat started on port(s): 8080 (http) with context path ''
-2020-09-23 10:36:22,123 INFO o.s.b.StartupInfoLogger [main] Started AlertsystemApplication in 1.949 seconds (JVM running for 2.706)
-2020-09-23 10:36:28,048 INFO o.a.j.l.DirectJDKLog [http-nio-8080-exec-1] Initializing Spring DispatcherServlet 'dispatcherServlet'
-2020-09-23 10:36:28,049 INFO o.s.w.s.FrameworkServlet [http-nio-8080-exec-1] Initializing Servlet 'dispatcherServlet'
-2020-09-23 10:36:28,051 INFO o.s.w.s.FrameworkServlet [http-nio-8080-exec-1] Completed initialization in 2 ms
-2020-09-23 10:36:29,880 INFO c.s.a.c.AlertController [http-nio-8080-exec-2] HTTP GET request recieved at /person URL
-2020-09-23 10:36:35,908 INFO c.s.a.c.FireStationController [http-nio-8080-exec-3] HTTP GET request recieved at /firestation?station=X URL
-2020-09-23 10:36:39,596 INFO c.s.a.c.FireStationController [http-nio-8080-exec-4] HTTP GET request recieved at /firestation?station=X URL
-2020-09-23 10:36:42,322 INFO c.s.a.c.FireStationController [http-nio-8080-exec-5] HTTP GET request recieved at /firestation?station=X URL
-2020-09-23 10:36:45,644 INFO c.s.a.c.FireStationController [http-nio-8080-exec-6] HTTP GET request recieved at /firestation?station=X URL
+2020-09-23 13:25:24,886 INFO c.s.a.AlertsystemApplication [main] Initializing SafetyNet app
+2020-09-23 13:25:25,222 INFO o.h.v.i.u.Version [background-preinit] HV000001: Hibernate Validator 6.1.5.Final
+2020-09-23 13:25:25,263 INFO o.s.b.StartupInfoLogger [main] Starting AlertsystemApplication using Java 1.8.0_251 on JCs-MacBook-Pro with PID 36624 (/Users/j.c./git/AlertSystem/alertsystem/target/classes started by j.c. in /Users/j.c./git/AlertSystem/alertsystem)
+2020-09-23 13:25:25,266 DEBUG o.s.b.StartupInfoLogger [main] Running with Spring Boot v2.4.0-SNAPSHOT, Spring v5.3.0-RC1
+2020-09-23 13:25:25,267 INFO o.s.b.SpringApplication [main] No active profile set, falling back to default profiles: default
+2020-09-23 13:25:26,192 INFO o.s.b.w.e.t.TomcatWebServer [main] Tomcat initialized with port(s): 8080 (http)
+2020-09-23 13:25:26,205 INFO o.a.j.l.DirectJDKLog [main] Initializing ProtocolHandler ["http-nio-8080"]
+2020-09-23 13:25:26,206 INFO o.a.j.l.DirectJDKLog [main] Starting service [Tomcat]
+2020-09-23 13:25:26,206 INFO o.a.j.l.DirectJDKLog [main] Starting Servlet engine: [Apache Tomcat/9.0.38]
+2020-09-23 13:25:26,265 INFO o.a.j.l.DirectJDKLog [main] Initializing Spring embedded WebApplicationContext
+2020-09-23 13:25:26,265 INFO o.s.b.w.s.c.ServletWebServerApplicationContext [main] Root WebApplicationContext: initialization completed in 960 ms
+2020-09-23 13:25:26,534 INFO o.s.s.c.ExecutorConfigurationSupport [main] Initializing ExecutorService 'applicationTaskExecutor'
+2020-09-23 13:25:26,598 INFO o.s.b.a.w.s.WelcomePageHandlerMapping [main] Adding welcome page template: index
+2020-09-23 13:25:26,832 INFO o.s.b.a.e.w.EndpointLinksResolver [main] Exposing 5 endpoint(s) beneath base path '/actuator'
+2020-09-23 13:25:26,856 INFO o.a.j.l.DirectJDKLog [main] Starting ProtocolHandler ["http-nio-8080"]
+2020-09-23 13:25:26,881 INFO o.s.b.w.e.t.TomcatWebServer [main] Tomcat started on port(s): 8080 (http) with context path ''
+2020-09-23 13:25:26,896 INFO o.s.b.StartupInfoLogger [main] Started AlertsystemApplication in 1.934 seconds (JVM running for 2.7)
+2020-09-23 13:25:32,910 INFO o.a.j.l.DirectJDKLog [http-nio-8080-exec-1] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-09-23 13:25:32,910 INFO o.s.w.s.FrameworkServlet [http-nio-8080-exec-1] Initializing Servlet 'dispatcherServlet'
+2020-09-23 13:25:32,913 INFO o.s.w.s.FrameworkServlet [http-nio-8080-exec-1] Completed initialization in 2 ms
+2020-09-23 13:25:35,332 INFO c.s.a.c.AlertController [http-nio-8080-exec-2] HTTP GET request recieved at /person URL
+2020-09-23 13:25:40,253 INFO c.s.a.c.FireStationController [http-nio-8080-exec-3] HTTP GET request recieved at /firestation?station=X URL

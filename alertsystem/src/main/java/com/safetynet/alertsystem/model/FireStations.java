@@ -3,10 +3,10 @@ package com.safetynet.alertsystem.model;
 public class FireStations {
 	
 	private String address;
-	private String station;
+	private Integer station;
 	private int id;
 	
-	public FireStations(String address, String station, int id) {
+	public FireStations(String address, int station, int id) {
 		super();
 		this.address = address;
 		this.station = station;
@@ -25,11 +25,11 @@ public class FireStations {
 		this.address = address;
 	}
 
-	public String getStation() {
+	public Integer getStation() {
 		return station;
 	}
 
-	public void setStation(String station) {
+	public void setStation(int station) {
 		this.station = station;
 	}
 
