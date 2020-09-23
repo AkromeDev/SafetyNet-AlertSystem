@@ -19,9 +19,11 @@ public class ModelDAO {
 	
 	private static final Logger logger = LogManager.getLogger("ModelDAO");
 	
+	private static JSONObject json = new JSONObject();
 	
-	ArrayList<PersonalInformation> peopleFromJson = new ArrayList<PersonalInformation>();
-	ArrayList<FireStations> fireStationFromJson = new ArrayList<FireStations>();
+	private static ArrayList<PersonalInformation> peopleFromJson = new ArrayList<PersonalInformation>();
+	private static ArrayList<FireStations> fireStationFromJson = new ArrayList<FireStations>();
+	private static ArrayList<MedicalRecords> medicalRecordsFromJson = new ArrayList<MedicalRecords>();
 
 	/**
 	 * @return a populated ArrayList of PersonalInformation
@@ -29,12 +31,39 @@ public class ModelDAO {
 	 * @throws IOException if we have problem with network call (connection problem)
 	 */
 	
-	public static ArrayList<PersonalInformation> fetchPersonalInformationFromJson() throws ClientProtocolException, IOException {
+	public static void loadDataFromJson() {
 		
-		ArrayList<PersonalInformation> personalInformation = new ArrayList<PersonalInformation>();
+		try {
+			json = new JSONObject(NetworkDAO.request(URIDataConstants.LINK_JASON_DATA));
+		} catch (JSONException e) {
+			logger.error("JSONException while loading the data from json link", e);
+			e.printStackTrace();
+		} catch (ClientProtocolException e) {
+			logger.error("ClientProtocolException while loading the data from json link", e);
+			e.printStackTrace();
+		} catch (IOException e) {
+			logger.error("IOException while loading the data from json link", e);
+			e.printStackTrace();
+		}
 		
-		JSONObject json = new JSONObject(NetworkDAO.request(URIDataConstants.LINK_JASON_DATA));
-		// TODO: use property file to use the code
+		// TODO: use property file for the data link
+		// TODO Ask Nick if it makes sense to pass the Json Data From a string back to a Json object (NetworkDAO method)
+		// TODO Ask Nick if this method is ok, should I use a return value => local Variables or instance variable, when should I use them?
+		
+	}
+	
+	public static void addAllDataToLists() {
+		
+			fetchFireStationsFromJson();
+		
+			fetchMedicalRecordsFromJson();
+	}
+	
+	public static ArrayList<PersonalInformation> fetchPersonalInformationFromJson() {
+		
+		loadDataFromJson();
+		
+		addAllDataToLists();
 		
 		JSONArray persons = json.getJSONArray("persons");
 		
@@ -62,30 +91,15 @@ public class ModelDAO {
 			personInfo.setId(i);
 			// TODO the setId implementation has been changed (we used a id = i + 1 formula that did not really make sense) check that it did not create some new bug
 			
-			personalInformation.add(personInfo);
+			peopleFromJson.add(personInfo);
 		}
 		
-		return personalInformation;
+		return peopleFromJson;
 	}
 	
 	public static ArrayList<FireStations> fetchFireStationsFromJson() {
 		
-		ArrayList<FireStations> fireStationsList = new ArrayList<FireStations>();
-		
-		JSONObject json = new JSONObject();
-		
-		try {
-			json = new JSONObject(NetworkDAO.request(URIDataConstants.LINK_JASON_DATA));
-		} catch (JSONException e) {
-			logger.error("JSONException while fetching the fire stations from json link", e);
-			e.printStackTrace();
-		} catch (ClientProtocolException e) {
-			logger.error("ClientProtocolException while fetching the fire stations from json link", e);
-			e.printStackTrace();
-		} catch (IOException e) {
-			logger.error("IOException while fetching the fire stations from json link", e);
-			e.printStackTrace();
-		}
+		loadDataFromJson();
 		
 		JSONArray jsonFireStation = json.getJSONArray("firestations");
 		
@@ -103,46 +117,58 @@ public class ModelDAO {
 			fireStation.setId(i);
 			// TODO try it with i + 1! who knows!
 			
-			fireStationsList.add(fireStation);
+			fireStationFromJson.add(fireStation);
 			
 		}
 		
-		return fireStationsList;
+		return fireStationFromJson;
 	}
 
-	public static ArrayList<MedicalRecords> fetchMedicalRecords() throws ClientProtocolException, IOException {
+	public static ArrayList<MedicalRecords> fetchMedicalRecordsFromJson() {
 		
-		ArrayList<MedicalRecords> medicalRecordsList = new ArrayList<MedicalRecords>();
+		loadDataFromJson();
 		
-		JSONObject json = new JSONObject(NetworkDAO.request(URIDataConstants.LINK_JASON_DATA));
-		
-		JSONArray jsonMedicalRecords = json.getJSONArray("firestations");
+		JSONArray jsonMedicalRecords = json.getJSONArray("medicalrecords");
 		
 		for(int i = 0; i < jsonMedicalRecords.length(); i++) {
 			JSONObject jsonMedicalRecord = jsonMedicalRecords.getJSONObject(i);
 			
-			// TODO you know what to do
-			MedicalRecords medicalRecord = new MedicalRecords(null, null, null, null, null, i);
+			MedicalRecords medicalRecord = new MedicalRecords();
 			
 			String firstName = jsonMedicalRecord.getString("firstName");
 			String lastName = jsonMedicalRecord.getString("lastName");
 			String birthdate = jsonMedicalRecord.getString("birthdate");
-			String medications = jsonMedicalRecord.getString("medications");
-			String allergies = jsonMedicalRecord.getString("allergies");
+			
+			// since "medications" and "allergies are JSONArrays we have to pass them into a ArrayLists
+			JSONArray jsonMedications = jsonMedicalRecord.getJSONArray("medications");
+			ArrayList<String> medicationList = new ArrayList<String>();
+			
+			for(int j = 0; j < jsonMedications.length(); j++) {
+				String medication = jsonMedications.getString(j);
+				medicationList.add(medication);
+			}
+			
+			JSONArray jsonAllergies = jsonMedicalRecord.getJSONArray("allergies");
+			ArrayList<String> allergiesList = new ArrayList<String>();
+			
+			for(int k = 0; k < jsonAllergies.length(); k++) {
+				String allergy = jsonAllergies.getString(k);
+				allergiesList.add(allergy);
+			}
 			
 			// populate our medical record model class with the information above
 			medicalRecord.setFirstName(firstName);
 			medicalRecord.setLasttName(lastName);
 			medicalRecord.setBirthdate(birthdate);
-			medicalRecord.setMedications(medications);
-			medicalRecord.setAllergies(allergies);
+			medicalRecord.setMedications(medicationList);
+			medicalRecord.setAllergies(allergiesList);
 			medicalRecord.setId(i);
 			
-			medicalRecordsList.add(medicalRecord);
+			medicalRecordsFromJson.add(medicalRecord);
 			
 		}
 		
-		return medicalRecordsList;
+		return medicalRecordsFromJson;
 	}
 	
 	public ArrayList<PersonalInformation> getPeopleFromJson() {
@@ -150,7 +176,7 @@ public class ModelDAO {
 	}
 
 	public void setPeopleFromJson(ArrayList<PersonalInformation> peopleFromJson) {
-		this.peopleFromJson = peopleFromJson;
+		ModelDAO.peopleFromJson = peopleFromJson;
 	}
 	
 	public void addPersonToList(PersonalInformation person) {
@@ -162,7 +188,7 @@ public class ModelDAO {
 	}
 
 	public void setFireStationFromJson(ArrayList<FireStations> fireStationFromJson) {
-		this.fireStationFromJson = fireStationFromJson;
+		ModelDAO.fireStationFromJson = fireStationFromJson;
 	}
 	
 	public void addStationToList(FireStations station) {
