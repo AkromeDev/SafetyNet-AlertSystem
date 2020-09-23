@@ -27,7 +27,7 @@ class ModelDAOTest {
 		ModelDAO modelDao = new ModelDAO();
 		
 		personalList = modelDao.fetchPersonalInformationFromJson();
-		fireStationList = modelDao.fetchFireStationsFromJson();
+		fireStationList = ModelDAO.fetchFireStationsFromJson();
 		// TODO ask Nick if it is ok to use the fetch methods in the BeforeAll and not in the test themselves.
 	}
 
