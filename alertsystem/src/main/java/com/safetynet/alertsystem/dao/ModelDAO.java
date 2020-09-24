@@ -194,4 +194,17 @@ public class ModelDAO {
 	public void addStationToList(FireStations station) {
 		fireStationFromJson.add(station);
 	}
+
+	public ArrayList<MedicalRecords> getMedicalRecordsFromJson() {
+		return medicalRecordsFromJson;
+	}
+
+	public void setMedicalRecordsFromJson(ArrayList<MedicalRecords> medicalRecordsFromJson) {
+		ModelDAO.medicalRecordsFromJson = medicalRecordsFromJson;
+	}
+	
+	public void addMedicalRecordList(MedicalRecords record) {
+		medicalRecordsFromJson.add(record);
+	}
+	
 }
