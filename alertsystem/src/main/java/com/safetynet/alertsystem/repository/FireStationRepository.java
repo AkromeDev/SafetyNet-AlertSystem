@@ -1,7 +1,6 @@
 package com.safetynet.alertsystem.repository;
 
 import java.util.ArrayList;
-import java.util.List;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -9,7 +8,9 @@ import org.springframework.stereotype.Repository;
 
 import com.safetynet.alertsystem.dao.ModelDAO;
 import com.safetynet.alertsystem.model.FireStations;
+import com.safetynet.alertsystem.model.MedicalRecords;
 import com.safetynet.alertsystem.model.PersonalInformation;
+import com.safetynet.alertsystem.util.OutputUtil;
 
 @Repository
 public class FireStationRepository {
@@ -17,11 +18,13 @@ public class FireStationRepository {
 	private static final Logger logger = LogManager.getLogger("FireStationRepository");
 	
 	ModelDAO modelDAO = new ModelDAO();
+	OutputUtil util = new OutputUtil();
 	// TODO: Ask Nick why I had to instantiate the modelDAO variable in order not to have a NullPointerExceptions
 	
-	ArrayList<PersonalInformation> habitantsList = new ArrayList<PersonalInformation>();
-	ArrayList<PersonalInformation> peopleFromStationList = new ArrayList<PersonalInformation>();
-	ArrayList<FireStations> fireStationList = new ArrayList<FireStations>();
+	private ArrayList<PersonalInformation> habitantsList = new ArrayList<PersonalInformation>();
+	private ArrayList<PersonalInformation> peopleFromStationList = new ArrayList<PersonalInformation>();
+	private ArrayList<FireStations> fireStationList = new ArrayList<FireStations>();
+	private ArrayList<MedicalRecords> medicalRecords = new ArrayList<MedicalRecords>();
 
 	public ArrayList<PersonalInformation> getPeopleFromStation(Integer station) {
 		
@@ -64,5 +67,22 @@ public class FireStationRepository {
 		}
 		
 		return peopleFromStationList;
+	}
+	
+	public ArrayList<MedicalRecords> matchPeopleToMedicalRecord(ArrayList<PersonalInformation> listOfPeople) {
+		
+		ArrayList<MedicalRecords> machtedRecords = new ArrayList<MedicalRecords>();
+		
+		for(PersonalInformation person: listOfPeople) {
+			
+			medicalRecords = modelDAO.getMedicalRecordsFromJson();
+			
+			for(MedicalRecords record : medicalRecords) {
+				if (person.getFirstName().equals(record.getFirstName()) & person.getLastName().equals(record.getLasttName())) {
+					machtedRecords.add(record);
+				}
+			}
+		}
+		return machtedRecords;
 	}
 }

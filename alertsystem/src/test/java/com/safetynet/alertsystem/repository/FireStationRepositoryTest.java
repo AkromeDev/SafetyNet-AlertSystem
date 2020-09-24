@@ -46,7 +46,7 @@ class FireStationRepositoryTest {
 	@Test
 	void findFireStationByNumberTest() {
 		
-		assertNotNull(fireRepo.findFireStationByNumber(1));
+		assertNotNull(fireRepo.findFireStationAreasByNumber(1));
 	}
 
 }
