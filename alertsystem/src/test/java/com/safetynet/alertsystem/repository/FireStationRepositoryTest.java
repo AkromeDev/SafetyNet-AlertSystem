@@ -34,19 +34,19 @@ class FireStationRepositoryTest {
 	void tearDown() throws Exception {
 	}
 
-	@Test
-	void getPeopleFromStationTest() {
-		personalList = fireRepo.getPeopleFromStation(1);
-		
-		PersonalInformation personalInfo = personalList.get(0);
-		
-		assertEquals(personalInfo.getAddress(), "1509 Culver St");
-	}
-	
-	@Test
-	void findFireStationByNumberTest() {
-		
-		assertNotNull(fireRepo.findFireStationAreasByNumber(1));
-	}
+//	@Test
+//	void getPeopleFromStationTest() {
+//		personalList = fireRepo.getPeopleFromStation(1);
+//		
+//		PersonalInformation personalInfo = personalList.get(0);
+//		
+//		assertEquals(personalInfo.getAddress(), "1509 Culver St");
+//	}
+//	
+//	@Test
+//	void findFireStationByNumberTest() {
+//		
+//		assertNotNull(fireRepo.findFireStationAreasByNumber(1));
+//	}
 
 }

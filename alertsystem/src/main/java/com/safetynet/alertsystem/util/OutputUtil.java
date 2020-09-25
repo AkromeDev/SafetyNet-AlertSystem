@@ -8,8 +8,7 @@ import java.util.ArrayList;
 import com.safetynet.alertsystem.model.MedicalRecords;
 
 public class OutputUtil {
-	
-	// TODO Ask Nick: Can a util class be a bean
+	// TODO Call it SummaryUtil
 
 	public Integer findNumberOfChildren(ArrayList<MedicalRecords> medicalRecords) {
 		

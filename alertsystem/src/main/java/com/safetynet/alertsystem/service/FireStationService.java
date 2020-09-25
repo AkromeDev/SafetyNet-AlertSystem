@@ -8,6 +8,7 @@ import org.json.JSONObject;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import com.safetynet.alertsystem.model.HabitantAndRecords;
 import com.safetynet.alertsystem.model.PersonalInformation;
 import com.safetynet.alertsystem.repository.FireStationRepository;
 import com.safetynet.alertsystem.util.OutputUtil;
@@ -24,14 +25,12 @@ public class FireStationService {
 		this.fireStationRepo = fireStationRepo;
 	}
 
-	public ArrayList<PersonalInformation> getPeopleFromStation(Integer station) {
+	public ArrayList<PersonalInformation> getPeopleFromStation(ArrayList<Integer> station) {
 		
 		return fireStationRepo.getPeopleFromStation(station);
 	}
 	
 	public JSONArray deleteCityZipEmailFromJson(JSONArray jsonArray) {
-		
-		// TODO ask Nick: Does this method belongs to a utility class, or is it good tp have it into your service class?
 		
 		JSONArray uptdatedJsonArray = new JSONArray();
 		
@@ -51,8 +50,6 @@ public class FireStationService {
 	}
 	
 	public JSONArray deleteAllButPhoneFromJson(JSONArray jsonArray) {
-		
-		// TODO ask Nick: Does this method belongs to a utility class, or is it good tp have it into your service class?
 		
 		JSONArray uptdatedJsonArray = new JSONArray();
 		
@@ -82,5 +79,10 @@ public class FireStationService {
 		data.put("numberOfAdults", util.findNumberOfAdults(fireStationRepo.matchPeopleToMedicalRecord(peopleList)).toString());
 		
 		return new JSONObject(data);
+	}
+
+	public HashMap<String, ArrayList<HabitantAndRecords>> createHouseholds(ArrayList<PersonalInformation> peopleList) {
+		
+		return fireStationRepo.mergeWithMedicalRecords(peopleList);
 	}
 }

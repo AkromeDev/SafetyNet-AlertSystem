@@ -1,6 +1,7 @@
 package com.safetynet.alertsystem.repository;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -8,9 +9,9 @@ import org.springframework.stereotype.Repository;
 
 import com.safetynet.alertsystem.dao.ModelDAO;
 import com.safetynet.alertsystem.model.FireStations;
+import com.safetynet.alertsystem.model.HabitantAndRecords;
 import com.safetynet.alertsystem.model.MedicalRecords;
 import com.safetynet.alertsystem.model.PersonalInformation;
-import com.safetynet.alertsystem.util.OutputUtil;
 
 @Repository
 public class FireStationRepository {
@@ -18,15 +19,13 @@ public class FireStationRepository {
 	private static final Logger logger = LogManager.getLogger("FireStationRepository");
 	
 	ModelDAO modelDAO = new ModelDAO();
-	OutputUtil util = new OutputUtil();
-	// TODO: Ask Nick why I had to instantiate the modelDAO variable in order not to have a NullPointerExceptions
 	
 	private ArrayList<PersonalInformation> habitantsList = new ArrayList<PersonalInformation>();
 	private ArrayList<PersonalInformation> peopleFromStationList = new ArrayList<PersonalInformation>();
 	private ArrayList<FireStations> fireStationList = new ArrayList<FireStations>();
 	private ArrayList<MedicalRecords> medicalRecords = new ArrayList<MedicalRecords>();
 
-	public ArrayList<PersonalInformation> getPeopleFromStation(Integer station) {
+	public ArrayList<PersonalInformation> getPeopleFromStation(ArrayList<Integer> station) {
 		
 		fireStationList = ModelDAO.fetchFireStationsFromJson();
 		
@@ -39,17 +38,18 @@ public class FireStationRepository {
 		return peopleFromStationList;
 	}
 	
-	public ArrayList<FireStations> findFireStationAreasByNumber(Integer station) {
+	public ArrayList<FireStations> findFireStationAreasByNumber(ArrayList<Integer> stations) {
 		
 		ArrayList<FireStations> chosenFireStation = new ArrayList<FireStations>();
 		
-		for (FireStations fireStation : fireStationList) {
-			if (fireStation.getStation().equals(station)) {
-				chosenFireStation.add(fireStation);
-			} 
+		for (Integer station: stations) {
+			for (FireStations fireStation : fireStationList) {
+				if (fireStation.getStation().equals(station)) {
+					chosenFireStation.add(fireStation);
+				} 
+			}
 		}
 		return chosenFireStation;
-		// TODO ask Nick if this kind of method is at it's right place in this class! thanks Nick!
 		// TODO Ninick should I test as I create code or should I wait until my code is approximately ready?
 	}
 	
@@ -84,5 +84,24 @@ public class FireStationRepository {
 			}
 		}
 		return machtedRecords;
+	}
+
+	public HashMap<String, ArrayList<HabitantAndRecords>> mergeWithMedicalRecords(ArrayList<PersonalInformation> peopleList) {
+		
+		ArrayList<HabitantAndRecords> habitantsAndRecordList = modelDAO.mergeWithMedicalRecords(peopleList);
+		
+		HashMap<String, ArrayList<HabitantAndRecords>> householdsMap = new HashMap<String, ArrayList<HabitantAndRecords>>();
+		
+			for (HabitantAndRecords har: habitantsAndRecordList) {
+				if (!householdsMap.containsKey(har.getAddress())) {
+					ArrayList<HabitantAndRecords> newKeyList = new ArrayList<HabitantAndRecords>();
+					newKeyList.add(har);
+					householdsMap.put(har.getAddress(), newKeyList);
+					
+				} else {
+					householdsMap.get(har.getAddress()).add(har);
+				}
+			}
+		return householdsMap;
 	}
 }

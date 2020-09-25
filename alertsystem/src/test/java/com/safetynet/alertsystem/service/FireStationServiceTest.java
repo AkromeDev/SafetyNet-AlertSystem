@@ -24,13 +24,13 @@ class FireStationServiceTest {
 		personalList = new ArrayList<PersonalInformation>();
 	}
 
-	@Test
-	void test() {
-		personalList = fireService.getPeopleFromStation(1);
-		
-		PersonalInformation personalInfo = personalList.get(0);
-		
-		assertEquals(personalInfo.getAddress(), "1509 Culver St");
-	}
+//	@Test
+//	void test() {
+//		personalList = fireService.getPeopleFromStation(1);
+//		
+//		PersonalInformation personalInfo = personalList.get(0);
+//		
+//		assertEquals(personalInfo.getAddress(), "1509 Culver St");
+//	}
 
 }

@@ -48,9 +48,8 @@ public class ModelDAO {
 			e.printStackTrace();
 		}
 		
-		// TODO: use property file for the data link
-		// TODO Ask Nick if it makes sense to pass the Json Data From a string back to a Json object (NetworkDAO method)
-		// TODO Ask Nick if this method is ok, should I use a return value => local Variables or instance variable, when should I use them?
+		// TODO use property file for the data link
+		// TODO Think about using gson or jsonmapper next time
 		
 	}
 	
@@ -143,7 +142,6 @@ public class ModelDAO {
 			fireStation.setAddress(address);
 			fireStation.setStation(station);
 			fireStation.setId(i);
-			// TODO try it with i + 1! who knows!
 			
 			fireStationFromJson.add(fireStation);
 			

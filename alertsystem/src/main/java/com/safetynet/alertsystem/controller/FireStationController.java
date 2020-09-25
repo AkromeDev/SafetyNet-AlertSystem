@@ -1,6 +1,7 @@
 package com.safetynet.alertsystem.controller;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -14,6 +15,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
+import com.safetynet.alertsystem.model.HabitantAndRecords;
 import com.safetynet.alertsystem.model.PersonalInformation;
 import com.safetynet.alertsystem.service.FireStationService;
 
@@ -33,7 +35,7 @@ public class FireStationController {
 	
 	@ResponseBody
 	@GetMapping(value="/firestation")
-	public ResponseEntity<String> getPeopleFromFireStations(@RequestParam Integer stationNumber) {
+	public ResponseEntity<String> getPeopleFromFireStations(@RequestParam ArrayList<Integer> stationNumber) {
 		
 		logger.info("HTTP GET request recieved at /firestation?station=X URL");
 		
@@ -50,9 +52,9 @@ public class FireStationController {
 	
 	@ResponseBody
 	@GetMapping(value="/phoneAlert")
-	public ResponseEntity<String> getPhonesFromPeopleInArea(@RequestParam Integer firestation) {
+	public ResponseEntity<String> getPhonesFromPeopleInArea(@RequestParam ArrayList<Integer> firestation) {
 		
-		logger.info("HTTP GET request recieved at /phoneAlert?station=X URL");
+		logger.info("HTTP GET request recieved at /phoneAlert?firestation=X URL");
 		
 		ArrayList<PersonalInformation> peopleList = fireStationService.getPeopleFromStation(firestation);
 		
@@ -61,6 +63,21 @@ public class FireStationController {
 		jsonPeopleArray = fireStationService.deleteAllButPhoneFromJson(jsonPeopleArray);
 		
 		return new ResponseEntity<String>(jsonPeopleArray.toString(), HttpStatus.OK);
+	}
+	
+	@ResponseBody
+	@GetMapping(value="/stations")
+	public ResponseEntity<String> getHouseholds(@RequestParam ArrayList<Integer> stations) {
+		
+		logger.info("HTTP GET request recieved at /stations?stations=X URL");
+		
+		ArrayList<PersonalInformation> peopleList = fireStationService.getPeopleFromStation(stations);
+		
+		HashMap<String, ArrayList<HabitantAndRecords>> householdsMap = fireStationService.createHouseholds(peopleList);
+		
+		JSONObject householdJsonObject = new JSONObject(householdsMap);
+		
+		return new ResponseEntity<String>(householdJsonObject.toString(), HttpStatus.OK);
 	}
 	
 }
