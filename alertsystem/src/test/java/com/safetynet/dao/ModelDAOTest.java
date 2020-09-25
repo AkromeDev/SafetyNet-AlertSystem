@@ -24,11 +24,9 @@ class ModelDAOTest {
 	
 	@BeforeAll
 	static void setUpBeforeClass() throws Exception {
-		ModelDAO modelDao = new ModelDAO();
 		
-		personalList = modelDao.fetchPersonalInformationFromJson();
+		personalList = ModelDAO.fetchPersonalInformationFromJson();
 		fireStationList = ModelDAO.fetchFireStationsFromJson();
-		// TODO ask Nick if it is ok to use the fetch methods in the BeforeAll and not in the test themselves.
 	}
 
 	@AfterAll

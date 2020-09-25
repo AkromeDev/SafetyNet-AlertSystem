@@ -12,6 +12,7 @@ import org.json.JSONObject;
 
 import com.safetynet.alertsystem.constants.URIDataConstants;
 import com.safetynet.alertsystem.model.FireStations;
+import com.safetynet.alertsystem.model.HabitantAndRecords;
 import com.safetynet.alertsystem.model.MedicalRecords;
 import com.safetynet.alertsystem.model.PersonalInformation;
 
@@ -24,6 +25,7 @@ public class ModelDAO {
 	private static ArrayList<PersonalInformation> peopleFromJson = new ArrayList<PersonalInformation>();
 	private static ArrayList<FireStations> fireStationFromJson = new ArrayList<FireStations>();
 	private static ArrayList<MedicalRecords> medicalRecordsFromJson = new ArrayList<MedicalRecords>();
+	private ArrayList<HabitantAndRecords> habitantsAndRecordList = new ArrayList<HabitantAndRecords>();
 
 	/**
 	 * @return a populated ArrayList of PersonalInformation
@@ -95,6 +97,32 @@ public class ModelDAO {
 		}
 		
 		return peopleFromJson;
+	}
+	
+	public ArrayList<HabitantAndRecords> mergeWithMedicalRecords(ArrayList<PersonalInformation> peopleList) {
+		
+		for(PersonalInformation person : peopleList) {
+			for(MedicalRecords record : medicalRecordsFromJson) {
+				if (person.getFirstName().equals(record.getFirstName()) & person.getLastName().equals(record.getLasttName())) {
+					HabitantAndRecords habAndRe = new HabitantAndRecords();
+					
+					habAndRe.setFirstName(person.getFirstName());
+					habAndRe.setLastName(person.getLastName());
+					habAndRe.setAddress(person.getAddress());
+					habAndRe.setCity(person.getCity());
+					habAndRe.setZip(person.getZip());
+					habAndRe.setPhone(person.getPhone());
+					habAndRe.setEmail(person.getEmail());
+					habAndRe.setBirthdate(record.getBirthdate());
+					habAndRe.setMedications(record.getMedications());
+					habAndRe.setAllergies(record.getAllergies());
+					
+					habitantsAndRecordList.add(habAndRe);
+				}
+			}
+		}
+		
+		return habitantsAndRecordList;
 	}
 	
 	public static ArrayList<FireStations> fetchFireStationsFromJson() {
@@ -205,6 +233,14 @@ public class ModelDAO {
 	
 	public void addMedicalRecordList(MedicalRecords record) {
 		medicalRecordsFromJson.add(record);
+	}
+
+	public ArrayList<HabitantAndRecords> getHabitantsAndRecordList() {
+		return habitantsAndRecordList;
+	}
+
+	public void setHabitantsAndRecordList(ArrayList<HabitantAndRecords> habitantsAndRecordList) {
+		this.habitantsAndRecordList = habitantsAndRecordList;
 	}
 	
 }
