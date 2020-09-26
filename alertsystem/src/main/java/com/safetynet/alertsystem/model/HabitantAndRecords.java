@@ -1,10 +1,9 @@
 package com.safetynet.alertsystem.model;
 
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
+import java.time.temporal.ChronoUnit;
 import java.util.ArrayList;
-
-import javax.validation.constraints.Email;
-import javax.validation.constraints.NotEmpty;
-import javax.validation.constraints.Size;
 
 public class HabitantAndRecords {
 	
@@ -16,12 +15,13 @@ public class HabitantAndRecords {
 	private String phone;
 	private String email;
 	private String birthdate;
+	private Integer age;
 	private ArrayList<String> medications;
 	private ArrayList<String> allergies;
 	private Integer Id;
 	
 	public HabitantAndRecords(String firstName, String lastName, String address, String city, String zip, String phone,
-			String email, String birthdate, ArrayList<String> medications, ArrayList<String> allergies, Integer id) {
+			String email, String birthdate, Integer age, ArrayList<String> medications, ArrayList<String> allergies, Integer id) {
 		super();
 		this.firstName = firstName;
 		this.lastName = lastName;
@@ -31,11 +31,12 @@ public class HabitantAndRecords {
 		this.phone = phone;
 		this.email = email;
 		this.birthdate = birthdate;
+		this.age = age;
 		this.medications = medications;
 		this.allergies = allergies;
 		Id = id;
 	}
-
+	
 	public HabitantAndRecords() {
 		// empty constructor for the addPersonInfoForm() method
 	}
@@ -103,6 +104,14 @@ public class HabitantAndRecords {
 	public void setBirthdate(String birthdate) {
 		this.birthdate = birthdate;
 	}
+	
+	public Integer getAge() {
+		return age;
+	}
+
+	public void setAge(Integer age) {
+		this.age = age;
+	}
 
 	public ArrayList<String> getMedications() {
 		return medications;
@@ -126,5 +135,20 @@ public class HabitantAndRecords {
 
 	public void setId(Integer id) {
 		Id = id;
+	}
+
+	public Integer calculateAge(String birthdate2) {
+		
+		DateTimeFormatter formatter = DateTimeFormatter.ofPattern("MM/d/yyyy");
+
+		//convert String to LocalDate
+		LocalDate localBirthDate = LocalDate.parse(birthdate2, formatter);
+		LocalDate today = LocalDate.now();
+		
+		Integer years = (int) ChronoUnit.YEARS.between(localBirthDate, today);
+		
+		setAge(years);
+		
+		return years;
 	}
 }
