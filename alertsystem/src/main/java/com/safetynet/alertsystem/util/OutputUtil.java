@@ -5,11 +5,15 @@ import java.time.format.DateTimeFormatter;
 import java.time.temporal.ChronoUnit;
 import java.util.ArrayList;
 
+import com.safetynet.alertsystem.model.FireStations;
 import com.safetynet.alertsystem.model.MedicalRecords;
+import com.safetynet.alertsystem.repository.FireStationRepository;
 
 public class OutputUtil {
 	// TODO Call it SummaryUtil
-
+	
+	FireStationRepository fireRepo = new FireStationRepository();
+	
 	public Integer findNumberOfChildren(ArrayList<MedicalRecords> medicalRecords) {
 		
 		Integer numberOfChildren = 0;
@@ -55,6 +59,19 @@ public class OutputUtil {
 		}
 
 		return numberOfAdults;
+	}
+
+	public String findStationFromAddress(String address) {
+		
+		ArrayList<FireStations> fireStations = fireRepo.getFirestations();
+		FireStations searchedStation = new FireStations();
+		
+		for (FireStations station: fireStations) {
+				if (station.getAddress().equals(address)) {
+					searchedStation = station;
+			}
+		}
+		return searchedStation.getStation().toString();
 	}
 
 }
