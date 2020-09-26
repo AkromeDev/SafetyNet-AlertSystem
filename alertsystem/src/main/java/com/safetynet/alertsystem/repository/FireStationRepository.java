@@ -50,7 +50,6 @@ public class FireStationRepository {
 			}
 		}
 		return chosenFireStation;
-		// TODO Ninick should I test as I create code or should I wait until my code is approximately ready?
 	}
 	
 	public ArrayList<PersonalInformation> findPeopleInFireStationAreaByAddress(ArrayList<FireStations> fireStations) {
@@ -88,14 +87,16 @@ public class FireStationRepository {
 
 	public HashMap<String, ArrayList<HabitantAndRecords>> mergeWithMedicalRecords(ArrayList<PersonalInformation> peopleList) {
 		
-		ArrayList<HabitantAndRecords> habitantsAndRecordList = modelDAO.mergeWithMedicalRecords(peopleList);
+		ArrayList<HabitantAndRecords> habitantsAndRecordList = ModelDAO.mergeWithMedicalRecords(peopleList);
 		
 		HashMap<String, ArrayList<HabitantAndRecords>> householdsMap = new HashMap<String, ArrayList<HabitantAndRecords>>();
 		
 			for (HabitantAndRecords har: habitantsAndRecordList) {
 				if (!householdsMap.containsKey(har.getAddress())) {
+					
 					ArrayList<HabitantAndRecords> newKeyList = new ArrayList<HabitantAndRecords>();
 					newKeyList.add(har);
+					
 					householdsMap.put(har.getAddress(), newKeyList);
 					
 				} else {
@@ -103,5 +104,22 @@ public class FireStationRepository {
 				}
 			}
 		return householdsMap;
+	}
+
+	public ArrayList<HabitantAndRecords> getPeopleFromAddress(String address) {
+		
+		ArrayList<HabitantAndRecords> peopleList = new ArrayList<HabitantAndRecords>();
+		
+		for (HabitantAndRecords person: ModelDAO.mergeWithMedicalRecords(modelDAO.getPeopleFromJson())) {
+				if (person.getAddress().equals(address)) {
+					peopleList.add(person);
+			}
+		}
+		return peopleList;
+	}
+
+	public ArrayList<FireStations> getFirestations() {
+		
+		return modelDAO.getFireStationFromJson();
 	}
 }

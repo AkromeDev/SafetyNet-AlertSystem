@@ -47,7 +47,7 @@ public class FireStationController {
 		
 		numberofAdultsAndChildren.put("peopleNearFireStation",(Object)jsonPeopleArray);
 		
-		return new ResponseEntity<String>(numberofAdultsAndChildren.toString(), HttpStatus.OK);
+		return new ResponseEntity<String>(numberofAdultsAndChildren.toString(1), HttpStatus.OK);
 	}
 	
 	@ResponseBody
@@ -62,7 +62,7 @@ public class FireStationController {
 		
 		jsonPeopleArray = fireStationService.deleteAllButPhoneFromJson(jsonPeopleArray);
 		
-		return new ResponseEntity<String>(jsonPeopleArray.toString(), HttpStatus.OK);
+		return new ResponseEntity<String>(jsonPeopleArray.toString(1), HttpStatus.OK);
 	}
 	
 	@ResponseBody
@@ -78,6 +78,21 @@ public class FireStationController {
 		JSONObject householdJsonObject = new JSONObject(householdsMap);
 		
 		return new ResponseEntity<String>(householdJsonObject.toString(), HttpStatus.OK);
+	}
+	
+	@ResponseBody
+	@GetMapping(value="/fire")
+	public ResponseEntity<String> getStationFromAdress(@RequestParam String address) {
+		
+		ArrayList<HabitantAndRecords> peopleList = fireStationService.getPeopleFromAddress(address);
+		JSONArray jsonPeopleArray = new JSONArray(peopleList);
+		jsonPeopleArray = fireStationService.deleteAddressCityZipEmailBirthdateFromJson(jsonPeopleArray);
+		
+		JSONObject reponsibleStationAndPeople = fireStationService.findStationFromAddress(address);
+		
+		reponsibleStationAndPeople.put("peopleNearFireStation",(Object)jsonPeopleArray);
+		
+		return new ResponseEntity<String>(reponsibleStationAndPeople.toString(1), HttpStatus.OK);
 	}
 	
 }

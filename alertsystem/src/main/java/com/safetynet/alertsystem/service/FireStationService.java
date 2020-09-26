@@ -85,4 +85,57 @@ public class FireStationService {
 		
 		return fireStationRepo.mergeWithMedicalRecords(peopleList);
 	}
+
+	public ArrayList<HabitantAndRecords> getPeopleFromAddress(String address) {
+		
+		return fireStationRepo.getPeopleFromAddress(address);
+	}
+
+	public JSONArray deleteAddressCityZipEmailBirthdateFromJson(JSONArray jsonArray) {
+
+		JSONArray uptdatedJsonArray = new JSONArray();
+		
+        for (int i = 0; i < jsonArray.length(); i++) {
+        	
+            JSONObject jsonObject = (JSONObject) jsonArray.get(i);
+            
+            jsonObject.remove("address");
+    		jsonObject.remove("city");
+    		jsonObject.remove("zip");
+    		jsonObject.remove("email");
+    		jsonObject.remove("birthdate");
+    		
+    		uptdatedJsonArray.put(jsonObject);
+        }
+	
+		return uptdatedJsonArray;
+	}
+
+	public JSONObject findStationFromAddress(String address) {
+		
+		HashMap<String, String> data = new HashMap<String, String>();
+		
+		data.put("responsibleStation", util.findStationFromAddress(address));
+		
+		return new JSONObject(data);
+	}
+	
+//	public JSONObject deleteAdCiZiEmBiId(JSONObject householdsObject) {
+//		 TODO delete if not useed in the presentation of the project
+//		
+//		JSONObject updatedObject = new JSONObject();
+//		
+//		for (int i = 0; i < ((List<PersonalInformation>) householdsObject).size(); i++) {
+//			
+//			
+//        	householdsObject.remove("address");
+//        	householdsObject.remove("city");
+//        	householdsObject.remove("zip");
+//        	householdsObject.remove("email");
+//        	householdsObject.remove("birthdate");
+//        	householdsObject.remove("id");
+//		}
+//	
+//		return householdsObject;
+//	}
 }
