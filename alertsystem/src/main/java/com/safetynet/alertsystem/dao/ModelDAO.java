@@ -66,8 +66,6 @@ public class ModelDAO {
 		
 		loadDataFromJson();
 		
-		addAllDataToLists();
-		
 		JSONArray persons = json.getJSONArray("persons");
 		
 		for(int i = 0; i < persons.length(); i++) {
@@ -96,6 +94,8 @@ public class ModelDAO {
 			
 			peopleFromJson.add(personInfo);
 		}
+		
+		addAllDataToLists();
 		
 		return peopleFromJson;
 	}
