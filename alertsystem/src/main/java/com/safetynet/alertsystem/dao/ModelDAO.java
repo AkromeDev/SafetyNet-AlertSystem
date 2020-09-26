@@ -25,7 +25,7 @@ public class ModelDAO {
 	private static ArrayList<PersonalInformation> peopleFromJson = new ArrayList<PersonalInformation>();
 	private static ArrayList<FireStations> fireStationFromJson = new ArrayList<FireStations>();
 	private static ArrayList<MedicalRecords> medicalRecordsFromJson = new ArrayList<MedicalRecords>();
-	private ArrayList<HabitantAndRecords> habitantsAndRecordList = new ArrayList<HabitantAndRecords>();
+	private static ArrayList<HabitantAndRecords> habitantsAndRecordList = new ArrayList<HabitantAndRecords>();
 
 	/**
 	 * @return a populated ArrayList of PersonalInformation
@@ -58,6 +58,8 @@ public class ModelDAO {
 			fetchFireStationsFromJson();
 		
 			fetchMedicalRecordsFromJson();
+			
+			mergeWithMedicalRecords(peopleFromJson);
 	}
 	
 	public static ArrayList<PersonalInformation> fetchPersonalInformationFromJson() {
@@ -98,7 +100,7 @@ public class ModelDAO {
 		return peopleFromJson;
 	}
 	
-	public ArrayList<HabitantAndRecords> mergeWithMedicalRecords(ArrayList<PersonalInformation> peopleList) {
+	public static ArrayList<HabitantAndRecords> mergeWithMedicalRecords(ArrayList<PersonalInformation> peopleList) {
 		
 		for(PersonalInformation person : peopleList) {
 			for(MedicalRecords record : medicalRecordsFromJson) {
@@ -113,6 +115,7 @@ public class ModelDAO {
 					habAndRe.setPhone(person.getPhone());
 					habAndRe.setEmail(person.getEmail());
 					habAndRe.setBirthdate(record.getBirthdate());
+					habAndRe.calculateAge(record.getBirthdate());
 					habAndRe.setMedications(record.getMedications());
 					habAndRe.setAllergies(record.getAllergies());
 					
@@ -238,7 +241,7 @@ public class ModelDAO {
 	}
 
 	public void setHabitantsAndRecordList(ArrayList<HabitantAndRecords> habitantsAndRecordList) {
-		this.habitantsAndRecordList = habitantsAndRecordList;
+		ModelDAO.habitantsAndRecordList = habitantsAndRecordList;
 	}
 	
 }
