@@ -71,4 +71,35 @@ public class PeopleController {
 		return new ResponseEntity<String>(household.toString(), HttpStatus.OK);
 	}
 	
+	@ResponseBody
+	@GetMapping(value="/personInfo")
+	public ResponseEntity<String> personInfo(@RequestParam String firstName, String lastName) {
+		
+		logger.info("HTTP GET request recieved at /personInfo?firstName=X&lastName=Y URL");
+		
+		ArrayList<HabitantAndRecords> personInfo = peopleService.getPersonInfo(firstName, lastName);
+		
+		JSONArray personJsonArray = new JSONArray(personInfo);
+		
+		personJsonArray = peopleService.deleteCityZipPhoneFromJson(personJsonArray);
+		
+		return new ResponseEntity<String>(personJsonArray.toString(), HttpStatus.OK);
+		
+		// TODO make the param some ArrayList
+	}
+
+	@ResponseBody
+	@GetMapping(value="/communityEmail")
+	public ResponseEntity<String> getEmailsFromCity(@RequestParam String city) {
+		
+		logger.info("HTTP GET request recieved at /personInfo?firstName=X&lastName=Y URL");
+		
+		ArrayList<PersonalInformation> peopleMails = peopleService.getPeopleMails(city);
+		
+		JSONArray mailsJsonArray = new JSONArray(peopleMails);
+		
+		mailsJsonArray = peopleService.deleteAllButMailFromJson(mailsJsonArray);
+		
+		return new ResponseEntity<String>(mailsJsonArray.toString(), HttpStatus.OK);
+	}
 }

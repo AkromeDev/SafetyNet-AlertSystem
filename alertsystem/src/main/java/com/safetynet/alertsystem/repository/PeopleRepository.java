@@ -20,104 +20,6 @@ public class PeopleRepository {
 	
 	ModelDAO modelDAO = new ModelDAO();
 	
-	private ArrayList<PersonalInformation> habitantsList = new ArrayList<PersonalInformation>();
-	private ArrayList<PersonalInformation> peopleFromStationList = new ArrayList<PersonalInformation>();
-	private ArrayList<FireStations> fireStationList = new ArrayList<FireStations>();
-	private ArrayList<MedicalRecords> medicalRecords = new ArrayList<MedicalRecords>();
-
-	public ArrayList<PersonalInformation> getPeopleFromStation(ArrayList<Integer> station) {
-		
-		fireStationList = ModelDAO.fetchFireStationsFromJson();
-		
-		ArrayList<FireStations> fireStations = findFireStationAreasByNumber(station);
-		
- 		habitantsList = modelDAO.getPeopleFromJson();
-		
-		peopleFromStationList = findPeopleInFireStationAreaByAddress(fireStations);
-		
-		return peopleFromStationList;
-	}
-	
-	public ArrayList<FireStations> findFireStationAreasByNumber(ArrayList<Integer> stations) {
-		
-		ArrayList<FireStations> chosenFireStation = new ArrayList<FireStations>();
-		
-		for (Integer station: stations) {
-			for (FireStations fireStation : fireStationList) {
-				if (fireStation.getStation().equals(station)) {
-					chosenFireStation.add(fireStation);
-				} 
-			}
-		}
-		return chosenFireStation;
-	}
-	
-	public ArrayList<PersonalInformation> findPeopleInFireStationAreaByAddress(ArrayList<FireStations> fireStations) {
-		
-		peopleFromStationList.clear();
-			
-		for(FireStations fireSta: fireStations) {
-			String address = fireSta.getAddress();
-			for(PersonalInformation personInArea : habitantsList) {
-				if (personInArea.getAddress().equals(address)) {
-					peopleFromStationList.add(personInArea);
-				}
-			}
-		}
-		
-		return peopleFromStationList;
-	}
-	
-	public ArrayList<MedicalRecords> matchPeopleToMedicalRecord(ArrayList<PersonalInformation> listOfPeople) {
-		
-		ArrayList<MedicalRecords> machtedRecords = new ArrayList<MedicalRecords>();
-		
-		for(PersonalInformation person: listOfPeople) {
-			
-			medicalRecords = modelDAO.getMedicalRecordsFromJson();
-			
-			for(MedicalRecords record : medicalRecords) {
-				if (person.getFirstName().equals(record.getFirstName()) & person.getLastName().equals(record.getLasttName())) {
-					machtedRecords.add(record);
-				}
-			}
-		}
-		return machtedRecords;
-	}
-
-	public HashMap<String, ArrayList<HabitantAndRecords>> mergeWithMedicalRecords(ArrayList<PersonalInformation> peopleList) {
-		
-		ArrayList<HabitantAndRecords> habitantsAndRecordList = ModelDAO.mergeWithMedicalRecords(peopleList);
-		
-		HashMap<String, ArrayList<HabitantAndRecords>> householdsMap = new HashMap<String, ArrayList<HabitantAndRecords>>();
-		
-			for (HabitantAndRecords har: habitantsAndRecordList) {
-				if (!householdsMap.containsKey(har.getAddress())) {
-					
-					ArrayList<HabitantAndRecords> newKeyList = new ArrayList<HabitantAndRecords>();
-					newKeyList.add(har);
-					
-					householdsMap.put(har.getAddress(), newKeyList);
-					
-				} else {
-					householdsMap.get(har.getAddress()).add(har);
-				}
-			}
-		return householdsMap;
-	}
-
-	public ArrayList<HabitantAndRecords> getPeopleFromAddress(String address) {
-		
-		ArrayList<HabitantAndRecords> peopleList = new ArrayList<HabitantAndRecords>();
-		
-		for (HabitantAndRecords person: modelDAO.getHabitantsAndRecordList()) {
-				if (person.getAddress().equals(address)) {
-					peopleList.add(person);
-			}
-		}
-		return peopleList;
-	}
-	
 	public ArrayList<HabitantAndRecords> getChildrenFromAddress(String address) {
 		
 		ArrayList<HabitantAndRecords> childrenList = new ArrayList<HabitantAndRecords>();
@@ -149,5 +51,30 @@ public class PeopleRepository {
 	public ArrayList<FireStations> getFirestations() {
 		
 		return modelDAO.getFireStationFromJson();
+	}
+
+	public ArrayList<HabitantAndRecords> getPersonInfo(String firstName, String lastName) {
+		
+		ArrayList<HabitantAndRecords> chosenOnes = new ArrayList<HabitantAndRecords>();
+		
+		for (HabitantAndRecords potentialOne: modelDAO.getHabitantsAndRecordList()) {
+				if (potentialOne.getFirstName().equals(firstName) && potentialOne.getLastName().contentEquals(lastName)) {
+					chosenOnes.add(potentialOne);
+				}
+			}
+		return chosenOnes;
+		
+	}
+
+	public ArrayList<PersonalInformation> getPeopleMails(String city) {
+		
+		ArrayList<PersonalInformation> people = new ArrayList<PersonalInformation>();
+		
+		for (PersonalInformation person: modelDAO.getPeopleFromJson()) {
+				if (person.getCity().equals(city)) {
+					people.add(person);
+			}
+		}
+		return people;
 	}
 }
