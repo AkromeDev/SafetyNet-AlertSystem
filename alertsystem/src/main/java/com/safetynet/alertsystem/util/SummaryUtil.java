@@ -9,8 +9,7 @@ import com.safetynet.alertsystem.model.FireStations;
 import com.safetynet.alertsystem.model.MedicalRecords;
 import com.safetynet.alertsystem.repository.FireStationRepository;
 
-public class OutputUtil {
-	// TODO Call it SummaryUtil
+public class SummaryUtil {
 	
 	FireStationRepository fireRepo = new FireStationRepository();
 	
