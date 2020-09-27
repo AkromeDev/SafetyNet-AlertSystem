@@ -11,13 +11,13 @@ import org.springframework.stereotype.Service;
 import com.safetynet.alertsystem.model.HabitantAndRecords;
 import com.safetynet.alertsystem.model.PersonalInformation;
 import com.safetynet.alertsystem.repository.FireStationRepository;
-import com.safetynet.alertsystem.util.OutputUtil;
+import com.safetynet.alertsystem.util.SummaryUtil;
 
 @Service
 public class FireStationService {
 
 	FireStationRepository fireStationRepo;
-	OutputUtil util = new OutputUtil();
+	SummaryUtil util = new SummaryUtil();
 	
 	@Autowired
 	public FireStationService(FireStationRepository fireStationRepo) {
@@ -119,23 +119,4 @@ public class FireStationService {
 		
 		return new JSONObject(data);
 	}
-	
-//	public JSONObject deleteAdCiZiEmBiId(JSONObject householdsObject) {
-//		 TODO delete if not useed in the presentation of the project
-//		
-//		JSONObject updatedObject = new JSONObject();
-//		
-//		for (int i = 0; i < ((List<PersonalInformation>) householdsObject).size(); i++) {
-//			
-//			
-//        	householdsObject.remove("address");
-//        	householdsObject.remove("city");
-//        	householdsObject.remove("zip");
-//        	householdsObject.remove("email");
-//        	householdsObject.remove("birthdate");
-//        	householdsObject.remove("id");
-//		}
-//	
-//		return householdsObject;
-//	}
 }

@@ -87,7 +87,7 @@ public class FireStationRepository {
 
 	public HashMap<String, ArrayList<HabitantAndRecords>> mergeWithMedicalRecords(ArrayList<PersonalInformation> peopleList) {
 		
-		ArrayList<HabitantAndRecords> habitantsAndRecordList = ModelDAO.mergeWithMedicalRecords(peopleList);
+		ArrayList<HabitantAndRecords> habitantsAndRecordList = modelDAO.getHabitantsAndRecordList();
 		
 		HashMap<String, ArrayList<HabitantAndRecords>> householdsMap = new HashMap<String, ArrayList<HabitantAndRecords>>();
 		
@@ -110,7 +110,7 @@ public class FireStationRepository {
 		
 		ArrayList<HabitantAndRecords> peopleList = new ArrayList<HabitantAndRecords>();
 		
-		for (HabitantAndRecords person: ModelDAO.mergeWithMedicalRecords(modelDAO.getPeopleFromJson())) {
+		for (HabitantAndRecords person: modelDAO.getHabitantsAndRecordList()) {
 				if (person.getAddress().equals(address)) {
 					peopleList.add(person);
 			}

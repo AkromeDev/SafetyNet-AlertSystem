@@ -66,7 +66,7 @@ public class FireStationController {
 	}
 	
 	@ResponseBody
-	@GetMapping(value="/stations")
+	@GetMapping(value="/flood/stations")
 	public ResponseEntity<String> getHouseholds(@RequestParam ArrayList<Integer> stations) {
 		
 		logger.info("HTTP GET request recieved at /stations?stations=X URL");
