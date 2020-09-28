@@ -26,7 +26,6 @@ public class FireStationController {
 	
 	private FireStationService fireStationService;
 	
-	// TODO to change when we create a FireStationService class
 	@Autowired
 	public FireStationController(FireStationService fireStationService) {
 		super();

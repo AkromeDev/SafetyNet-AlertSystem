@@ -37,7 +37,7 @@ public class AlertControllerTests {
 	
 	
 	@Test
-	@DisplayName("TODO")
+	@DisplayName("tests /person: if the controller send to the riht page/sucess status/Model size/view name")
 	public void testGetPersonalInfo() throws Exception {
 		
 		mockMvc.perform(get("/person"))
@@ -45,12 +45,11 @@ public class AlertControllerTests {
 		.andExpect(view().name("person"))
 		.andExpect(model().size(2))
 		.andExpect(model().attributeExists("person"))
-		.andExpect(model().attributeExists("numberToSave"
-				));
+		.andExpect(model().attributeExists("numberToSave"));
 	}
 	
 	@Test
-	@DisplayName("tests: if the controller send to the riht page/sucess status/Model size/view name")
+	@DisplayName("tests /addPersonForm: if the controller send to the riht page/sucess status/Model size/view name")
 	public void testShowPersonInfoForm() throws Exception {
 		
 		mockMvc.perform(get("/addPersonForm"))
@@ -73,7 +72,6 @@ public class AlertControllerTests {
 				.param("phone", "000000000")
 				.param("email", "mybad@gmail.com"))
 		.andExpect(status().is3xxRedirection());
-//		.andExpect(forwardedUrl("/person"));
 	}
 
 }
