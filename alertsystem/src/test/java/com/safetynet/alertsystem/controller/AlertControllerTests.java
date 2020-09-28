@@ -1,4 +1,4 @@
-package com.safetynet.alertsystem;
+package com.safetynet.alertsystem.controller;
 
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.post;
