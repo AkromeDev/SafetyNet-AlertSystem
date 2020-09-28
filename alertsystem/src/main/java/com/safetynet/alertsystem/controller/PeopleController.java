@@ -1,7 +1,6 @@
 package com.safetynet.alertsystem.controller;
 
 import java.util.ArrayList;
-import java.util.HashMap;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -31,23 +30,6 @@ public class PeopleController {
 		super();
 		this.peopleService = peopleService;
 	}
-	
-//	@ResponseBody
-//	@GetMapping(value="/firestation")
-//	public ResponseEntity<String> getPeopleFromFireStations(@RequestParam ArrayList<Integer> stationNumber) {
-//		
-//		logger.info("HTTP GET request recieved at /firestation?station=X URL");
-//		
-//		ArrayList<PersonalInformation> peopleList = peopleService.getPeopleFromStation(stationNumber);
-//		JSONArray jsonPeopleArray = new JSONArray(peopleList);
-//		jsonPeopleArray = peopleService.deleteCityZipEmailFromJson(jsonPeopleArray);
-//		
-//		JSONObject numberofAdultsAndChildren = peopleService.numberOfAdultsAndChildrenIntoJsonObject(peopleList);
-//		
-//		numberofAdultsAndChildren.put("peopleNearFireStation",(Object)jsonPeopleArray);
-//		
-//		return new ResponseEntity<String>(numberofAdultsAndChildren.toString(1), HttpStatus.OK);
-//	}
 	
 	@ResponseBody
 	@GetMapping(value="/childAlert")
@@ -84,8 +66,6 @@ public class PeopleController {
 		personJsonArray = peopleService.deleteCityZipPhoneFromJson(personJsonArray);
 		
 		return new ResponseEntity<String>(personJsonArray.toString(), HttpStatus.OK);
-		
-		// TODO make the param some ArrayList
 	}
 
 	@ResponseBody
