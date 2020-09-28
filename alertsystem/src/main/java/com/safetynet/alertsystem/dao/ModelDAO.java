@@ -1,7 +1,9 @@
 package com.safetynet.alertsystem.dao;
 
+import java.io.FileInputStream;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Properties;
 
 import org.apache.http.client.ClientProtocolException;
 import org.apache.logging.log4j.LogManager;
@@ -10,7 +12,6 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-import com.safetynet.alertsystem.constants.URIDataConstants;
 import com.safetynet.alertsystem.model.FireStations;
 import com.safetynet.alertsystem.model.HabitantAndRecords;
 import com.safetynet.alertsystem.model.MedicalRecords;
@@ -36,7 +37,14 @@ public class ModelDAO {
 	public static void loadDataFromJson() {
 		
 		try {
-			json = new JSONObject(NetworkDAO.request(URIDataConstants.LINK_JASON_DATA));
+			// load Properties file
+	    	Properties props = new Properties();
+	    	props.load(new FileInputStream("src/main/resources/config.properties"));
+	    	
+	    	// read the properties File
+	    	String password = props.getProperty("alert.url");
+	    	
+			json = new JSONObject(NetworkDAO.request(password));
 		} catch (JSONException e) {
 			logger.error("JSONException while loading the data from json link", e);
 			e.printStackTrace();
@@ -49,8 +57,6 @@ public class ModelDAO {
 		}
 		
 		// TODO use property file for the data link
-		// TODO Think about using gson or jsonmapper next time
-		
 	}
 	
 	public static void addAllDataToLists() {
@@ -90,7 +96,6 @@ public class ModelDAO {
 			personInfo.setPhone(phone);
 			personInfo.setEmail(email);
 			personInfo.setId(i);
-			// TODO the setId implementation has been changed (we used a id = i + 1 formula that did not really make sense) check that it did not create some new bug
 			
 			peopleFromJson.add(personInfo);
 		}
