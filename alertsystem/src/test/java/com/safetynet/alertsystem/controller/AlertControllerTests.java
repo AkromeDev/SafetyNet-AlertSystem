@@ -45,7 +45,8 @@ public class AlertControllerTests {
 		.andExpect(view().name("person"))
 		.andExpect(model().size(2))
 		.andExpect(model().attributeExists("person"))
-		.andExpect(model().attributeExists("numberToSave"));
+		.andExpect(model().attributeExists("numberToSave"
+				));
 	}
 	
 	@Test

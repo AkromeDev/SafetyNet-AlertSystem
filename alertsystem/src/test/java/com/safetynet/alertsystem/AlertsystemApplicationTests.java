@@ -11,6 +11,13 @@ import com.safetynet.alertsystem.controller.CustomErrorController;
 import com.safetynet.alertsystem.controller.FireStationController;
 import com.safetynet.alertsystem.controller.PeopleController;
 
+/**
+ * 
+ * @author j.c.
+ * This class is testing if the app is online and if the controllers are being created
+ *
+ */
+
 @SpringBootTest
 class AlertsystemApplicationTests {
 
