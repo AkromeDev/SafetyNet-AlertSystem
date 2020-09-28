@@ -30,6 +30,11 @@ public class FireStationService {
 		return fireStationRepo.getPeopleFromStation(station);
 	}
 	
+	public ArrayList<HabitantAndRecords> getHabitantsAndRecordsFromStation(ArrayList<Integer> station) {
+		
+		return fireStationRepo.getHabitantsAndRecordsFromStation(station);
+	}
+	
 	public JSONArray deleteCityZipEmailFromJson(JSONArray jsonArray) {
 		
 		JSONArray uptdatedJsonArray = new JSONArray();
@@ -81,7 +86,7 @@ public class FireStationService {
 		return new JSONObject(data);
 	}
 
-	public HashMap<String, ArrayList<HabitantAndRecords>> createHouseholds(ArrayList<PersonalInformation> peopleList) {
+	public HashMap<String, ArrayList<HabitantAndRecords>> createHouseholds(ArrayList<HabitantAndRecords> peopleList) {
 		
 		return fireStationRepo.mergeWithMedicalRecords(peopleList);
 	}

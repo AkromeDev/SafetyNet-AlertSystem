@@ -20,22 +20,41 @@ public class FireStationRepository {
 	
 	ModelDAO modelDAO = new ModelDAO();
 	
-	private ArrayList<PersonalInformation> habitantsList = new ArrayList<PersonalInformation>();
 	private ArrayList<PersonalInformation> peopleFromStationList = new ArrayList<PersonalInformation>();
-	private ArrayList<FireStations> fireStationList = new ArrayList<FireStations>();
 	private ArrayList<MedicalRecords> medicalRecords = new ArrayList<MedicalRecords>();
 
 	public ArrayList<PersonalInformation> getPeopleFromStation(ArrayList<Integer> station) {
 		
-		fireStationList = ModelDAO.fetchFireStationsFromJson();
-		
 		ArrayList<FireStations> fireStations = findFireStationAreasByNumber(station);
-		
- 		habitantsList = modelDAO.getPeopleFromJson();
 		
 		peopleFromStationList = findPeopleInFireStationAreaByAddress(fireStations);
 		
 		return peopleFromStationList;
+	}
+	
+	public ArrayList<HabitantAndRecords> getHabitantsAndRecordsFromStation(ArrayList<Integer> station) {
+		
+		ArrayList<FireStations> fireStations = findFireStationAreasByNumber(station);
+		
+		ArrayList<HabitantAndRecords> habAndRebyAd = findHabitantAndRecordsByAddress(fireStations);
+		
+		return habAndRebyAd;
+	}
+	
+	public ArrayList<HabitantAndRecords> findHabitantAndRecordsByAddress(ArrayList<FireStations> fireStations) {
+		
+		ArrayList<HabitantAndRecords> people = new ArrayList<HabitantAndRecords>();
+			
+		for(FireStations fireSta: fireStations) {
+			String address = fireSta.getAddress();
+			for(HabitantAndRecords personInArea : modelDAO.getHabitantsAndRecordList()) {
+				if (personInArea.getAddress().equals(address)) {
+					people.add(personInArea);
+				}
+			}
+		}
+		
+		return people;
 	}
 	
 	public ArrayList<FireStations> findFireStationAreasByNumber(ArrayList<Integer> stations) {
@@ -43,7 +62,7 @@ public class FireStationRepository {
 		ArrayList<FireStations> chosenFireStation = new ArrayList<FireStations>();
 		
 		for (Integer station: stations) {
-			for (FireStations fireStation : fireStationList) {
+			for (FireStations fireStation : modelDAO.getFireStationFromJson()) {
 				if (fireStation.getStation().equals(station)) {
 					chosenFireStation.add(fireStation);
 				} 
@@ -58,7 +77,7 @@ public class FireStationRepository {
 			
 		for(FireStations fireSta: fireStations) {
 			String address = fireSta.getAddress();
-			for(PersonalInformation personInArea : habitantsList) {
+			for(PersonalInformation personInArea : modelDAO.getPeopleFromJson()) {
 				if (personInArea.getAddress().equals(address)) {
 					peopleFromStationList.add(personInArea);
 				}
@@ -85,13 +104,11 @@ public class FireStationRepository {
 		return machtedRecords;
 	}
 
-	public HashMap<String, ArrayList<HabitantAndRecords>> mergeWithMedicalRecords(ArrayList<PersonalInformation> peopleList) {
-		
-		ArrayList<HabitantAndRecords> habitantsAndRecordList = modelDAO.getHabitantsAndRecordList();
+	public HashMap<String, ArrayList<HabitantAndRecords>> mergeWithMedicalRecords(ArrayList<HabitantAndRecords> peopleList) {
 		
 		HashMap<String, ArrayList<HabitantAndRecords>> householdsMap = new HashMap<String, ArrayList<HabitantAndRecords>>();
 		
-			for (HabitantAndRecords har: habitantsAndRecordList) {
+			for (HabitantAndRecords har: peopleList) {
 				if (!householdsMap.containsKey(har.getAddress())) {
 					
 					ArrayList<HabitantAndRecords> newKeyList = new ArrayList<HabitantAndRecords>();

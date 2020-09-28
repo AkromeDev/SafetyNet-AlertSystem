@@ -71,7 +71,7 @@ public class FireStationController {
 		
 		logger.info("HTTP GET request recieved at /stations?stations=X URL");
 		
-		ArrayList<PersonalInformation> peopleList = fireStationService.getPeopleFromStation(stations);
+		ArrayList<HabitantAndRecords> peopleList = fireStationService.getHabitantsAndRecordsFromStation(stations);
 		
 		HashMap<String, ArrayList<HabitantAndRecords>> householdsMap = fireStationService.createHouseholds(peopleList);
 		
