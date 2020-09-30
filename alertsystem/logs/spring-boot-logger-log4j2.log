@@ -3072,3 +3072,680 @@ You may wish to exclude one of them to ensure predictable runtime behavior
 2020-09-28 22:58:05,528 INFO o.s.b.StartupInfoLogger [main] Started FireStationControllerTest in 2.927 seconds (JVM running for 5.632)
 2020-09-28 22:58:05,834 WARN o.s.w.s.h.AbstractHandlerExceptionResolver [main] Resolved [org.springframework.web.bind.MissingServletRequestParameterException: Required ArrayList parameter 'stationNumber' is not present]
 2020-09-28 22:58:05,896 INFO o.s.s.c.ExecutorConfigurationSupport [SpringContextShutdownHook] Shutting down ExecutorService 'applicationTaskExecutor'
+2020-09-29 09:30:04,390 INFO o.s.t.c.s.AbstractTestContextBootstrapper [main] Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.safetynet.alertsystem.controller.FireStationControllerTest], using SpringBootContextLoader
+2020-09-29 09:30:04,403 INFO o.s.t.c.s.AbstractContextLoader [main] Could not detect default resource locations for test class [com.safetynet.alertsystem.controller.FireStationControllerTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+2020-09-29 09:30:04,405 INFO o.s.t.c.s.AnnotationConfigContextLoaderUtils [main] Could not detect default configuration classes for test class [com.safetynet.alertsystem.controller.FireStationControllerTest]: FireStationControllerTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2020-09-29 09:30:04,564 INFO o.s.b.t.c.SpringBootTestContextBootstrapper [main] Found @SpringBootConfiguration com.safetynet.alertsystem.AlertsystemApplication for test class com.safetynet.alertsystem.controller.FireStationControllerTest
+2020-09-29 09:30:04,699 INFO o.s.t.c.s.AbstractTestContextBootstrapper [main] Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
+2020-09-29 09:30:04,715 INFO o.s.t.c.s.AbstractTestContextBootstrapper [main] Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@24ba9639, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@38aa816f, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@53f6fd09, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@6bffbc6d, org.springframework.test.context.support.DirtiesContextTestExecutionListener@1b84f475, org.springframework.test.context.event.EventPublishingTestExecutionListener@7749bf93, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@13330ac6, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@539d019, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@39a2bb97, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@3ad2e17, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@8c3619e, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener@4331d187]
+2020-09-29 09:30:06,383 INFO o.h.v.i.u.Version [background-preinit] HV000001: Hibernate Validator 6.1.5.Final
+2020-09-29 09:30:06,469 WARN o.s.b.t.j.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer [main] 
+
+Found multiple occurrences of org.json.JSONObject on the class path:
+
+	jar:file:/Users/j.c./.m2/repository/com/vaadin/external/google/android-json/0.0.20131108.vaadin1/android-json-0.0.20131108.vaadin1.jar!/org/json/JSONObject.class
+	jar:file:/Users/j.c./.m2/repository/org/json/json/20140107/json-20140107.jar!/org/json/JSONObject.class
+
+You may wish to exclude one of them to ensure predictable runtime behavior
+
+2020-09-29 09:30:06,483 INFO o.s.b.StartupInfoLogger [main] Starting FireStationControllerTest using Java 1.8.0_251 on JCs-MacBook-Pro with PID 52574 (started by j.c. in /Users/j.c./git/AlertSystem/alertsystem)
+2020-09-29 09:30:06,486 DEBUG o.s.b.StartupInfoLogger [main] Running with Spring Boot v2.4.0-SNAPSHOT, Spring v5.3.0-RC1
+2020-09-29 09:30:06,488 INFO o.s.b.SpringApplication [main] No active profile set, falling back to default profiles: default
+2020-09-29 09:30:08,442 INFO o.s.s.c.ExecutorConfigurationSupport [main] Initializing ExecutorService 'applicationTaskExecutor'
+2020-09-29 09:30:08,603 INFO o.s.b.a.w.s.WelcomePageHandlerMapping [main] Adding welcome page template: index
+2020-09-29 09:30:09,277 INFO o.s.m.w.MockServletContext [main] Initializing Spring TestDispatcherServlet ''
+2020-09-29 09:30:09,277 INFO o.s.w.s.FrameworkServlet [main] Initializing Servlet ''
+2020-09-29 09:30:09,290 INFO o.s.b.a.e.w.EndpointLinksResolver [main] Exposing 5 endpoint(s) beneath base path '/actuator'
+2020-09-29 09:30:09,325 INFO o.s.w.s.FrameworkServlet [main] Completed initialization in 47 ms
+2020-09-29 09:30:09,371 INFO o.s.b.StartupInfoLogger [main] Started FireStationControllerTest in 3.206 seconds (JVM running for 6.592)
+2020-09-29 09:30:09,746 WARN o.s.w.s.h.AbstractHandlerExceptionResolver [main] Resolved [org.springframework.web.bind.MissingServletRequestParameterException: Required ArrayList parameter 'stationNumber' is not present]
+2020-09-29 09:30:09,806 INFO o.s.s.c.ExecutorConfigurationSupport [SpringContextShutdownHook] Shutting down ExecutorService 'applicationTaskExecutor'
+2020-09-29 09:33:36,558 INFO o.s.t.c.s.AbstractTestContextBootstrapper [main] Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.safetynet.alertsystem.controller.FireStationControllerTest], using SpringBootContextLoader
+2020-09-29 09:33:36,568 INFO o.s.t.c.s.AbstractContextLoader [main] Could not detect default resource locations for test class [com.safetynet.alertsystem.controller.FireStationControllerTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+2020-09-29 09:33:36,569 INFO o.s.t.c.s.AnnotationConfigContextLoaderUtils [main] Could not detect default configuration classes for test class [com.safetynet.alertsystem.controller.FireStationControllerTest]: FireStationControllerTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2020-09-29 09:33:36,698 INFO o.s.b.t.c.SpringBootTestContextBootstrapper [main] Found @SpringBootConfiguration com.safetynet.alertsystem.AlertsystemApplication for test class com.safetynet.alertsystem.controller.FireStationControllerTest
+2020-09-29 09:33:36,790 INFO o.s.t.c.s.AbstractTestContextBootstrapper [main] Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
+2020-09-29 09:33:36,800 INFO o.s.t.c.s.AbstractTestContextBootstrapper [main] Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@24ba9639, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@38aa816f, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@53f6fd09, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@6bffbc6d, org.springframework.test.context.support.DirtiesContextTestExecutionListener@1b84f475, org.springframework.test.context.event.EventPublishingTestExecutionListener@7749bf93, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@13330ac6, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@539d019, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@39a2bb97, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@3ad2e17, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@8c3619e, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener@4331d187]
+2020-09-29 09:33:38,326 INFO o.h.v.i.u.Version [background-preinit] HV000001: Hibernate Validator 6.1.5.Final
+2020-09-29 09:33:38,377 WARN o.s.b.t.j.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer [main] 
+
+Found multiple occurrences of org.json.JSONObject on the class path:
+
+	jar:file:/Users/j.c./.m2/repository/com/vaadin/external/google/android-json/0.0.20131108.vaadin1/android-json-0.0.20131108.vaadin1.jar!/org/json/JSONObject.class
+	jar:file:/Users/j.c./.m2/repository/org/json/json/20140107/json-20140107.jar!/org/json/JSONObject.class
+
+You may wish to exclude one of them to ensure predictable runtime behavior
+
+2020-09-29 09:33:38,388 INFO o.s.b.StartupInfoLogger [main] Starting FireStationControllerTest using Java 1.8.0_251 on JCs-MacBook-Pro with PID 52611 (started by j.c. in /Users/j.c./git/AlertSystem/alertsystem)
+2020-09-29 09:33:38,391 DEBUG o.s.b.StartupInfoLogger [main] Running with Spring Boot v2.4.0-SNAPSHOT, Spring v5.3.0-RC1
+2020-09-29 09:33:38,394 INFO o.s.b.SpringApplication [main] No active profile set, falling back to default profiles: default
+2020-09-29 09:33:40,135 INFO o.s.s.c.ExecutorConfigurationSupport [main] Initializing ExecutorService 'applicationTaskExecutor'
+2020-09-29 09:33:40,271 INFO o.s.b.a.w.s.WelcomePageHandlerMapping [main] Adding welcome page template: index
+2020-09-29 09:33:40,880 INFO o.s.m.w.MockServletContext [main] Initializing Spring TestDispatcherServlet ''
+2020-09-29 09:33:40,881 INFO o.s.w.s.FrameworkServlet [main] Initializing Servlet ''
+2020-09-29 09:33:40,894 INFO o.s.b.a.e.w.EndpointLinksResolver [main] Exposing 5 endpoint(s) beneath base path '/actuator'
+2020-09-29 09:33:40,926 INFO o.s.w.s.FrameworkServlet [main] Completed initialization in 45 ms
+2020-09-29 09:33:40,977 INFO o.s.b.StartupInfoLogger [main] Started FireStationControllerTest in 2.844 seconds (JVM running for 5.646)
+2020-09-29 09:33:41,291 INFO c.s.a.c.FireStationController [main] HTTP GET request recieved at /firestation?station=X URL
+2020-09-29 09:33:41,333 INFO o.s.s.c.ExecutorConfigurationSupport [SpringContextShutdownHook] Shutting down ExecutorService 'applicationTaskExecutor'
+2020-09-29 10:02:46,417 INFO o.s.t.c.s.AbstractTestContextBootstrapper [main] Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.safetynet.alertsystem.controller.FireStationControllerTest], using SpringBootContextLoader
+2020-09-29 10:02:46,427 INFO o.s.t.c.s.AbstractContextLoader [main] Could not detect default resource locations for test class [com.safetynet.alertsystem.controller.FireStationControllerTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+2020-09-29 10:02:46,428 INFO o.s.t.c.s.AnnotationConfigContextLoaderUtils [main] Could not detect default configuration classes for test class [com.safetynet.alertsystem.controller.FireStationControllerTest]: FireStationControllerTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2020-09-29 10:02:46,558 INFO o.s.b.t.c.SpringBootTestContextBootstrapper [main] Found @SpringBootConfiguration com.safetynet.alertsystem.AlertsystemApplication for test class com.safetynet.alertsystem.controller.FireStationControllerTest
+2020-09-29 10:02:46,658 INFO o.s.t.c.s.AbstractTestContextBootstrapper [main] Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
+2020-09-29 10:02:46,668 INFO o.s.t.c.s.AbstractTestContextBootstrapper [main] Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@24ba9639, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@38aa816f, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@53f6fd09, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@6bffbc6d, org.springframework.test.context.support.DirtiesContextTestExecutionListener@1b84f475, org.springframework.test.context.event.EventPublishingTestExecutionListener@7749bf93, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@13330ac6, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@539d019, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@39a2bb97, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@3ad2e17, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@8c3619e, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener@4331d187]
+2020-09-29 10:02:48,140 INFO o.h.v.i.u.Version [background-preinit] HV000001: Hibernate Validator 6.1.5.Final
+2020-09-29 10:02:48,198 WARN o.s.b.t.j.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer [main] 
+
+Found multiple occurrences of org.json.JSONObject on the class path:
+
+	jar:file:/Users/j.c./.m2/repository/com/vaadin/external/google/android-json/0.0.20131108.vaadin1/android-json-0.0.20131108.vaadin1.jar!/org/json/JSONObject.class
+	jar:file:/Users/j.c./.m2/repository/org/json/json/20140107/json-20140107.jar!/org/json/JSONObject.class
+
+You may wish to exclude one of them to ensure predictable runtime behavior
+
+2020-09-29 10:02:48,210 INFO o.s.b.StartupInfoLogger [main] Starting FireStationControllerTest using Java 1.8.0_251 on JCs-MacBook-Pro with PID 52898 (started by j.c. in /Users/j.c./git/AlertSystem/alertsystem)
+2020-09-29 10:02:48,213 DEBUG o.s.b.StartupInfoLogger [main] Running with Spring Boot v2.4.0-SNAPSHOT, Spring v5.3.0-RC1
+2020-09-29 10:02:48,216 INFO o.s.b.SpringApplication [main] No active profile set, falling back to default profiles: default
+2020-09-29 10:02:50,016 INFO o.s.s.c.ExecutorConfigurationSupport [main] Initializing ExecutorService 'applicationTaskExecutor'
+2020-09-29 10:02:50,157 INFO o.s.b.a.w.s.WelcomePageHandlerMapping [main] Adding welcome page template: index
+2020-09-29 10:02:50,782 INFO o.s.m.w.MockServletContext [main] Initializing Spring TestDispatcherServlet ''
+2020-09-29 10:02:50,783 INFO o.s.w.s.FrameworkServlet [main] Initializing Servlet ''
+2020-09-29 10:02:50,795 INFO o.s.b.a.e.w.EndpointLinksResolver [main] Exposing 5 endpoint(s) beneath base path '/actuator'
+2020-09-29 10:02:50,829 INFO o.s.w.s.FrameworkServlet [main] Completed initialization in 45 ms
+2020-09-29 10:02:50,880 INFO o.s.b.StartupInfoLogger [main] Started FireStationControllerTest in 2.941 seconds (JVM running for 5.692)
+2020-09-29 10:02:51,192 INFO c.s.a.c.FireStationController [main] HTTP GET request recieved at /firestation?station=X URL
+2020-09-29 10:02:51,235 INFO o.s.s.c.ExecutorConfigurationSupport [SpringContextShutdownHook] Shutting down ExecutorService 'applicationTaskExecutor'
+2020-09-29 12:11:04,567 INFO o.s.t.c.s.AbstractTestContextBootstrapper [main] Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.safetynet.alertsystem.controller.FireStationControllerTest], using SpringBootContextLoader
+2020-09-29 12:11:04,577 INFO o.s.t.c.s.AbstractContextLoader [main] Could not detect default resource locations for test class [com.safetynet.alertsystem.controller.FireStationControllerTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+2020-09-29 12:11:04,578 INFO o.s.t.c.s.AnnotationConfigContextLoaderUtils [main] Could not detect default configuration classes for test class [com.safetynet.alertsystem.controller.FireStationControllerTest]: FireStationControllerTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2020-09-29 12:11:04,708 INFO o.s.b.t.c.SpringBootTestContextBootstrapper [main] Found @SpringBootConfiguration com.safetynet.alertsystem.AlertsystemApplication for test class com.safetynet.alertsystem.controller.FireStationControllerTest
+2020-09-29 12:11:04,806 INFO o.s.t.c.s.AbstractTestContextBootstrapper [main] Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
+2020-09-29 12:11:04,817 INFO o.s.t.c.s.AbstractTestContextBootstrapper [main] Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@24ba9639, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@38aa816f, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@53f6fd09, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@6bffbc6d, org.springframework.test.context.support.DirtiesContextTestExecutionListener@1b84f475, org.springframework.test.context.event.EventPublishingTestExecutionListener@7749bf93, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@13330ac6, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@539d019, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@39a2bb97, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@3ad2e17, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@8c3619e, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener@4331d187]
+2020-09-29 12:11:06,316 INFO o.h.v.i.u.Version [background-preinit] HV000001: Hibernate Validator 6.1.5.Final
+2020-09-29 12:11:06,369 WARN o.s.b.t.j.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer [main] 
+
+Found multiple occurrences of org.json.JSONObject on the class path:
+
+	jar:file:/Users/j.c./.m2/repository/com/vaadin/external/google/android-json/0.0.20131108.vaadin1/android-json-0.0.20131108.vaadin1.jar!/org/json/JSONObject.class
+	jar:file:/Users/j.c./.m2/repository/org/json/json/20140107/json-20140107.jar!/org/json/JSONObject.class
+
+You may wish to exclude one of them to ensure predictable runtime behavior
+
+2020-09-29 12:11:06,382 INFO o.s.b.StartupInfoLogger [main] Starting FireStationControllerTest using Java 1.8.0_251 on JCs-MacBook-Pro with PID 54079 (started by j.c. in /Users/j.c./git/AlertSystem/alertsystem)
+2020-09-29 12:11:06,385 DEBUG o.s.b.StartupInfoLogger [main] Running with Spring Boot v2.4.0-SNAPSHOT, Spring v5.3.0-RC1
+2020-09-29 12:11:06,387 INFO o.s.b.SpringApplication [main] No active profile set, falling back to default profiles: default
+2020-09-29 12:11:08,181 INFO o.s.s.c.ExecutorConfigurationSupport [main] Initializing ExecutorService 'applicationTaskExecutor'
+2020-09-29 12:11:08,310 INFO o.s.b.a.w.s.WelcomePageHandlerMapping [main] Adding welcome page template: index
+2020-09-29 12:11:08,947 INFO o.s.m.w.MockServletContext [main] Initializing Spring TestDispatcherServlet ''
+2020-09-29 12:11:08,947 INFO o.s.w.s.FrameworkServlet [main] Initializing Servlet ''
+2020-09-29 12:11:08,960 INFO o.s.b.a.e.w.EndpointLinksResolver [main] Exposing 5 endpoint(s) beneath base path '/actuator'
+2020-09-29 12:11:08,995 INFO o.s.w.s.FrameworkServlet [main] Completed initialization in 48 ms
+2020-09-29 12:11:09,047 INFO o.s.b.StartupInfoLogger [main] Started FireStationControllerTest in 2.931 seconds (JVM running for 5.703)
+2020-09-29 12:11:09,361 INFO c.s.a.c.FireStationController [main] HTTP GET request recieved at /firestation?station=X URL
+2020-09-29 12:11:09,404 INFO o.s.s.c.ExecutorConfigurationSupport [SpringContextShutdownHook] Shutting down ExecutorService 'applicationTaskExecutor'
+2020-09-29 12:13:28,091 INFO o.s.t.c.s.AbstractTestContextBootstrapper [main] Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.safetynet.alertsystem.controller.FireStationControllerTest], using SpringBootContextLoader
+2020-09-29 12:13:28,102 INFO o.s.t.c.s.AbstractContextLoader [main] Could not detect default resource locations for test class [com.safetynet.alertsystem.controller.FireStationControllerTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+2020-09-29 12:13:28,103 INFO o.s.t.c.s.AnnotationConfigContextLoaderUtils [main] Could not detect default configuration classes for test class [com.safetynet.alertsystem.controller.FireStationControllerTest]: FireStationControllerTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2020-09-29 12:13:28,228 INFO o.s.b.t.c.SpringBootTestContextBootstrapper [main] Found @SpringBootConfiguration com.safetynet.alertsystem.AlertsystemApplication for test class com.safetynet.alertsystem.controller.FireStationControllerTest
+2020-09-29 12:13:28,324 INFO o.s.t.c.s.AbstractTestContextBootstrapper [main] Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
+2020-09-29 12:13:28,336 INFO o.s.t.c.s.AbstractTestContextBootstrapper [main] Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@24ba9639, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@38aa816f, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@53f6fd09, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@6bffbc6d, org.springframework.test.context.support.DirtiesContextTestExecutionListener@1b84f475, org.springframework.test.context.event.EventPublishingTestExecutionListener@7749bf93, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@13330ac6, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@539d019, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@39a2bb97, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@3ad2e17, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@8c3619e, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener@4331d187]
+2020-09-29 12:13:32,681 INFO o.h.v.i.u.Version [background-preinit] HV000001: Hibernate Validator 6.1.5.Final
+2020-09-29 12:13:32,742 WARN o.s.b.t.j.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer [main] 
+
+Found multiple occurrences of org.json.JSONObject on the class path:
+
+	jar:file:/Users/j.c./.m2/repository/com/vaadin/external/google/android-json/0.0.20131108.vaadin1/android-json-0.0.20131108.vaadin1.jar!/org/json/JSONObject.class
+	jar:file:/Users/j.c./.m2/repository/org/json/json/20140107/json-20140107.jar!/org/json/JSONObject.class
+
+You may wish to exclude one of them to ensure predictable runtime behavior
+
+2020-09-29 12:13:32,754 INFO o.s.b.StartupInfoLogger [main] Starting FireStationControllerTest using Java 1.8.0_251 on JCs-MacBook-Pro with PID 54124 (started by j.c. in /Users/j.c./git/AlertSystem/alertsystem)
+2020-09-29 12:13:32,758 DEBUG o.s.b.StartupInfoLogger [main] Running with Spring Boot v2.4.0-SNAPSHOT, Spring v5.3.0-RC1
+2020-09-29 12:13:32,761 INFO o.s.b.SpringApplication [main] No active profile set, falling back to default profiles: default
+2020-09-29 12:13:34,625 INFO o.s.s.c.ExecutorConfigurationSupport [main] Initializing ExecutorService 'applicationTaskExecutor'
+2020-09-29 12:13:34,757 INFO o.s.b.a.w.s.WelcomePageHandlerMapping [main] Adding welcome page template: index
+2020-09-29 12:13:35,376 INFO o.s.m.w.MockServletContext [main] Initializing Spring TestDispatcherServlet ''
+2020-09-29 12:13:35,376 INFO o.s.w.s.FrameworkServlet [main] Initializing Servlet ''
+2020-09-29 12:13:35,389 INFO o.s.b.a.e.w.EndpointLinksResolver [main] Exposing 5 endpoint(s) beneath base path '/actuator'
+2020-09-29 12:13:35,437 INFO o.s.w.s.FrameworkServlet [main] Completed initialization in 61 ms
+2020-09-29 12:13:35,486 INFO o.s.b.StartupInfoLogger [main] Started FireStationControllerTest in 3.0 seconds (JVM running for 8.603)
+2020-09-29 12:13:35,796 INFO c.s.a.c.FireStationController [main] HTTP GET request recieved at /firestation?station=X URL
+2020-09-29 12:13:35,836 INFO o.s.s.c.ExecutorConfigurationSupport [SpringContextShutdownHook] Shutting down ExecutorService 'applicationTaskExecutor'
+2020-09-29 12:13:57,818 INFO o.s.t.c.s.AbstractTestContextBootstrapper [main] Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.safetynet.alertsystem.controller.FireStationControllerTest], using SpringBootContextLoader
+2020-09-29 12:13:57,828 INFO o.s.t.c.s.AbstractContextLoader [main] Could not detect default resource locations for test class [com.safetynet.alertsystem.controller.FireStationControllerTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+2020-09-29 12:13:57,829 INFO o.s.t.c.s.AnnotationConfigContextLoaderUtils [main] Could not detect default configuration classes for test class [com.safetynet.alertsystem.controller.FireStationControllerTest]: FireStationControllerTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2020-09-29 12:13:57,953 INFO o.s.b.t.c.SpringBootTestContextBootstrapper [main] Found @SpringBootConfiguration com.safetynet.alertsystem.AlertsystemApplication for test class com.safetynet.alertsystem.controller.FireStationControllerTest
+2020-09-29 12:13:58,048 INFO o.s.t.c.s.AbstractTestContextBootstrapper [main] Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
+2020-09-29 12:13:58,059 INFO o.s.t.c.s.AbstractTestContextBootstrapper [main] Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@24ba9639, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@38aa816f, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@53f6fd09, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@6bffbc6d, org.springframework.test.context.support.DirtiesContextTestExecutionListener@1b84f475, org.springframework.test.context.event.EventPublishingTestExecutionListener@7749bf93, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@13330ac6, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@539d019, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@39a2bb97, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@3ad2e17, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@8c3619e, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener@4331d187]
+2020-09-29 12:13:59,638 INFO o.h.v.i.u.Version [background-preinit] HV000001: Hibernate Validator 6.1.5.Final
+2020-09-29 12:13:59,696 WARN o.s.b.t.j.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer [main] 
+
+Found multiple occurrences of org.json.JSONObject on the class path:
+
+	jar:file:/Users/j.c./.m2/repository/com/vaadin/external/google/android-json/0.0.20131108.vaadin1/android-json-0.0.20131108.vaadin1.jar!/org/json/JSONObject.class
+	jar:file:/Users/j.c./.m2/repository/org/json/json/20140107/json-20140107.jar!/org/json/JSONObject.class
+
+You may wish to exclude one of them to ensure predictable runtime behavior
+
+2020-09-29 12:13:59,709 INFO o.s.b.StartupInfoLogger [main] Starting FireStationControllerTest using Java 1.8.0_251 on JCs-MacBook-Pro with PID 54129 (started by j.c. in /Users/j.c./git/AlertSystem/alertsystem)
+2020-09-29 12:13:59,712 DEBUG o.s.b.StartupInfoLogger [main] Running with Spring Boot v2.4.0-SNAPSHOT, Spring v5.3.0-RC1
+2020-09-29 12:13:59,714 INFO o.s.b.SpringApplication [main] No active profile set, falling back to default profiles: default
+2020-09-29 12:14:01,468 INFO o.s.s.c.ExecutorConfigurationSupport [main] Initializing ExecutorService 'applicationTaskExecutor'
+2020-09-29 12:14:01,597 INFO o.s.b.a.w.s.WelcomePageHandlerMapping [main] Adding welcome page template: index
+2020-09-29 12:14:02,216 INFO o.s.m.w.MockServletContext [main] Initializing Spring TestDispatcherServlet ''
+2020-09-29 12:14:02,217 INFO o.s.w.s.FrameworkServlet [main] Initializing Servlet ''
+2020-09-29 12:14:02,229 INFO o.s.b.a.e.w.EndpointLinksResolver [main] Exposing 5 endpoint(s) beneath base path '/actuator'
+2020-09-29 12:14:02,261 INFO o.s.w.s.FrameworkServlet [main] Completed initialization in 44 ms
+2020-09-29 12:14:02,309 INFO o.s.b.StartupInfoLogger [main] Started FireStationControllerTest in 2.865 seconds (JVM running for 5.729)
+2020-09-29 12:14:02,644 WARN o.s.w.s.h.AbstractHandlerExceptionResolver [main] Resolved [org.springframework.web.bind.MissingServletRequestParameterException: Required ArrayList parameter 'stationNumber' is not present]
+2020-09-29 12:14:02,699 INFO o.s.s.c.ExecutorConfigurationSupport [SpringContextShutdownHook] Shutting down ExecutorService 'applicationTaskExecutor'
+2020-09-29 12:14:15,983 INFO o.s.t.c.s.AbstractTestContextBootstrapper [main] Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.safetynet.alertsystem.controller.FireStationControllerTest], using SpringBootContextLoader
+2020-09-29 12:14:15,995 INFO o.s.t.c.s.AbstractContextLoader [main] Could not detect default resource locations for test class [com.safetynet.alertsystem.controller.FireStationControllerTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+2020-09-29 12:14:16,003 INFO o.s.t.c.s.AnnotationConfigContextLoaderUtils [main] Could not detect default configuration classes for test class [com.safetynet.alertsystem.controller.FireStationControllerTest]: FireStationControllerTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2020-09-29 12:14:16,132 INFO o.s.b.t.c.SpringBootTestContextBootstrapper [main] Found @SpringBootConfiguration com.safetynet.alertsystem.AlertsystemApplication for test class com.safetynet.alertsystem.controller.FireStationControllerTest
+2020-09-29 12:14:16,231 INFO o.s.t.c.s.AbstractTestContextBootstrapper [main] Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
+2020-09-29 12:14:16,241 INFO o.s.t.c.s.AbstractTestContextBootstrapper [main] Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@24ba9639, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@38aa816f, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@53f6fd09, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@6bffbc6d, org.springframework.test.context.support.DirtiesContextTestExecutionListener@1b84f475, org.springframework.test.context.event.EventPublishingTestExecutionListener@7749bf93, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@13330ac6, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@539d019, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@39a2bb97, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@3ad2e17, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@8c3619e, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener@4331d187]
+2020-09-29 12:14:17,747 INFO o.h.v.i.u.Version [background-preinit] HV000001: Hibernate Validator 6.1.5.Final
+2020-09-29 12:14:17,804 WARN o.s.b.t.j.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer [main] 
+
+Found multiple occurrences of org.json.JSONObject on the class path:
+
+	jar:file:/Users/j.c./.m2/repository/com/vaadin/external/google/android-json/0.0.20131108.vaadin1/android-json-0.0.20131108.vaadin1.jar!/org/json/JSONObject.class
+	jar:file:/Users/j.c./.m2/repository/org/json/json/20140107/json-20140107.jar!/org/json/JSONObject.class
+
+You may wish to exclude one of them to ensure predictable runtime behavior
+
+2020-09-29 12:14:17,817 INFO o.s.b.StartupInfoLogger [main] Starting FireStationControllerTest using Java 1.8.0_251 on JCs-MacBook-Pro with PID 54131 (started by j.c. in /Users/j.c./git/AlertSystem/alertsystem)
+2020-09-29 12:14:17,820 DEBUG o.s.b.StartupInfoLogger [main] Running with Spring Boot v2.4.0-SNAPSHOT, Spring v5.3.0-RC1
+2020-09-29 12:14:17,823 INFO o.s.b.SpringApplication [main] No active profile set, falling back to default profiles: default
+2020-09-29 12:14:19,653 INFO o.s.s.c.ExecutorConfigurationSupport [main] Initializing ExecutorService 'applicationTaskExecutor'
+2020-09-29 12:14:19,793 INFO o.s.b.a.w.s.WelcomePageHandlerMapping [main] Adding welcome page template: index
+2020-09-29 12:14:20,451 INFO o.s.m.w.MockServletContext [main] Initializing Spring TestDispatcherServlet ''
+2020-09-29 12:14:20,452 INFO o.s.w.s.FrameworkServlet [main] Initializing Servlet ''
+2020-09-29 12:14:20,468 INFO o.s.b.a.e.w.EndpointLinksResolver [main] Exposing 5 endpoint(s) beneath base path '/actuator'
+2020-09-29 12:14:20,504 INFO o.s.w.s.FrameworkServlet [main] Completed initialization in 52 ms
+2020-09-29 12:14:20,558 INFO o.s.b.StartupInfoLogger [main] Started FireStationControllerTest in 3.007 seconds (JVM running for 5.809)
+2020-09-29 12:14:20,917 INFO o.s.s.c.ExecutorConfigurationSupport [SpringContextShutdownHook] Shutting down ExecutorService 'applicationTaskExecutor'
+2020-09-29 12:46:41,694 INFO o.s.t.c.s.AbstractTestContextBootstrapper [main] Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.safetynet.alertsystem.controller.FireStationControllerTest], using SpringBootContextLoader
+2020-09-29 12:46:41,705 INFO o.s.t.c.s.AbstractContextLoader [main] Could not detect default resource locations for test class [com.safetynet.alertsystem.controller.FireStationControllerTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+2020-09-29 12:46:41,706 INFO o.s.t.c.s.AnnotationConfigContextLoaderUtils [main] Could not detect default configuration classes for test class [com.safetynet.alertsystem.controller.FireStationControllerTest]: FireStationControllerTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2020-09-29 12:46:41,835 INFO o.s.b.t.c.SpringBootTestContextBootstrapper [main] Found @SpringBootConfiguration com.safetynet.alertsystem.AlertsystemApplication for test class com.safetynet.alertsystem.controller.FireStationControllerTest
+2020-09-29 12:46:41,934 INFO o.s.t.c.s.AbstractTestContextBootstrapper [main] Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
+2020-09-29 12:46:41,945 INFO o.s.t.c.s.AbstractTestContextBootstrapper [main] Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@24ba9639, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@38aa816f, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@53f6fd09, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@6bffbc6d, org.springframework.test.context.support.DirtiesContextTestExecutionListener@1b84f475, org.springframework.test.context.event.EventPublishingTestExecutionListener@7749bf93, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@13330ac6, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@539d019, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@39a2bb97, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@3ad2e17, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@8c3619e, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener@4331d187]
+2020-09-29 12:46:43,541 INFO o.h.v.i.u.Version [background-preinit] HV000001: Hibernate Validator 6.1.5.Final
+2020-09-29 12:46:43,597 WARN o.s.b.t.j.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer [main] 
+
+Found multiple occurrences of org.json.JSONObject on the class path:
+
+	jar:file:/Users/j.c./.m2/repository/com/vaadin/external/google/android-json/0.0.20131108.vaadin1/android-json-0.0.20131108.vaadin1.jar!/org/json/JSONObject.class
+	jar:file:/Users/j.c./.m2/repository/org/json/json/20140107/json-20140107.jar!/org/json/JSONObject.class
+
+You may wish to exclude one of them to ensure predictable runtime behavior
+
+2020-09-29 12:46:43,610 INFO o.s.b.StartupInfoLogger [main] Starting FireStationControllerTest using Java 1.8.0_251 on JCs-MacBook-Pro with PID 54468 (started by j.c. in /Users/j.c./git/AlertSystem/alertsystem)
+2020-09-29 12:46:43,613 DEBUG o.s.b.StartupInfoLogger [main] Running with Spring Boot v2.4.0-SNAPSHOT, Spring v5.3.0-RC1
+2020-09-29 12:46:43,615 INFO o.s.b.SpringApplication [main] No active profile set, falling back to default profiles: default
+2020-09-29 12:46:45,422 INFO o.s.s.c.ExecutorConfigurationSupport [main] Initializing ExecutorService 'applicationTaskExecutor'
+2020-09-29 12:46:45,564 INFO o.s.b.a.w.s.WelcomePageHandlerMapping [main] Adding welcome page template: index
+2020-09-29 12:46:46,203 INFO o.s.m.w.MockServletContext [main] Initializing Spring TestDispatcherServlet ''
+2020-09-29 12:46:46,203 INFO o.s.w.s.FrameworkServlet [main] Initializing Servlet ''
+2020-09-29 12:46:46,214 INFO o.s.b.a.e.w.EndpointLinksResolver [main] Exposing 5 endpoint(s) beneath base path '/actuator'
+2020-09-29 12:46:46,246 INFO o.s.w.s.FrameworkServlet [main] Completed initialization in 43 ms
+2020-09-29 12:46:46,293 INFO o.s.b.StartupInfoLogger [main] Started FireStationControllerTest in 2.96 seconds (JVM running for 5.809)
+2020-09-29 12:46:46,657 INFO c.s.a.c.FireStationController [main] HTTP GET request recieved at /firestation?station=X URL
+2020-09-29 12:46:46,702 INFO o.s.s.c.ExecutorConfigurationSupport [SpringContextShutdownHook] Shutting down ExecutorService 'applicationTaskExecutor'
+2020-09-29 12:47:56,768 INFO o.s.t.c.s.AbstractTestContextBootstrapper [main] Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.safetynet.alertsystem.controller.FireStationControllerTest], using SpringBootContextLoader
+2020-09-29 12:47:56,778 INFO o.s.t.c.s.AbstractContextLoader [main] Could not detect default resource locations for test class [com.safetynet.alertsystem.controller.FireStationControllerTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+2020-09-29 12:47:56,779 INFO o.s.t.c.s.AnnotationConfigContextLoaderUtils [main] Could not detect default configuration classes for test class [com.safetynet.alertsystem.controller.FireStationControllerTest]: FireStationControllerTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2020-09-29 12:47:56,903 INFO o.s.b.t.c.SpringBootTestContextBootstrapper [main] Found @SpringBootConfiguration com.safetynet.alertsystem.AlertsystemApplication for test class com.safetynet.alertsystem.controller.FireStationControllerTest
+2020-09-29 12:47:57,001 INFO o.s.t.c.s.AbstractTestContextBootstrapper [main] Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
+2020-09-29 12:47:57,015 INFO o.s.t.c.s.AbstractTestContextBootstrapper [main] Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@24ba9639, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@38aa816f, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@53f6fd09, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@6bffbc6d, org.springframework.test.context.support.DirtiesContextTestExecutionListener@1b84f475, org.springframework.test.context.event.EventPublishingTestExecutionListener@7749bf93, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@13330ac6, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@539d019, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@39a2bb97, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@3ad2e17, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@8c3619e, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener@4331d187]
+2020-09-29 12:47:58,704 INFO o.h.v.i.u.Version [background-preinit] HV000001: Hibernate Validator 6.1.5.Final
+2020-09-29 12:47:58,762 WARN o.s.b.t.j.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer [main] 
+
+Found multiple occurrences of org.json.JSONObject on the class path:
+
+	jar:file:/Users/j.c./.m2/repository/com/vaadin/external/google/android-json/0.0.20131108.vaadin1/android-json-0.0.20131108.vaadin1.jar!/org/json/JSONObject.class
+	jar:file:/Users/j.c./.m2/repository/org/json/json/20140107/json-20140107.jar!/org/json/JSONObject.class
+
+You may wish to exclude one of them to ensure predictable runtime behavior
+
+2020-09-29 12:47:58,777 INFO o.s.b.StartupInfoLogger [main] Starting FireStationControllerTest using Java 1.8.0_251 on JCs-MacBook-Pro with PID 54478 (started by j.c. in /Users/j.c./git/AlertSystem/alertsystem)
+2020-09-29 12:47:58,780 DEBUG o.s.b.StartupInfoLogger [main] Running with Spring Boot v2.4.0-SNAPSHOT, Spring v5.3.0-RC1
+2020-09-29 12:47:58,782 INFO o.s.b.SpringApplication [main] No active profile set, falling back to default profiles: default
+2020-09-29 12:48:00,564 INFO o.s.s.c.ExecutorConfigurationSupport [main] Initializing ExecutorService 'applicationTaskExecutor'
+2020-09-29 12:48:00,717 INFO o.s.b.a.w.s.WelcomePageHandlerMapping [main] Adding welcome page template: index
+2020-09-29 12:48:01,348 INFO o.s.m.w.MockServletContext [main] Initializing Spring TestDispatcherServlet ''
+2020-09-29 12:48:01,348 INFO o.s.w.s.FrameworkServlet [main] Initializing Servlet ''
+2020-09-29 12:48:01,360 INFO o.s.b.a.e.w.EndpointLinksResolver [main] Exposing 5 endpoint(s) beneath base path '/actuator'
+2020-09-29 12:48:01,393 INFO o.s.w.s.FrameworkServlet [main] Completed initialization in 45 ms
+2020-09-29 12:48:01,441 INFO o.s.b.StartupInfoLogger [main] Started FireStationControllerTest in 2.933 seconds (JVM running for 5.901)
+2020-09-29 12:48:01,749 INFO c.s.a.c.FireStationController [main] HTTP GET request recieved at /firestation?station=X URL
+2020-09-29 12:48:01,793 INFO o.s.s.c.ExecutorConfigurationSupport [SpringContextShutdownHook] Shutting down ExecutorService 'applicationTaskExecutor'
+2020-09-29 12:57:22,235 INFO c.s.a.AlertsystemApplication [main] Initializing SafetyNet app
+2020-09-29 12:57:22,570 INFO o.h.v.i.u.Version [background-preinit] HV000001: Hibernate Validator 6.1.5.Final
+2020-09-29 12:57:22,612 INFO o.s.b.StartupInfoLogger [main] Starting AlertsystemApplication using Java 1.8.0_251 on JCs-MacBook-Pro with PID 54594 (/Users/j.c./git/AlertSystem/alertsystem/target/classes started by j.c. in /Users/j.c./git/AlertSystem/alertsystem)
+2020-09-29 12:57:22,614 DEBUG o.s.b.StartupInfoLogger [main] Running with Spring Boot v2.4.0-SNAPSHOT, Spring v5.3.0-RC1
+2020-09-29 12:57:22,615 INFO o.s.b.SpringApplication [main] No active profile set, falling back to default profiles: default
+2020-09-29 12:57:23,575 INFO o.s.b.w.e.t.TomcatWebServer [main] Tomcat initialized with port(s): 8080 (http)
+2020-09-29 12:57:23,592 INFO o.a.j.l.DirectJDKLog [main] Initializing ProtocolHandler ["http-nio-8080"]
+2020-09-29 12:57:23,593 INFO o.a.j.l.DirectJDKLog [main] Starting service [Tomcat]
+2020-09-29 12:57:23,594 INFO o.a.j.l.DirectJDKLog [main] Starting Servlet engine: [Apache Tomcat/9.0.38]
+2020-09-29 12:57:23,666 INFO o.a.j.l.DirectJDKLog [main] Initializing Spring embedded WebApplicationContext
+2020-09-29 12:57:23,666 INFO o.s.b.w.s.c.ServletWebServerApplicationContext [main] Root WebApplicationContext: initialization completed in 1015 ms
+2020-09-29 12:57:23,965 INFO o.s.s.c.ExecutorConfigurationSupport [main] Initializing ExecutorService 'applicationTaskExecutor'
+2020-09-29 12:57:24,029 INFO o.s.b.a.w.s.WelcomePageHandlerMapping [main] Adding welcome page template: index
+2020-09-29 12:57:24,252 INFO o.s.b.a.e.w.EndpointLinksResolver [main] Exposing 5 endpoint(s) beneath base path '/actuator'
+2020-09-29 12:57:24,278 INFO o.a.j.l.DirectJDKLog [main] Starting ProtocolHandler ["http-nio-8080"]
+2020-09-29 12:57:24,303 WARN o.s.c.s.AbstractApplicationContext [main] Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Failed to start bean 'webServerStartStop'; nested exception is org.springframework.boot.web.server.PortInUseException: Port 8080 is already in use
+2020-09-29 12:57:24,304 INFO o.s.s.c.ExecutorConfigurationSupport [main] Shutting down ExecutorService 'applicationTaskExecutor'
+2020-09-29 12:57:24,308 INFO o.a.j.l.DirectJDKLog [main] Pausing ProtocolHandler ["http-nio-8080"]
+2020-09-29 12:57:24,308 INFO o.a.j.l.DirectJDKLog [main] Stopping service [Tomcat]
+2020-09-29 12:57:24,314 INFO o.a.j.l.DirectJDKLog [main] Stopping ProtocolHandler ["http-nio-8080"]
+2020-09-29 12:57:24,315 INFO o.a.j.l.DirectJDKLog [main] Destroying ProtocolHandler ["http-nio-8080"]
+2020-09-29 12:57:24,326 INFO o.s.b.a.l.ConditionEvaluationReportLoggingListener [main] 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2020-09-29 12:57:24,330 ERROR o.s.b.d.LoggingFailureAnalysisReporter [main] 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Web server failed to start. Port 8080 was already in use.
+
+Action:
+
+Identify and stop the process that's listening on port 8080 or configure this application to listen on another port.
+
+2020-09-29 12:57:42,802 WARN o.s.c.s.DefaultLifecycleProcessor [SpringContextShutdownHook] Failed to stop bean 'webServerGracefulShutdown'
+java.lang.BootstrapMethodError: java.lang.NoClassDefFoundError: org/springframework/boot/web/server/GracefulShutdownResult
+	at org.springframework.boot.web.servlet.context.WebServerGracefulShutdownLifecycle.stop(WebServerGracefulShutdownLifecycle.java:51) ~[spring-boot-2.4.0-SNAPSHOT.jar:2.4.0-SNAPSHOT]
+	at org.springframework.context.support.DefaultLifecycleProcessor.doStop(DefaultLifecycleProcessor.java:234) [spring-context-5.3.0-RC1.jar:5.3.0-RC1]
+	at org.springframework.context.support.DefaultLifecycleProcessor.access$300(DefaultLifecycleProcessor.java:54) [spring-context-5.3.0-RC1.jar:5.3.0-RC1]
+	at org.springframework.context.support.DefaultLifecycleProcessor$LifecycleGroup.stop(DefaultLifecycleProcessor.java:373) [spring-context-5.3.0-RC1.jar:5.3.0-RC1]
+	at org.springframework.context.support.DefaultLifecycleProcessor.stopBeans(DefaultLifecycleProcessor.java:206) [spring-context-5.3.0-RC1.jar:5.3.0-RC1]
+	at org.springframework.context.support.DefaultLifecycleProcessor.onClose(DefaultLifecycleProcessor.java:129) [spring-context-5.3.0-RC1.jar:5.3.0-RC1]
+	at org.springframework.context.support.AbstractApplicationContext.doClose(AbstractApplicationContext.java:1072) [spring-context-5.3.0-RC1.jar:5.3.0-RC1]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.doClose(ServletWebServerApplicationContext.java:171) [spring-boot-2.4.0-SNAPSHOT.jar:2.4.0-SNAPSHOT]
+	at org.springframework.context.support.AbstractApplicationContext$1.run(AbstractApplicationContext.java:997) [spring-context-5.3.0-RC1.jar:5.3.0-RC1]
+Caused by: java.lang.NoClassDefFoundError: org/springframework/boot/web/server/GracefulShutdownResult
+	... 9 more
+Caused by: java.lang.ClassNotFoundException: org.springframework.boot.web.server.GracefulShutdownResult
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:382) ~[?:1.8.0_251]
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:418) ~[?:1.8.0_251]
+	at sun.misc.Launcher$AppClassLoader.loadClass(Launcher.java:355) ~[?:1.8.0_251]
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:351) ~[?:1.8.0_251]
+	... 9 more
+2020-09-29 12:57:56,426 INFO c.s.a.AlertsystemApplication [main] Initializing SafetyNet app
+2020-09-29 12:57:56,749 INFO o.h.v.i.u.Version [background-preinit] HV000001: Hibernate Validator 6.1.5.Final
+2020-09-29 12:57:56,792 INFO o.s.b.StartupInfoLogger [main] Starting AlertsystemApplication using Java 1.8.0_251 on JCs-MacBook-Pro with PID 54602 (/Users/j.c./git/AlertSystem/alertsystem/target/classes started by j.c. in /Users/j.c./git/AlertSystem/alertsystem)
+2020-09-29 12:57:56,795 DEBUG o.s.b.StartupInfoLogger [main] Running with Spring Boot v2.4.0-SNAPSHOT, Spring v5.3.0-RC1
+2020-09-29 12:57:56,796 INFO o.s.b.SpringApplication [main] No active profile set, falling back to default profiles: default
+2020-09-29 12:57:57,684 INFO o.s.b.w.e.t.TomcatWebServer [main] Tomcat initialized with port(s): 8080 (http)
+2020-09-29 12:57:57,699 INFO o.a.j.l.DirectJDKLog [main] Initializing ProtocolHandler ["http-nio-8080"]
+2020-09-29 12:57:57,700 INFO o.a.j.l.DirectJDKLog [main] Starting service [Tomcat]
+2020-09-29 12:57:57,701 INFO o.a.j.l.DirectJDKLog [main] Starting Servlet engine: [Apache Tomcat/9.0.38]
+2020-09-29 12:57:57,757 INFO o.a.j.l.DirectJDKLog [main] Initializing Spring embedded WebApplicationContext
+2020-09-29 12:57:57,758 INFO o.s.b.w.s.c.ServletWebServerApplicationContext [main] Root WebApplicationContext: initialization completed in 928 ms
+2020-09-29 12:57:58,021 INFO o.s.s.c.ExecutorConfigurationSupport [main] Initializing ExecutorService 'applicationTaskExecutor'
+2020-09-29 12:57:58,080 INFO o.s.b.a.w.s.WelcomePageHandlerMapping [main] Adding welcome page template: index
+2020-09-29 12:57:58,289 INFO o.s.b.a.e.w.EndpointLinksResolver [main] Exposing 5 endpoint(s) beneath base path '/actuator'
+2020-09-29 12:57:58,315 INFO o.a.j.l.DirectJDKLog [main] Starting ProtocolHandler ["http-nio-8080"]
+2020-09-29 12:57:58,332 WARN o.s.c.s.AbstractApplicationContext [main] Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Failed to start bean 'webServerStartStop'; nested exception is org.springframework.boot.web.server.PortInUseException: Port 8080 is already in use
+2020-09-29 12:57:58,333 INFO o.s.s.c.ExecutorConfigurationSupport [main] Shutting down ExecutorService 'applicationTaskExecutor'
+2020-09-29 12:57:58,337 INFO o.a.j.l.DirectJDKLog [main] Pausing ProtocolHandler ["http-nio-8080"]
+2020-09-29 12:57:58,338 INFO o.a.j.l.DirectJDKLog [main] Stopping service [Tomcat]
+2020-09-29 12:57:58,342 INFO o.a.j.l.DirectJDKLog [main] Stopping ProtocolHandler ["http-nio-8080"]
+2020-09-29 12:57:58,343 INFO o.a.j.l.DirectJDKLog [main] Destroying ProtocolHandler ["http-nio-8080"]
+2020-09-29 12:57:58,354 INFO o.s.b.a.l.ConditionEvaluationReportLoggingListener [main] 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2020-09-29 12:57:58,358 ERROR o.s.b.d.LoggingFailureAnalysisReporter [main] 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Web server failed to start. Port 8080 was already in use.
+
+Action:
+
+Identify and stop the process that's listening on port 8080 or configure this application to listen on another port.
+
+2020-09-29 12:58:12,821 INFO o.s.c.s.DefaultLifecycleProcessor$LifecycleGroup [SpringContextShutdownHook] Failed to shut down 1 bean with phase value 2147483647 within timeout of 30000ms: [webServerGracefulShutdown]
+2020-09-29 12:58:12,891 INFO o.s.s.c.ExecutorConfigurationSupport [SpringContextShutdownHook] Shutting down ExecutorService 'applicationTaskExecutor'
+2020-09-29 12:58:51,536 INFO c.s.a.AlertsystemApplication [main] Initializing SafetyNet app
+2020-09-29 12:58:51,860 INFO o.h.v.i.u.Version [background-preinit] HV000001: Hibernate Validator 6.1.5.Final
+2020-09-29 12:58:51,900 INFO o.s.b.StartupInfoLogger [main] Starting AlertsystemApplication using Java 1.8.0_251 on JCs-MacBook-Pro with PID 54616 (/Users/j.c./git/AlertSystem/alertsystem/target/classes started by j.c. in /Users/j.c./git/AlertSystem/alertsystem)
+2020-09-29 12:58:51,903 DEBUG o.s.b.StartupInfoLogger [main] Running with Spring Boot v2.4.0-SNAPSHOT, Spring v5.3.0-RC1
+2020-09-29 12:58:51,904 INFO o.s.b.SpringApplication [main] No active profile set, falling back to default profiles: default
+2020-09-29 12:58:52,803 INFO o.s.b.w.e.t.TomcatWebServer [main] Tomcat initialized with port(s): 8080 (http)
+2020-09-29 12:58:52,817 INFO o.a.j.l.DirectJDKLog [main] Initializing ProtocolHandler ["http-nio-8080"]
+2020-09-29 12:58:52,818 INFO o.a.j.l.DirectJDKLog [main] Starting service [Tomcat]
+2020-09-29 12:58:52,818 INFO o.a.j.l.DirectJDKLog [main] Starting Servlet engine: [Apache Tomcat/9.0.38]
+2020-09-29 12:58:52,873 INFO o.a.j.l.DirectJDKLog [main] Initializing Spring embedded WebApplicationContext
+2020-09-29 12:58:52,873 INFO o.s.b.w.s.c.ServletWebServerApplicationContext [main] Root WebApplicationContext: initialization completed in 934 ms
+2020-09-29 12:58:53,136 INFO o.s.s.c.ExecutorConfigurationSupport [main] Initializing ExecutorService 'applicationTaskExecutor'
+2020-09-29 12:58:53,194 INFO o.s.b.a.w.s.WelcomePageHandlerMapping [main] Adding welcome page template: index
+2020-09-29 12:58:53,415 INFO o.s.b.a.e.w.EndpointLinksResolver [main] Exposing 5 endpoint(s) beneath base path '/actuator'
+2020-09-29 12:58:53,441 INFO o.a.j.l.DirectJDKLog [main] Starting ProtocolHandler ["http-nio-8080"]
+2020-09-29 12:58:53,471 INFO o.s.b.w.e.t.TomcatWebServer [main] Tomcat started on port(s): 8080 (http) with context path ''
+2020-09-29 12:58:53,486 INFO o.s.b.StartupInfoLogger [main] Started AlertsystemApplication in 1.875 seconds (JVM running for 2.593)
+2020-09-29 13:05:08,762 INFO o.a.j.l.DirectJDKLog [http-nio-8080-exec-1] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-09-29 13:05:08,764 INFO o.s.w.s.FrameworkServlet [http-nio-8080-exec-1] Initializing Servlet 'dispatcherServlet'
+2020-09-29 13:05:08,767 INFO o.s.w.s.FrameworkServlet [http-nio-8080-exec-1] Completed initialization in 3 ms
+2020-09-29 13:05:11,452 INFO c.s.a.c.AlertController [http-nio-8080-exec-2] HTTP GET request recieved at /person URL
+2020-09-29 13:16:54,313 INFO c.s.a.c.FireStationController [http-nio-8080-exec-5] HTTP GET request recieved at /firestation?station=X URL
+2020-09-29 13:17:15,234 INFO o.s.t.c.s.AbstractTestContextBootstrapper [main] Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.safetynet.alertsystem.controller.FireStationControllerTest], using SpringBootContextLoader
+2020-09-29 13:17:15,245 INFO o.s.t.c.s.AbstractContextLoader [main] Could not detect default resource locations for test class [com.safetynet.alertsystem.controller.FireStationControllerTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+2020-09-29 13:17:15,246 INFO o.s.t.c.s.AnnotationConfigContextLoaderUtils [main] Could not detect default configuration classes for test class [com.safetynet.alertsystem.controller.FireStationControllerTest]: FireStationControllerTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2020-09-29 13:17:15,375 INFO o.s.b.t.c.SpringBootTestContextBootstrapper [main] Found @SpringBootConfiguration com.safetynet.alertsystem.AlertsystemApplication for test class com.safetynet.alertsystem.controller.FireStationControllerTest
+2020-09-29 13:17:15,476 INFO o.s.t.c.s.AbstractTestContextBootstrapper [main] Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
+2020-09-29 13:17:15,487 INFO o.s.t.c.s.AbstractTestContextBootstrapper [main] Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@24ba9639, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@38aa816f, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@53f6fd09, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@6bffbc6d, org.springframework.test.context.support.DirtiesContextTestExecutionListener@1b84f475, org.springframework.test.context.event.EventPublishingTestExecutionListener@7749bf93, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@13330ac6, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@539d019, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@39a2bb97, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@3ad2e17, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@8c3619e, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener@4331d187]
+2020-09-29 13:17:17,044 INFO o.h.v.i.u.Version [background-preinit] HV000001: Hibernate Validator 6.1.5.Final
+2020-09-29 13:17:17,091 WARN o.s.b.t.j.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer [main] 
+
+Found multiple occurrences of org.json.JSONObject on the class path:
+
+	jar:file:/Users/j.c./.m2/repository/com/vaadin/external/google/android-json/0.0.20131108.vaadin1/android-json-0.0.20131108.vaadin1.jar!/org/json/JSONObject.class
+	jar:file:/Users/j.c./.m2/repository/org/json/json/20140107/json-20140107.jar!/org/json/JSONObject.class
+
+You may wish to exclude one of them to ensure predictable runtime behavior
+
+2020-09-29 13:17:17,104 INFO o.s.b.StartupInfoLogger [main] Starting FireStationControllerTest using Java 1.8.0_251 on JCs-MacBook-Pro with PID 54818 (started by j.c. in /Users/j.c./git/AlertSystem/alertsystem)
+2020-09-29 13:17:17,110 DEBUG o.s.b.StartupInfoLogger [main] Running with Spring Boot v2.4.0-SNAPSHOT, Spring v5.3.0-RC1
+2020-09-29 13:17:17,113 INFO o.s.b.SpringApplication [main] No active profile set, falling back to default profiles: default
+2020-09-29 13:17:18,897 INFO o.s.s.c.ExecutorConfigurationSupport [main] Initializing ExecutorService 'applicationTaskExecutor'
+2020-09-29 13:17:19,022 INFO o.s.b.a.w.s.WelcomePageHandlerMapping [main] Adding welcome page template: index
+2020-09-29 13:17:19,658 INFO o.s.m.w.MockServletContext [main] Initializing Spring TestDispatcherServlet ''
+2020-09-29 13:17:19,658 INFO o.s.w.s.FrameworkServlet [main] Initializing Servlet ''
+2020-09-29 13:17:19,669 INFO o.s.b.a.e.w.EndpointLinksResolver [main] Exposing 5 endpoint(s) beneath base path '/actuator'
+2020-09-29 13:17:19,706 INFO o.s.w.s.FrameworkServlet [main] Completed initialization in 47 ms
+2020-09-29 13:17:19,752 INFO o.s.b.StartupInfoLogger [main] Started FireStationControllerTest in 2.912 seconds (JVM running for 5.766)
+2020-09-29 13:17:20,072 INFO c.s.a.c.FireStationController [main] HTTP GET request recieved at /firestation?station=X URL
+2020-09-29 13:17:20,114 INFO o.s.s.c.ExecutorConfigurationSupport [SpringContextShutdownHook] Shutting down ExecutorService 'applicationTaskExecutor'
+2020-09-29 13:34:13,953 INFO o.s.t.c.s.AbstractTestContextBootstrapper [main] Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.safetynet.alertsystem.controller.FireStationControllerTest], using SpringBootContextLoader
+2020-09-29 13:34:13,963 INFO o.s.t.c.s.AbstractContextLoader [main] Could not detect default resource locations for test class [com.safetynet.alertsystem.controller.FireStationControllerTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+2020-09-29 13:34:13,965 INFO o.s.t.c.s.AnnotationConfigContextLoaderUtils [main] Could not detect default configuration classes for test class [com.safetynet.alertsystem.controller.FireStationControllerTest]: FireStationControllerTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2020-09-29 13:34:14,097 INFO o.s.b.t.c.SpringBootTestContextBootstrapper [main] Found @SpringBootConfiguration com.safetynet.alertsystem.AlertsystemApplication for test class com.safetynet.alertsystem.controller.FireStationControllerTest
+2020-09-29 13:34:14,186 INFO o.s.t.c.s.AbstractTestContextBootstrapper [main] Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
+2020-09-29 13:34:14,197 INFO o.s.t.c.s.AbstractTestContextBootstrapper [main] Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@24ba9639, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@38aa816f, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@53f6fd09, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@6bffbc6d, org.springframework.test.context.support.DirtiesContextTestExecutionListener@1b84f475, org.springframework.test.context.event.EventPublishingTestExecutionListener@7749bf93, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@13330ac6, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@539d019, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@39a2bb97, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@3ad2e17, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@8c3619e, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener@4331d187]
+2020-09-29 13:34:16,435 INFO o.h.v.i.u.Version [background-preinit] HV000001: Hibernate Validator 6.1.5.Final
+2020-09-29 13:34:16,492 WARN o.s.b.t.j.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer [main] 
+
+Found multiple occurrences of org.json.JSONObject on the class path:
+
+	jar:file:/Users/j.c./.m2/repository/com/vaadin/external/google/android-json/0.0.20131108.vaadin1/android-json-0.0.20131108.vaadin1.jar!/org/json/JSONObject.class
+	jar:file:/Users/j.c./.m2/repository/org/json/json/20140107/json-20140107.jar!/org/json/JSONObject.class
+
+You may wish to exclude one of them to ensure predictable runtime behavior
+
+2020-09-29 13:34:16,505 INFO o.s.b.StartupInfoLogger [main] Starting FireStationControllerTest using Java 1.8.0_251 on JCs-MacBook-Pro with PID 55022 (started by j.c. in /Users/j.c./git/AlertSystem/alertsystem)
+2020-09-29 13:34:16,509 DEBUG o.s.b.StartupInfoLogger [main] Running with Spring Boot v2.4.0-SNAPSHOT, Spring v5.3.0-RC1
+2020-09-29 13:34:16,511 INFO o.s.b.SpringApplication [main] No active profile set, falling back to default profiles: default
+2020-09-29 13:34:18,314 INFO o.s.s.c.ExecutorConfigurationSupport [main] Initializing ExecutorService 'applicationTaskExecutor'
+2020-09-29 13:34:18,451 INFO o.s.b.a.w.s.WelcomePageHandlerMapping [main] Adding welcome page template: index
+2020-09-29 13:34:19,080 INFO o.s.m.w.MockServletContext [main] Initializing Spring TestDispatcherServlet ''
+2020-09-29 13:34:19,080 INFO o.s.w.s.FrameworkServlet [main] Initializing Servlet ''
+2020-09-29 13:34:19,092 INFO o.s.b.a.e.w.EndpointLinksResolver [main] Exposing 5 endpoint(s) beneath base path '/actuator'
+2020-09-29 13:34:19,125 INFO o.s.w.s.FrameworkServlet [main] Completed initialization in 45 ms
+2020-09-29 13:34:19,172 INFO o.s.b.StartupInfoLogger [main] Started FireStationControllerTest in 2.931 seconds (JVM running for 6.398)
+2020-09-29 13:34:19,495 INFO c.s.a.c.FireStationController [main] HTTP GET request recieved at /firestation?station=X URL
+2020-09-29 13:34:19,535 INFO o.s.s.c.ExecutorConfigurationSupport [SpringContextShutdownHook] Shutting down ExecutorService 'applicationTaskExecutor'
+2020-09-29 14:09:16,502 INFO o.s.t.c.s.AbstractTestContextBootstrapper [main] Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.safetynet.alertsystem.controller.FireStationControllerTest], using SpringBootContextLoader
+2020-09-29 14:09:16,518 INFO o.s.t.c.s.AbstractContextLoader [main] Could not detect default resource locations for test class [com.safetynet.alertsystem.controller.FireStationControllerTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+2020-09-29 14:09:16,519 INFO o.s.t.c.s.AnnotationConfigContextLoaderUtils [main] Could not detect default configuration classes for test class [com.safetynet.alertsystem.controller.FireStationControllerTest]: FireStationControllerTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2020-09-29 14:09:16,642 INFO o.s.b.t.c.SpringBootTestContextBootstrapper [main] Found @SpringBootConfiguration com.safetynet.alertsystem.AlertsystemApplication for test class com.safetynet.alertsystem.controller.FireStationControllerTest
+2020-09-29 14:09:16,738 INFO o.s.t.c.s.AbstractTestContextBootstrapper [main] Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
+2020-09-29 14:09:16,749 INFO o.s.t.c.s.AbstractTestContextBootstrapper [main] Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@24ba9639, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@38aa816f, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@53f6fd09, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@6bffbc6d, org.springframework.test.context.support.DirtiesContextTestExecutionListener@1b84f475, org.springframework.test.context.event.EventPublishingTestExecutionListener@7749bf93, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@13330ac6, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@539d019, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@39a2bb97, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@3ad2e17, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@8c3619e, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener@4331d187]
+2020-09-29 14:09:18,364 INFO o.h.v.i.u.Version [background-preinit] HV000001: Hibernate Validator 6.1.5.Final
+2020-09-29 14:09:18,421 WARN o.s.b.t.j.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer [main] 
+
+Found multiple occurrences of org.json.JSONObject on the class path:
+
+	jar:file:/Users/j.c./.m2/repository/com/vaadin/external/google/android-json/0.0.20131108.vaadin1/android-json-0.0.20131108.vaadin1.jar!/org/json/JSONObject.class
+	jar:file:/Users/j.c./.m2/repository/org/json/json/20140107/json-20140107.jar!/org/json/JSONObject.class
+
+You may wish to exclude one of them to ensure predictable runtime behavior
+
+2020-09-29 14:09:18,434 INFO o.s.b.StartupInfoLogger [main] Starting FireStationControllerTest using Java 1.8.0_251 on JCs-MacBook-Pro with PID 55239 (started by j.c. in /Users/j.c./git/AlertSystem/alertsystem)
+2020-09-29 14:09:18,437 DEBUG o.s.b.StartupInfoLogger [main] Running with Spring Boot v2.4.0-SNAPSHOT, Spring v5.3.0-RC1
+2020-09-29 14:09:18,439 INFO o.s.b.SpringApplication [main] No active profile set, falling back to default profiles: default
+2020-09-29 14:09:20,228 INFO o.s.s.c.ExecutorConfigurationSupport [main] Initializing ExecutorService 'applicationTaskExecutor'
+2020-09-29 14:09:20,366 INFO o.s.b.a.w.s.WelcomePageHandlerMapping [main] Adding welcome page template: index
+2020-09-29 14:09:21,003 INFO o.s.m.w.MockServletContext [main] Initializing Spring TestDispatcherServlet ''
+2020-09-29 14:09:21,003 INFO o.s.w.s.FrameworkServlet [main] Initializing Servlet ''
+2020-09-29 14:09:21,014 INFO o.s.b.a.e.w.EndpointLinksResolver [main] Exposing 5 endpoint(s) beneath base path '/actuator'
+2020-09-29 14:09:21,047 INFO o.s.w.s.FrameworkServlet [main] Completed initialization in 42 ms
+2020-09-29 14:09:21,092 INFO o.s.b.StartupInfoLogger [main] Started FireStationControllerTest in 2.923 seconds (JVM running for 5.81)
+2020-09-29 14:09:21,390 INFO c.s.a.c.FireStationController [main] HTTP GET request recieved at /firestation?station=X URL
+2020-09-29 14:09:21,428 INFO o.s.s.c.ExecutorConfigurationSupport [SpringContextShutdownHook] Shutting down ExecutorService 'applicationTaskExecutor'
+2020-09-29 14:09:37,157 INFO o.s.t.c.s.AbstractTestContextBootstrapper [main] Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.safetynet.alertsystem.controller.FireStationControllerTest], using SpringBootContextLoader
+2020-09-29 14:09:37,167 INFO o.s.t.c.s.AbstractContextLoader [main] Could not detect default resource locations for test class [com.safetynet.alertsystem.controller.FireStationControllerTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+2020-09-29 14:09:37,169 INFO o.s.t.c.s.AnnotationConfigContextLoaderUtils [main] Could not detect default configuration classes for test class [com.safetynet.alertsystem.controller.FireStationControllerTest]: FireStationControllerTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2020-09-29 14:09:37,294 INFO o.s.b.t.c.SpringBootTestContextBootstrapper [main] Found @SpringBootConfiguration com.safetynet.alertsystem.AlertsystemApplication for test class com.safetynet.alertsystem.controller.FireStationControllerTest
+2020-09-29 14:09:37,390 INFO o.s.t.c.s.AbstractTestContextBootstrapper [main] Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
+2020-09-29 14:09:37,401 INFO o.s.t.c.s.AbstractTestContextBootstrapper [main] Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@24ba9639, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@38aa816f, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@53f6fd09, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@6bffbc6d, org.springframework.test.context.support.DirtiesContextTestExecutionListener@1b84f475, org.springframework.test.context.event.EventPublishingTestExecutionListener@7749bf93, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@13330ac6, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@539d019, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@39a2bb97, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@3ad2e17, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@8c3619e, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener@4331d187]
+2020-09-29 14:09:39,283 INFO o.h.v.i.u.Version [background-preinit] HV000001: Hibernate Validator 6.1.5.Final
+2020-09-29 14:09:39,338 WARN o.s.b.t.j.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer [main] 
+
+Found multiple occurrences of org.json.JSONObject on the class path:
+
+	jar:file:/Users/j.c./.m2/repository/com/vaadin/external/google/android-json/0.0.20131108.vaadin1/android-json-0.0.20131108.vaadin1.jar!/org/json/JSONObject.class
+	jar:file:/Users/j.c./.m2/repository/org/json/json/20140107/json-20140107.jar!/org/json/JSONObject.class
+
+You may wish to exclude one of them to ensure predictable runtime behavior
+
+2020-09-29 14:09:39,351 INFO o.s.b.StartupInfoLogger [main] Starting FireStationControllerTest using Java 1.8.0_251 on JCs-MacBook-Pro with PID 55245 (started by j.c. in /Users/j.c./git/AlertSystem/alertsystem)
+2020-09-29 14:09:39,354 DEBUG o.s.b.StartupInfoLogger [main] Running with Spring Boot v2.4.0-SNAPSHOT, Spring v5.3.0-RC1
+2020-09-29 14:09:39,356 INFO o.s.b.SpringApplication [main] No active profile set, falling back to default profiles: default
+2020-09-29 14:09:41,111 INFO o.s.s.c.ExecutorConfigurationSupport [main] Initializing ExecutorService 'applicationTaskExecutor'
+2020-09-29 14:09:41,232 INFO o.s.b.a.w.s.WelcomePageHandlerMapping [main] Adding welcome page template: index
+2020-09-29 14:09:41,846 INFO o.s.m.w.MockServletContext [main] Initializing Spring TestDispatcherServlet ''
+2020-09-29 14:09:41,847 INFO o.s.w.s.FrameworkServlet [main] Initializing Servlet ''
+2020-09-29 14:09:41,858 INFO o.s.b.a.e.w.EndpointLinksResolver [main] Exposing 5 endpoint(s) beneath base path '/actuator'
+2020-09-29 14:09:41,889 INFO o.s.w.s.FrameworkServlet [main] Completed initialization in 42 ms
+2020-09-29 14:09:41,935 INFO o.s.b.StartupInfoLogger [main] Started FireStationControllerTest in 2.84 seconds (JVM running for 5.991)
+2020-09-29 14:09:42,252 INFO c.s.a.c.FireStationController [main] HTTP GET request recieved at /firestation?station=X URL
+2020-09-29 14:09:42,292 INFO o.s.s.c.ExecutorConfigurationSupport [SpringContextShutdownHook] Shutting down ExecutorService 'applicationTaskExecutor'
+2020-09-29 14:09:57,213 INFO o.s.t.c.s.AbstractTestContextBootstrapper [main] Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.safetynet.alertsystem.controller.FireStationControllerTest], using SpringBootContextLoader
+2020-09-29 14:09:57,223 INFO o.s.t.c.s.AbstractContextLoader [main] Could not detect default resource locations for test class [com.safetynet.alertsystem.controller.FireStationControllerTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+2020-09-29 14:09:57,224 INFO o.s.t.c.s.AnnotationConfigContextLoaderUtils [main] Could not detect default configuration classes for test class [com.safetynet.alertsystem.controller.FireStationControllerTest]: FireStationControllerTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2020-09-29 14:09:57,350 INFO o.s.b.t.c.SpringBootTestContextBootstrapper [main] Found @SpringBootConfiguration com.safetynet.alertsystem.AlertsystemApplication for test class com.safetynet.alertsystem.controller.FireStationControllerTest
+2020-09-29 14:09:57,439 INFO o.s.t.c.s.AbstractTestContextBootstrapper [main] Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
+2020-09-29 14:09:57,449 INFO o.s.t.c.s.AbstractTestContextBootstrapper [main] Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@24ba9639, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@38aa816f, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@53f6fd09, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@6bffbc6d, org.springframework.test.context.support.DirtiesContextTestExecutionListener@1b84f475, org.springframework.test.context.event.EventPublishingTestExecutionListener@7749bf93, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@13330ac6, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@539d019, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@39a2bb97, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@3ad2e17, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@8c3619e, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener@4331d187]
+2020-09-29 14:09:59,127 INFO o.h.v.i.u.Version [background-preinit] HV000001: Hibernate Validator 6.1.5.Final
+2020-09-29 14:09:59,185 WARN o.s.b.t.j.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer [main] 
+
+Found multiple occurrences of org.json.JSONObject on the class path:
+
+	jar:file:/Users/j.c./.m2/repository/com/vaadin/external/google/android-json/0.0.20131108.vaadin1/android-json-0.0.20131108.vaadin1.jar!/org/json/JSONObject.class
+	jar:file:/Users/j.c./.m2/repository/org/json/json/20140107/json-20140107.jar!/org/json/JSONObject.class
+
+You may wish to exclude one of them to ensure predictable runtime behavior
+
+2020-09-29 14:09:59,200 INFO o.s.b.StartupInfoLogger [main] Starting FireStationControllerTest using Java 1.8.0_251 on JCs-MacBook-Pro with PID 55249 (started by j.c. in /Users/j.c./git/AlertSystem/alertsystem)
+2020-09-29 14:09:59,204 DEBUG o.s.b.StartupInfoLogger [main] Running with Spring Boot v2.4.0-SNAPSHOT, Spring v5.3.0-RC1
+2020-09-29 14:09:59,206 INFO o.s.b.SpringApplication [main] No active profile set, falling back to default profiles: default
+2020-09-29 14:10:01,045 INFO o.s.s.c.ExecutorConfigurationSupport [main] Initializing ExecutorService 'applicationTaskExecutor'
+2020-09-29 14:10:01,189 INFO o.s.b.a.w.s.WelcomePageHandlerMapping [main] Adding welcome page template: index
+2020-09-29 14:10:01,813 INFO o.s.m.w.MockServletContext [main] Initializing Spring TestDispatcherServlet ''
+2020-09-29 14:10:01,813 INFO o.s.w.s.FrameworkServlet [main] Initializing Servlet ''
+2020-09-29 14:10:01,824 INFO o.s.b.a.e.w.EndpointLinksResolver [main] Exposing 5 endpoint(s) beneath base path '/actuator'
+2020-09-29 14:10:01,860 INFO o.s.w.s.FrameworkServlet [main] Completed initialization in 46 ms
+2020-09-29 14:10:01,910 INFO o.s.b.StartupInfoLogger [main] Started FireStationControllerTest in 2.985 seconds (JVM running for 5.91)
+2020-09-29 14:10:02,230 INFO c.s.a.c.FireStationController [main] HTTP GET request recieved at /firestation?station=X URL
+2020-09-29 14:10:02,273 INFO o.s.s.c.ExecutorConfigurationSupport [SpringContextShutdownHook] Shutting down ExecutorService 'applicationTaskExecutor'
+2020-09-29 14:10:23,736 INFO o.s.t.c.s.AbstractTestContextBootstrapper [main] Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.safetynet.alertsystem.controller.FireStationControllerTest], using SpringBootContextLoader
+2020-09-29 14:10:23,746 INFO o.s.t.c.s.AbstractContextLoader [main] Could not detect default resource locations for test class [com.safetynet.alertsystem.controller.FireStationControllerTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+2020-09-29 14:10:23,747 INFO o.s.t.c.s.AnnotationConfigContextLoaderUtils [main] Could not detect default configuration classes for test class [com.safetynet.alertsystem.controller.FireStationControllerTest]: FireStationControllerTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2020-09-29 14:10:23,875 INFO o.s.b.t.c.SpringBootTestContextBootstrapper [main] Found @SpringBootConfiguration com.safetynet.alertsystem.AlertsystemApplication for test class com.safetynet.alertsystem.controller.FireStationControllerTest
+2020-09-29 14:10:23,972 INFO o.s.t.c.s.AbstractTestContextBootstrapper [main] Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
+2020-09-29 14:10:23,982 INFO o.s.t.c.s.AbstractTestContextBootstrapper [main] Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@7a1234bf, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@2f62ea70, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@24ba9639, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@38aa816f, org.springframework.test.context.support.DirtiesContextTestExecutionListener@53f6fd09, org.springframework.test.context.event.EventPublishingTestExecutionListener@6bffbc6d, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@1b84f475, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@7749bf93, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@13330ac6, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@539d019, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@39a2bb97, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener@3ad2e17]
+2020-09-29 14:10:25,415 INFO o.h.v.i.u.Version [background-preinit] HV000001: Hibernate Validator 6.1.5.Final
+2020-09-29 14:10:25,471 WARN o.s.b.t.j.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer [main] 
+
+Found multiple occurrences of org.json.JSONObject on the class path:
+
+	jar:file:/Users/j.c./.m2/repository/com/vaadin/external/google/android-json/0.0.20131108.vaadin1/android-json-0.0.20131108.vaadin1.jar!/org/json/JSONObject.class
+	jar:file:/Users/j.c./.m2/repository/org/json/json/20140107/json-20140107.jar!/org/json/JSONObject.class
+
+You may wish to exclude one of them to ensure predictable runtime behavior
+
+2020-09-29 14:10:25,484 INFO o.s.b.StartupInfoLogger [main] Starting FireStationControllerTest using Java 1.8.0_251 on JCs-MacBook-Pro with PID 55260 (started by j.c. in /Users/j.c./git/AlertSystem/alertsystem)
+2020-09-29 14:10:25,487 DEBUG o.s.b.StartupInfoLogger [main] Running with Spring Boot v2.4.0-SNAPSHOT, Spring v5.3.0-RC1
+2020-09-29 14:10:25,490 INFO o.s.b.SpringApplication [main] No active profile set, falling back to default profiles: default
+2020-09-29 14:10:27,278 INFO o.s.s.c.ExecutorConfigurationSupport [main] Initializing ExecutorService 'applicationTaskExecutor'
+2020-09-29 14:10:27,409 INFO o.s.b.a.w.s.WelcomePageHandlerMapping [main] Adding welcome page template: index
+2020-09-29 14:10:28,034 INFO o.s.m.w.MockServletContext [main] Initializing Spring TestDispatcherServlet ''
+2020-09-29 14:10:28,034 INFO o.s.w.s.FrameworkServlet [main] Initializing Servlet ''
+2020-09-29 14:10:28,047 INFO o.s.b.a.e.w.EndpointLinksResolver [main] Exposing 5 endpoint(s) beneath base path '/actuator'
+2020-09-29 14:10:28,080 INFO o.s.w.s.FrameworkServlet [main] Completed initialization in 45 ms
+2020-09-29 14:10:28,129 INFO o.s.b.StartupInfoLogger [main] Started FireStationControllerTest in 2.905 seconds (JVM running for 5.566)
+2020-09-29 14:10:28,408 INFO o.s.s.c.ExecutorConfigurationSupport [SpringContextShutdownHook] Shutting down ExecutorService 'applicationTaskExecutor'
+2020-09-29 14:11:40,086 INFO o.s.t.c.s.AbstractTestContextBootstrapper [main] Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.safetynet.alertsystem.controller.FireStationControllerTest], using SpringBootContextLoader
+2020-09-29 14:11:40,095 INFO o.s.t.c.s.AbstractContextLoader [main] Could not detect default resource locations for test class [com.safetynet.alertsystem.controller.FireStationControllerTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+2020-09-29 14:11:40,096 INFO o.s.t.c.s.AnnotationConfigContextLoaderUtils [main] Could not detect default configuration classes for test class [com.safetynet.alertsystem.controller.FireStationControllerTest]: FireStationControllerTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2020-09-29 14:11:40,224 INFO o.s.b.t.c.SpringBootTestContextBootstrapper [main] Found @SpringBootConfiguration com.safetynet.alertsystem.AlertsystemApplication for test class com.safetynet.alertsystem.controller.FireStationControllerTest
+2020-09-29 14:11:40,319 INFO o.s.t.c.s.AbstractTestContextBootstrapper [main] Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
+2020-09-29 14:11:40,330 INFO o.s.t.c.s.AbstractTestContextBootstrapper [main] Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@24ba9639, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@38aa816f, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@53f6fd09, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@6bffbc6d, org.springframework.test.context.support.DirtiesContextTestExecutionListener@1b84f475, org.springframework.test.context.event.EventPublishingTestExecutionListener@7749bf93, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@13330ac6, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@539d019, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@39a2bb97, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@3ad2e17, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@8c3619e, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener@4331d187]
+2020-09-29 14:11:41,792 INFO o.h.v.i.u.Version [background-preinit] HV000001: Hibernate Validator 6.1.5.Final
+2020-09-29 14:11:41,848 WARN o.s.b.t.j.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer [main] 
+
+Found multiple occurrences of org.json.JSONObject on the class path:
+
+	jar:file:/Users/j.c./.m2/repository/com/vaadin/external/google/android-json/0.0.20131108.vaadin1/android-json-0.0.20131108.vaadin1.jar!/org/json/JSONObject.class
+	jar:file:/Users/j.c./.m2/repository/org/json/json/20140107/json-20140107.jar!/org/json/JSONObject.class
+
+You may wish to exclude one of them to ensure predictable runtime behavior
+
+2020-09-29 14:11:41,859 INFO o.s.b.StartupInfoLogger [main] Starting FireStationControllerTest using Java 1.8.0_251 on JCs-MacBook-Pro with PID 55269 (started by j.c. in /Users/j.c./git/AlertSystem/alertsystem)
+2020-09-29 14:11:41,862 DEBUG o.s.b.StartupInfoLogger [main] Running with Spring Boot v2.4.0-SNAPSHOT, Spring v5.3.0-RC1
+2020-09-29 14:11:41,864 INFO o.s.b.SpringApplication [main] No active profile set, falling back to default profiles: default
+2020-09-29 14:11:43,756 INFO o.s.s.c.ExecutorConfigurationSupport [main] Initializing ExecutorService 'applicationTaskExecutor'
+2020-09-29 14:11:43,879 INFO o.s.b.a.w.s.WelcomePageHandlerMapping [main] Adding welcome page template: index
+2020-09-29 14:11:44,515 INFO o.s.m.w.MockServletContext [main] Initializing Spring TestDispatcherServlet ''
+2020-09-29 14:11:44,515 INFO o.s.w.s.FrameworkServlet [main] Initializing Servlet ''
+2020-09-29 14:11:44,526 INFO o.s.b.a.e.w.EndpointLinksResolver [main] Exposing 5 endpoint(s) beneath base path '/actuator'
+2020-09-29 14:11:44,562 INFO o.s.w.s.FrameworkServlet [main] Completed initialization in 47 ms
+2020-09-29 14:11:44,611 INFO o.s.b.StartupInfoLogger [main] Started FireStationControllerTest in 3.017 seconds (JVM running for 5.722)
+2020-09-29 14:11:44,918 INFO c.s.a.c.FireStationController [main] HTTP GET request recieved at /firestation?station=X URL
+2020-09-29 14:11:44,955 INFO o.s.s.c.ExecutorConfigurationSupport [SpringContextShutdownHook] Shutting down ExecutorService 'applicationTaskExecutor'
+2020-09-29 14:15:07,131 INFO o.s.t.c.s.AbstractTestContextBootstrapper [main] Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.safetynet.alertsystem.controller.FireStationControllerTest], using SpringBootContextLoader
+2020-09-29 14:15:07,141 INFO o.s.t.c.s.AbstractContextLoader [main] Could not detect default resource locations for test class [com.safetynet.alertsystem.controller.FireStationControllerTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+2020-09-29 14:15:07,142 INFO o.s.t.c.s.AnnotationConfigContextLoaderUtils [main] Could not detect default configuration classes for test class [com.safetynet.alertsystem.controller.FireStationControllerTest]: FireStationControllerTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2020-09-29 14:15:07,268 INFO o.s.b.t.c.SpringBootTestContextBootstrapper [main] Found @SpringBootConfiguration com.safetynet.alertsystem.AlertsystemApplication for test class com.safetynet.alertsystem.controller.FireStationControllerTest
+2020-09-29 14:15:07,368 INFO o.s.t.c.s.AbstractTestContextBootstrapper [main] Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
+2020-09-29 14:15:07,379 INFO o.s.t.c.s.AbstractTestContextBootstrapper [main] Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@24ba9639, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@38aa816f, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@53f6fd09, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@6bffbc6d, org.springframework.test.context.support.DirtiesContextTestExecutionListener@1b84f475, org.springframework.test.context.event.EventPublishingTestExecutionListener@7749bf93, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@13330ac6, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@539d019, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@39a2bb97, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@3ad2e17, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@8c3619e, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener@4331d187]
+2020-09-29 14:15:09,028 INFO o.h.v.i.u.Version [background-preinit] HV000001: Hibernate Validator 6.1.5.Final
+2020-09-29 14:15:09,089 WARN o.s.b.t.j.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer [main] 
+
+Found multiple occurrences of org.json.JSONObject on the class path:
+
+	jar:file:/Users/j.c./.m2/repository/com/vaadin/external/google/android-json/0.0.20131108.vaadin1/android-json-0.0.20131108.vaadin1.jar!/org/json/JSONObject.class
+	jar:file:/Users/j.c./.m2/repository/org/json/json/20140107/json-20140107.jar!/org/json/JSONObject.class
+
+You may wish to exclude one of them to ensure predictable runtime behavior
+
+2020-09-29 14:15:09,101 INFO o.s.b.StartupInfoLogger [main] Starting FireStationControllerTest using Java 1.8.0_251 on JCs-MacBook-Pro with PID 55310 (started by j.c. in /Users/j.c./git/AlertSystem/alertsystem)
+2020-09-29 14:15:09,105 DEBUG o.s.b.StartupInfoLogger [main] Running with Spring Boot v2.4.0-SNAPSHOT, Spring v5.3.0-RC1
+2020-09-29 14:15:09,107 INFO o.s.b.SpringApplication [main] No active profile set, falling back to default profiles: default
+2020-09-29 14:15:10,862 INFO o.s.s.c.ExecutorConfigurationSupport [main] Initializing ExecutorService 'applicationTaskExecutor'
+2020-09-29 14:15:11,003 INFO o.s.b.a.w.s.WelcomePageHandlerMapping [main] Adding welcome page template: index
+2020-09-29 14:15:11,655 INFO o.s.m.w.MockServletContext [main] Initializing Spring TestDispatcherServlet ''
+2020-09-29 14:15:11,655 INFO o.s.w.s.FrameworkServlet [main] Initializing Servlet ''
+2020-09-29 14:15:11,666 INFO o.s.b.a.e.w.EndpointLinksResolver [main] Exposing 5 endpoint(s) beneath base path '/actuator'
+2020-09-29 14:15:11,697 INFO o.s.w.s.FrameworkServlet [main] Completed initialization in 41 ms
+2020-09-29 14:15:11,751 INFO o.s.b.StartupInfoLogger [main] Started FireStationControllerTest in 2.917 seconds (JVM running for 5.829)
+2020-09-29 14:15:12,073 INFO c.s.a.c.FireStationController [main] HTTP GET request recieved at /firestation?station=X URL
+2020-09-29 14:15:12,117 INFO o.s.s.c.ExecutorConfigurationSupport [SpringContextShutdownHook] Shutting down ExecutorService 'applicationTaskExecutor'
+2020-09-29 14:25:36,639 INFO o.s.t.c.s.AbstractTestContextBootstrapper [main] Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.safetynet.alertsystem.controller.FireStationControllerTest], using SpringBootContextLoader
+2020-09-29 14:25:36,650 INFO o.s.t.c.s.AbstractContextLoader [main] Could not detect default resource locations for test class [com.safetynet.alertsystem.controller.FireStationControllerTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+2020-09-29 14:25:36,651 INFO o.s.t.c.s.AnnotationConfigContextLoaderUtils [main] Could not detect default configuration classes for test class [com.safetynet.alertsystem.controller.FireStationControllerTest]: FireStationControllerTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2020-09-29 14:25:36,781 INFO o.s.b.t.c.SpringBootTestContextBootstrapper [main] Found @SpringBootConfiguration com.safetynet.alertsystem.AlertsystemApplication for test class com.safetynet.alertsystem.controller.FireStationControllerTest
+2020-09-29 14:25:36,881 INFO o.s.t.c.s.AbstractTestContextBootstrapper [main] Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
+2020-09-29 14:25:36,892 INFO o.s.t.c.s.AbstractTestContextBootstrapper [main] Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@24ba9639, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@38aa816f, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@53f6fd09, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@6bffbc6d, org.springframework.test.context.support.DirtiesContextTestExecutionListener@1b84f475, org.springframework.test.context.event.EventPublishingTestExecutionListener@7749bf93, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@13330ac6, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@539d019, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@39a2bb97, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@3ad2e17, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@8c3619e, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener@4331d187]
+2020-09-29 14:25:38,405 INFO o.h.v.i.u.Version [background-preinit] HV000001: Hibernate Validator 6.1.5.Final
+2020-09-29 14:25:38,456 WARN o.s.b.t.j.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer [main] 
+
+Found multiple occurrences of org.json.JSONObject on the class path:
+
+	jar:file:/Users/j.c./.m2/repository/com/vaadin/external/google/android-json/0.0.20131108.vaadin1/android-json-0.0.20131108.vaadin1.jar!/org/json/JSONObject.class
+	jar:file:/Users/j.c./.m2/repository/org/json/json/20140107/json-20140107.jar!/org/json/JSONObject.class
+
+You may wish to exclude one of them to ensure predictable runtime behavior
+
+2020-09-29 14:25:38,468 INFO o.s.b.StartupInfoLogger [main] Starting FireStationControllerTest using Java 1.8.0_251 on JCs-MacBook-Pro with PID 55440 (started by j.c. in /Users/j.c./git/AlertSystem/alertsystem)
+2020-09-29 14:25:38,471 DEBUG o.s.b.StartupInfoLogger [main] Running with Spring Boot v2.4.0-SNAPSHOT, Spring v5.3.0-RC1
+2020-09-29 14:25:38,473 INFO o.s.b.SpringApplication [main] No active profile set, falling back to default profiles: default
+2020-09-29 14:25:40,317 INFO o.s.s.c.ExecutorConfigurationSupport [main] Initializing ExecutorService 'applicationTaskExecutor'
+2020-09-29 14:25:40,453 INFO o.s.b.a.w.s.WelcomePageHandlerMapping [main] Adding welcome page template: index
+2020-09-29 14:25:41,089 INFO o.s.m.w.MockServletContext [main] Initializing Spring TestDispatcherServlet ''
+2020-09-29 14:25:41,090 INFO o.s.w.s.FrameworkServlet [main] Initializing Servlet ''
+2020-09-29 14:25:41,101 INFO o.s.b.a.e.w.EndpointLinksResolver [main] Exposing 5 endpoint(s) beneath base path '/actuator'
+2020-09-29 14:25:41,132 INFO o.s.w.s.FrameworkServlet [main] Completed initialization in 42 ms
+2020-09-29 14:25:41,179 INFO o.s.b.StartupInfoLogger [main] Started FireStationControllerTest in 2.972 seconds (JVM running for 5.732)
+2020-09-29 14:25:41,482 INFO c.s.a.c.FireStationController [main] HTTP GET request recieved at /firestation?station=X URL
+2020-09-29 14:25:41,524 INFO o.s.s.c.ExecutorConfigurationSupport [SpringContextShutdownHook] Shutting down ExecutorService 'applicationTaskExecutor'
+2020-09-29 14:26:07,909 INFO o.s.t.c.s.AbstractTestContextBootstrapper [main] Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.safetynet.alertsystem.controller.FireStationControllerTest], using SpringBootContextLoader
+2020-09-29 14:26:07,920 INFO o.s.t.c.s.AbstractContextLoader [main] Could not detect default resource locations for test class [com.safetynet.alertsystem.controller.FireStationControllerTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+2020-09-29 14:26:07,921 INFO o.s.t.c.s.AnnotationConfigContextLoaderUtils [main] Could not detect default configuration classes for test class [com.safetynet.alertsystem.controller.FireStationControllerTest]: FireStationControllerTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2020-09-29 14:26:08,049 INFO o.s.b.t.c.SpringBootTestContextBootstrapper [main] Found @SpringBootConfiguration com.safetynet.alertsystem.AlertsystemApplication for test class com.safetynet.alertsystem.controller.FireStationControllerTest
+2020-09-29 14:26:08,148 INFO o.s.t.c.s.AbstractTestContextBootstrapper [main] Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
+2020-09-29 14:26:08,159 INFO o.s.t.c.s.AbstractTestContextBootstrapper [main] Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@24ba9639, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@38aa816f, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@53f6fd09, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@6bffbc6d, org.springframework.test.context.support.DirtiesContextTestExecutionListener@1b84f475, org.springframework.test.context.event.EventPublishingTestExecutionListener@7749bf93, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@13330ac6, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@539d019, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@39a2bb97, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@3ad2e17, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@8c3619e, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener@4331d187]
+2020-09-29 14:26:09,800 INFO o.h.v.i.u.Version [background-preinit] HV000001: Hibernate Validator 6.1.5.Final
+2020-09-29 14:26:09,859 WARN o.s.b.t.j.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer [main] 
+
+Found multiple occurrences of org.json.JSONObject on the class path:
+
+	jar:file:/Users/j.c./.m2/repository/com/vaadin/external/google/android-json/0.0.20131108.vaadin1/android-json-0.0.20131108.vaadin1.jar!/org/json/JSONObject.class
+	jar:file:/Users/j.c./.m2/repository/org/json/json/20140107/json-20140107.jar!/org/json/JSONObject.class
+
+You may wish to exclude one of them to ensure predictable runtime behavior
+
+2020-09-29 14:26:09,871 INFO o.s.b.StartupInfoLogger [main] Starting FireStationControllerTest using Java 1.8.0_251 on JCs-MacBook-Pro with PID 55450 (started by j.c. in /Users/j.c./git/AlertSystem/alertsystem)
+2020-09-29 14:26:09,874 DEBUG o.s.b.StartupInfoLogger [main] Running with Spring Boot v2.4.0-SNAPSHOT, Spring v5.3.0-RC1
+2020-09-29 14:26:09,877 INFO o.s.b.SpringApplication [main] No active profile set, falling back to default profiles: default
+2020-09-29 14:26:11,658 INFO o.s.s.c.ExecutorConfigurationSupport [main] Initializing ExecutorService 'applicationTaskExecutor'
+2020-09-29 14:26:11,791 INFO o.s.b.a.w.s.WelcomePageHandlerMapping [main] Adding welcome page template: index
+2020-09-29 14:26:12,425 INFO o.s.m.w.MockServletContext [main] Initializing Spring TestDispatcherServlet ''
+2020-09-29 14:26:12,427 INFO o.s.w.s.FrameworkServlet [main] Initializing Servlet ''
+2020-09-29 14:26:12,439 INFO o.s.b.a.e.w.EndpointLinksResolver [main] Exposing 5 endpoint(s) beneath base path '/actuator'
+2020-09-29 14:26:12,473 INFO o.s.w.s.FrameworkServlet [main] Completed initialization in 46 ms
+2020-09-29 14:26:12,520 INFO o.s.b.StartupInfoLogger [main] Started FireStationControllerTest in 2.916 seconds (JVM running for 5.842)
+2020-09-29 14:26:12,849 INFO c.s.a.c.FireStationController [main] HTTP GET request recieved at /firestation?station=X URL
+2020-09-29 14:26:12,897 INFO o.s.s.c.ExecutorConfigurationSupport [SpringContextShutdownHook] Shutting down ExecutorService 'applicationTaskExecutor'
+2020-09-29 14:26:37,692 INFO o.s.t.c.s.AbstractTestContextBootstrapper [main] Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.safetynet.alertsystem.controller.FireStationControllerTest], using SpringBootContextLoader
+2020-09-29 14:26:37,702 INFO o.s.t.c.s.AbstractContextLoader [main] Could not detect default resource locations for test class [com.safetynet.alertsystem.controller.FireStationControllerTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+2020-09-29 14:26:37,704 INFO o.s.t.c.s.AnnotationConfigContextLoaderUtils [main] Could not detect default configuration classes for test class [com.safetynet.alertsystem.controller.FireStationControllerTest]: FireStationControllerTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2020-09-29 14:26:37,831 INFO o.s.b.t.c.SpringBootTestContextBootstrapper [main] Found @SpringBootConfiguration com.safetynet.alertsystem.AlertsystemApplication for test class com.safetynet.alertsystem.controller.FireStationControllerTest
+2020-09-29 14:26:37,925 INFO o.s.t.c.s.AbstractTestContextBootstrapper [main] Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
+2020-09-29 14:26:37,937 INFO o.s.t.c.s.AbstractTestContextBootstrapper [main] Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@24ba9639, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@38aa816f, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@53f6fd09, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@6bffbc6d, org.springframework.test.context.support.DirtiesContextTestExecutionListener@1b84f475, org.springframework.test.context.event.EventPublishingTestExecutionListener@7749bf93, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@13330ac6, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@539d019, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@39a2bb97, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@3ad2e17, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@8c3619e, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener@4331d187]
+2020-09-29 14:26:39,414 INFO o.h.v.i.u.Version [background-preinit] HV000001: Hibernate Validator 6.1.5.Final
+2020-09-29 14:26:39,472 WARN o.s.b.t.j.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer [main] 
+
+Found multiple occurrences of org.json.JSONObject on the class path:
+
+	jar:file:/Users/j.c./.m2/repository/com/vaadin/external/google/android-json/0.0.20131108.vaadin1/android-json-0.0.20131108.vaadin1.jar!/org/json/JSONObject.class
+	jar:file:/Users/j.c./.m2/repository/org/json/json/20140107/json-20140107.jar!/org/json/JSONObject.class
+
+You may wish to exclude one of them to ensure predictable runtime behavior
+
+2020-09-29 14:26:39,485 INFO o.s.b.StartupInfoLogger [main] Starting FireStationControllerTest using Java 1.8.0_251 on JCs-MacBook-Pro with PID 55458 (started by j.c. in /Users/j.c./git/AlertSystem/alertsystem)
+2020-09-29 14:26:39,488 DEBUG o.s.b.StartupInfoLogger [main] Running with Spring Boot v2.4.0-SNAPSHOT, Spring v5.3.0-RC1
+2020-09-29 14:26:39,491 INFO o.s.b.SpringApplication [main] No active profile set, falling back to default profiles: default
+2020-09-29 14:26:41,262 INFO o.s.s.c.ExecutorConfigurationSupport [main] Initializing ExecutorService 'applicationTaskExecutor'
+2020-09-29 14:26:41,399 INFO o.s.b.a.w.s.WelcomePageHandlerMapping [main] Adding welcome page template: index
+2020-09-29 14:26:42,034 INFO o.s.m.w.MockServletContext [main] Initializing Spring TestDispatcherServlet ''
+2020-09-29 14:26:42,035 INFO o.s.w.s.FrameworkServlet [main] Initializing Servlet ''
+2020-09-29 14:26:42,047 INFO o.s.b.a.e.w.EndpointLinksResolver [main] Exposing 5 endpoint(s) beneath base path '/actuator'
+2020-09-29 14:26:42,079 INFO o.s.w.s.FrameworkServlet [main] Completed initialization in 44 ms
+2020-09-29 14:26:42,133 INFO o.s.b.StartupInfoLogger [main] Started FireStationControllerTest in 2.917 seconds (JVM running for 5.672)
+2020-09-29 14:26:42,479 INFO c.s.a.c.FireStationController [main] HTTP GET request recieved at /firestation?station=X URL
+2020-09-29 14:26:42,521 INFO o.s.s.c.ExecutorConfigurationSupport [SpringContextShutdownHook] Shutting down ExecutorService 'applicationTaskExecutor'

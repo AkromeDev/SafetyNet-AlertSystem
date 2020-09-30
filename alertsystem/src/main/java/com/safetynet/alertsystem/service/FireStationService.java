@@ -25,9 +25,17 @@ public class FireStationService {
 		this.fireStationRepo = fireStationRepo;
 	}
 
-	public ArrayList<PersonalInformation> getPeopleFromStation(ArrayList<Integer> station) {
+	public ArrayList<PersonalInformation> getPeopleFromStation(ArrayList<String> stationNumber) {
 		
-		return fireStationRepo.getPeopleFromStation(station);
+		ArrayList<Integer> newStationNumber = new ArrayList<Integer>();
+		
+		for (int i = 0; i < stationNumber.size(); i++) {
+			String fuck = stationNumber.get(i);
+			Integer you = Integer.parseInt(fuck);
+			newStationNumber.add(you);
+		}
+		
+		return fireStationRepo.getPeopleFromStation(newStationNumber);
 	}
 	
 	public ArrayList<HabitantAndRecords> getHabitantsAndRecordsFromStation(ArrayList<Integer> station) {

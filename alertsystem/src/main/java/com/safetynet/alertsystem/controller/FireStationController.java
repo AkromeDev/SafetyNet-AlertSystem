@@ -34,7 +34,7 @@ public class FireStationController {
 	
 	@ResponseBody
 	@GetMapping(value="/firestation")
-	public ResponseEntity<String> getPeopleFromFireStations(@RequestParam ArrayList<Integer> stationNumber) {
+	public ResponseEntity<String> getPeopleFromFireStations(@RequestParam ArrayList<String> stationNumber) {
 		
 		logger.info("HTTP GET request recieved at /firestation?station=X URL");
 		
@@ -51,7 +51,7 @@ public class FireStationController {
 	
 	@ResponseBody
 	@GetMapping(value="/phoneAlert")
-	public ResponseEntity<String> getPhonesFromPeopleInArea(@RequestParam ArrayList<Integer> firestation) {
+	public ResponseEntity<String> getPhonesFromPeopleInArea(@RequestParam ArrayList<String> firestation) {
 		
 		logger.info("HTTP GET request recieved at /phoneAlert?firestation=X URL");
 		
