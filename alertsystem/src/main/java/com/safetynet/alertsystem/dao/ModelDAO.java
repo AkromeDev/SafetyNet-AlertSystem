@@ -213,8 +213,9 @@ public class ModelDAO {
 		ModelDAO.peopleFromJson = peopleFromJson;
 	}
 	
-	public void addPersonToList(PersonalInformation person) {
+	public PersonalInformation addPersonToList(PersonalInformation person) {
 		peopleFromJson.add(person);
+		return person;
 	}
 
 	public ArrayList<FireStations> getFireStationFromJson() {
@@ -225,8 +226,9 @@ public class ModelDAO {
 		ModelDAO.fireStationFromJson = fireStationFromJson;
 	}
 	
-	public void addStationToList(FireStations station) {
+	public FireStations addStationToList(FireStations station) {
 		fireStationFromJson.add(station);
+		return station;
 	}
 
 	public ArrayList<MedicalRecords> getMedicalRecordsFromJson() {
@@ -237,8 +239,9 @@ public class ModelDAO {
 		ModelDAO.medicalRecordsFromJson = medicalRecordsFromJson;
 	}
 	
-	public void addMedicalRecordList(MedicalRecords record) {
+	public MedicalRecords addMedicalRecordList(MedicalRecords record) {
 		medicalRecordsFromJson.add(record);
+		return record;
 	}
 
 	public ArrayList<HabitantAndRecords> getHabitantsAndRecordList() {
