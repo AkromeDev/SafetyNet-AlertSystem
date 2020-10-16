@@ -1,12 +1,8 @@
 package com.safetynet.alertsystem.repository;
 
-import java.util.ArrayList;
-
 import org.springframework.stereotype.Repository;
-import org.springframework.web.servlet.ModelAndView;
 
 import com.safetynet.alertsystem.dao.ModelDAO;
-import com.safetynet.alertsystem.model.HabitantAndRecords;
 import com.safetynet.alertsystem.model.MedicalRecords;
 
 @Repository

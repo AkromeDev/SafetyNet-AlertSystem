@@ -2,7 +2,6 @@ package com.safetynet.alertsystem.service;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import org.springframework.web.servlet.ModelAndView;
 
 import com.safetynet.alertsystem.model.MedicalRecords;
 import com.safetynet.alertsystem.repository.MedicalRecordsRepository;
