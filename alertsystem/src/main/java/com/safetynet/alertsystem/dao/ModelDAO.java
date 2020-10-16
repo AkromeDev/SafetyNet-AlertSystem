@@ -56,7 +56,6 @@ public class ModelDAO {
 			e.printStackTrace();
 		}
 		
-		// TODO use property file for the data link
 	}
 	
 	public static void addAllDataToLists() {
@@ -109,7 +108,7 @@ public class ModelDAO {
 		
 		for(PersonalInformation person : peopleList) {
 			for(MedicalRecords record : medicalRecordsFromJson) {
-				if (person.getFirstName().equals(record.getFirstName()) & person.getLastName().equals(record.getLasttName())) {
+				if (person.getFirstName().equals(record.getFirstName()) & person.getLastName().equals(record.getLastName())) {
 					HabitantAndRecords habAndRe = new HabitantAndRecords();
 					
 					habAndRe.setFirstName(person.getFirstName());
@@ -250,6 +249,18 @@ public class ModelDAO {
 
 	public void setHabitantsAndRecordList(ArrayList<HabitantAndRecords> habitantsAndRecordList) {
 		ModelDAO.habitantsAndRecordList = habitantsAndRecordList;
+	}
+
+	public MedicalRecords deleteMedicalRecord(String firstName, String lastName) {
+		MedicalRecords chosenOne = new MedicalRecords();
+		
+		for (MedicalRecords potentialOne: medicalRecordsFromJson) {
+				if (potentialOne.getFirstName().equals(firstName) && potentialOne.getLastName().contentEquals(lastName)) {
+					medicalRecordsFromJson.remove(medicalRecordsFromJson.indexOf(potentialOne));
+					chosenOne = potentialOne;
+				}
+			}
+		return chosenOne;
 	}
 	
 }
