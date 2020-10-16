@@ -13,7 +13,6 @@ public class HealthCheck implements HealthIndicator {
 	@Autowired
 	private AlertService alertService;
 
-	// TODO: why the server is not working https://openclassrooms.com/en/courses/5684146-create-web-applications-efficiently-with-the-spring-boot-mvc-framework/6170301-get-started-with-spring-boot-actuator#/id/r-6170348
 	@Override
 	public Health health() {
 		

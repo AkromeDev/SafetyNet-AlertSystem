@@ -5004,3 +5004,4 @@ Identify and stop the process that's listening on port 8080 or configure this ap
 2020-10-08 17:52:50,911 INFO c.s.a.c.AlertController [main] HTTP GET request recieved at /person URL
 2020-10-08 17:52:51,027 INFO o.s.s.c.ExecutorConfigurationSupport [SpringContextShutdownHook] Shutting down ExecutorService 'applicationTaskExecutor'
 2020-10-08 17:52:51,027 INFO o.s.s.c.ExecutorConfigurationSupport [SpringContextShutdownHook] Shutting down ExecutorService 'applicationTaskExecutor'
+2020-10-09 14:05:37,178 ERROR c.s.a.c.CustomErrorController [http-nio-8080-exec-6] Error with the code 404 happened! damn...
