@@ -30,34 +30,27 @@ public class MedicalRecordsController {
 		this.mediService = mediService;
 	}
 	
-	@PostMapping(value="/POST/medicalRecord")
+	@PostMapping("/medicalRecord")
 	public MedicalRecords postMedicalRecord(@RequestParam MedicalRecords mediRecord) {
 		logger.info("HTTP POST request recieved at /POST/medicalRecord URL");		
 		
 		return mediService.saveMedicalRecord(mediRecord);
 	}
 	
-	@PutMapping("/PUT/medicalRecord")
+	@PutMapping("/medicalRecord")
 	public MedicalRecords submitPersonInfoForm(@RequestParam MedicalRecords mediRecord) {
-		
 		logger.info("HTTP PUT request recieved at /PUT/medicalRecord URL");
 		
 		
 		return mediService.putMedicalRecord(mediRecord);
 	}
 	
-	@DeleteMapping("/DELETE/medicalRecord")
-	public ModelAndView deleteMedicalRecord(@RequestParam String firstName, String lastName) {
+	@DeleteMapping("/medicalRecord")
+	public MedicalRecords deleteMedicalRecord(@RequestParam String firstName, String lastName) {
 		
-		logger.info("HTTP GET request recieved at /person URL");
+		logger.info("HTTP PUT request recieved at /DELETE/medicalRecord URL");
 		
-		String viewName = "person";
 		
-		Map<String, Object> model = new HashMap<String, Object>();
-		
-		model.put("person", alertService.addDataFromJson());
-		model.put("numberToSave", alertService.getListSize());
-		
-		return new ModelAndView(viewName, model);
+		return mediService.deleteMedicalRecord(firstName, lastName);
 	}
 }
