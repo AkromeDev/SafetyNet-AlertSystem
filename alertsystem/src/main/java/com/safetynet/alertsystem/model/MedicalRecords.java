@@ -33,7 +33,7 @@ public class MedicalRecords {
 		this.firstName = firstName;
 	}
 
-	public String getLasttName() {
+	public String getLastName() {
 		return lastName;
 	}
 
