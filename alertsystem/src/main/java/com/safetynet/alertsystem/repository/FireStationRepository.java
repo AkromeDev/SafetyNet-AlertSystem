@@ -96,7 +96,7 @@ public class FireStationRepository {
 			medicalRecords = modelDAO.getMedicalRecordsFromJson();
 			
 			for(MedicalRecords record : medicalRecords) {
-				if (person.getFirstName().equals(record.getFirstName()) & person.getLastName().equals(record.getLasttName())) {
+				if (person.getFirstName().equals(record.getFirstName()) & person.getLastName().equals(record.getLastName())) {
 					machtedRecords.add(record);
 				}
 			}
