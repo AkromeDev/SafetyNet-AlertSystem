@@ -9,9 +9,9 @@ public class MedicalRecords {
 	private String birthdate;
 	private ArrayList<String> medications;
 	private ArrayList<String> allergies;
-	private int id;
+	private Integer id;
 	
-	public MedicalRecords(String firstName, String lastName, String birthdate, ArrayList<String> medications, ArrayList<String> allergies, int id) {
+	public MedicalRecords(String firstName, String lastName, String birthdate, ArrayList<String> medications, ArrayList<String> allergies, Integer id) {
 		super();
 		this.firstName = firstName;
 		this.lastName = lastName;
@@ -65,11 +65,11 @@ public class MedicalRecords {
 		this.allergies = allergiesList;
 	}
 
-	public int getId() {
+	public Integer getId() {
 		return id;
 	}
 
-	public void setId(int id) {
+	public void setId(Integer id) {
 		this.id = id;
 	}
 	
