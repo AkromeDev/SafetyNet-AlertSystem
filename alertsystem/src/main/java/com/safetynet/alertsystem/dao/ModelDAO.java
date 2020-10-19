@@ -238,7 +238,7 @@ public class ModelDAO {
 		ModelDAO.medicalRecordsFromJson = medicalRecordsFromJson;
 	}
 	
-	public MedicalRecords addMedicalRecordList(MedicalRecords record) {
+	public MedicalRecords addMedicalRecordToList(MedicalRecords record) {
 		medicalRecordsFromJson.add(record);
 		return record;
 	}
@@ -256,7 +256,25 @@ public class ModelDAO {
 		
 		for (MedicalRecords potentialOne: medicalRecordsFromJson) {
 				if (potentialOne.getFirstName().equals(firstName) && potentialOne.getLastName().contentEquals(lastName)) {
-					medicalRecordsFromJson.remove(medicalRecordsFromJson.indexOf(potentialOne));
+					chosenOne = potentialOne;
+				}
+			}
+		
+		medicalRecordsFromJson.remove(medicalRecordsFromJson.indexOf(chosenOne));
+		
+		return chosenOne;
+	}
+	
+	public MedicalRecords findAndUpdateMedicalRecordbyNames(MedicalRecords mediRecord) {
+		
+		MedicalRecords chosenOne = new MedicalRecords();
+		
+		for (MedicalRecords potentialOne: medicalRecordsFromJson) {
+				if (potentialOne.getId().equals(mediRecord.getId())) {
+					potentialOne.setAllergies(mediRecord.getAllergies());
+					potentialOne.setMedications(mediRecord.getMedications());
+					potentialOne.setBirthdate(mediRecord.getBirthdate());
+					
 					chosenOne = potentialOne;
 				}
 			}
