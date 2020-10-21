@@ -11,9 +11,9 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.safetynet.alertsystem.model.FireStations;
 import com.safetynet.alertsystem.model.MedicalRecords;
 import com.safetynet.alertsystem.model.PersonalInformation;
 import com.safetynet.alertsystem.service.RestService;
@@ -83,6 +83,34 @@ public class RestEndController {
 		logger.info("HTTP PUT request recieved at /DELETE/person URL");
 		
 		JSONObject deletePerson = new JSONObject(restService.deletePerson(firstName, lastName));
+		
+		return new ResponseEntity<String>(deletePerson.toString(), HttpStatus.OK);
+	}
+	
+	@PostMapping("/firestation")
+	public ResponseEntity<String> postFirestation(@RequestBody FireStations fire) {
+		logger.info("HTTP POST request recieved at /POST/firestation URL");		
+		
+		JSONObject postFire = new JSONObject(restService.saveFire(fire));
+		
+		return new ResponseEntity<String>(postFire.toString(), HttpStatus.CREATED);
+	}
+	
+	@PutMapping("/firestation")
+	public ResponseEntity<String> putFirestation(@RequestBody FireStations fire) {
+		logger.info("HTTP PUT request recieved at /PUT/firestation URL");
+		
+		JSONObject putFire = new JSONObject(restService.putFirestation(fire));
+		
+		return new ResponseEntity<String>(putFire.toString(), HttpStatus.ACCEPTED);
+	}
+	
+	@DeleteMapping("/firestation")
+	public ResponseEntity<String> deleteFirestation(@RequestParam String address, Integer station) {
+		
+		logger.info("HTTP PUT request recieved at /DELETE/firestation URL");
+		
+		JSONObject deletePerson = new JSONObject(restService.deleteFirestation(address, station));
 		
 		return new ResponseEntity<String>(deletePerson.toString(), HttpStatus.OK);
 	}
