@@ -4,9 +4,9 @@ public class FireStations {
 	
 	private String address;
 	private Integer station;
-	private int id;
+	private Integer id;
 	
-	public FireStations(String address, int station, int id) {
+	public FireStations(String address, Integer station, Integer id) {
 		super();
 		this.address = address;
 		this.station = station;
@@ -29,7 +29,7 @@ public class FireStations {
 		return station;
 	}
 
-	public void setStation(int station) {
+	public void setStation(Integer station) {
 		this.station = station;
 	}
 
@@ -37,7 +37,7 @@ public class FireStations {
 		return id;
 	}
 
-	public void setId(int id) {
+	public void setId(Integer id) {
 		this.id = id;
 	}
 
