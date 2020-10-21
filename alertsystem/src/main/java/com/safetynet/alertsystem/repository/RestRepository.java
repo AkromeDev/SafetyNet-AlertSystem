@@ -1,8 +1,10 @@
 package com.safetynet.alertsystem.repository;
 
+import org.json.JSONTokener;
 import org.springframework.stereotype.Repository;
 
 import com.safetynet.alertsystem.dao.ModelDAO;
+import com.safetynet.alertsystem.model.FireStations;
 import com.safetynet.alertsystem.model.MedicalRecords;
 import com.safetynet.alertsystem.model.PersonalInformation;
 
@@ -67,6 +69,34 @@ public class RestRepository {
 	public PersonalInformation deletePerson(String firstName, String lastName) {
 
 		return modelDAO.deletePerson(firstName, lastName);
+	}
+
+	public FireStations saveFire(FireStations fire) {
+		fire.setId(findStationNewId());
+		
+		return modelDAO.addStationToList(fire);
+	}
+	
+	public Integer findStationNewId() {
+		Integer id = 0;
+		
+		for (FireStations station: modelDAO.getFireStationFromJson()) {
+			if (station.getId() > id) {
+				id = station.getId();
+			}
+		}
+	
+		return id + 1;
+	}
+
+	public FireStations putFirestation(FireStations fire) {
+		
+		return modelDAO.findAndUpdateFirestation(fire);
+	}
+
+	public FireStations deleteFirestation(String address, Integer station) {
+		
+		return modelDAO.deleteFirestation(address, station);
 	}
 	
 	}
