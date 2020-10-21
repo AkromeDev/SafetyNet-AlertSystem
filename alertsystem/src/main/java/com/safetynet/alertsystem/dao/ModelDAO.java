@@ -255,7 +255,7 @@ public class ModelDAO {
 		MedicalRecords chosenOne = new MedicalRecords();
 		
 		for (MedicalRecords potentialOne: medicalRecordsFromJson) {
-				if (potentialOne.getFirstName().equals(firstName) && potentialOne.getLastName().contentEquals(lastName)) {
+				if (potentialOne.getFirstName().equals(firstName) && potentialOne.getLastName().equals(lastName)) {
 					chosenOne = potentialOne;
 				}
 			}
@@ -278,6 +278,39 @@ public class ModelDAO {
 					chosenOne = potentialOne;
 				}
 			}
+		return chosenOne;
+	}
+	
+	public PersonalInformation findAndUpdatePersonalInformation(PersonalInformation person) {
+		
+		PersonalInformation chosenOne = new PersonalInformation();
+		
+		for (PersonalInformation potentialOne: peopleFromJson) {
+				if (potentialOne.getFirstName().equals(person.getFirstName()) && potentialOne.getLastName().equals(person.getLastName())) {
+					potentialOne.setAddress(person.getAddress());
+					potentialOne.setCity(person.getCity());
+					potentialOne.setZip(person.getZip());
+					potentialOne.setPhone(person.getPhone());
+					potentialOne.setEmail(person.getEmail());
+					
+					chosenOne = potentialOne;
+				}
+			}
+		return chosenOne;
+	}
+
+	public PersonalInformation deletePerson(String firstName, String lastName) {
+		
+		PersonalInformation chosenOne = new PersonalInformation();
+		
+		for (PersonalInformation potentialOne: peopleFromJson) {
+				if (potentialOne.getFirstName().equals(firstName) && potentialOne.getLastName().equals(lastName)) {
+					chosenOne = potentialOne;
+				}
+			}
+		
+		peopleFromJson.remove(peopleFromJson.indexOf(chosenOne));
+		
 		return chosenOne;
 	}
 	
