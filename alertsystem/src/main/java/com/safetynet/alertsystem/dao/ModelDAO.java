@@ -270,7 +270,7 @@ public class ModelDAO {
 		MedicalRecords chosenOne = new MedicalRecords();
 		
 		for (MedicalRecords potentialOne: medicalRecordsFromJson) {
-				if (potentialOne.getId().equals(mediRecord.getId())) {
+				if (potentialOne.getFirstName().equals(mediRecord.getFirstName()) && potentialOne.getLastName().equals(mediRecord.getLastName())) {
 					potentialOne.setAllergies(mediRecord.getAllergies());
 					potentialOne.setMedications(mediRecord.getMedications());
 					potentialOne.setBirthdate(mediRecord.getBirthdate());
@@ -310,6 +310,35 @@ public class ModelDAO {
 			}
 		
 		peopleFromJson.remove(peopleFromJson.indexOf(chosenOne));
+		
+		return chosenOne;
+	}
+
+	public FireStations findAndUpdateFirestation(FireStations fire) {
+		
+		FireStations chosenOne = new FireStations();
+		
+		for (FireStations potentialOne: fireStationFromJson) {
+				if (potentialOne.getAddress().equals(fire.getAddress())) {
+					potentialOne.setStation(fire.getStation());
+					
+					chosenOne = potentialOne;
+				}
+			}
+		return chosenOne;
+	}
+
+	public FireStations deleteFirestation(String address, Integer station) {
+		
+		FireStations chosenOne = new FireStations();
+		
+		for (FireStations potentialOne: fireStationFromJson) {
+				if (potentialOne.getAddress().equals(address) && potentialOne.getStation().equals(station)) {
+					chosenOne = potentialOne;
+				}
+			}
+		
+		fireStationFromJson.remove(fireStationFromJson.indexOf(chosenOne));
 		
 		return chosenOne;
 	}
