@@ -77,7 +77,7 @@ public class RestEndController {
 		return new ResponseEntity<String>(putPerson.toString(), HttpStatus.ACCEPTED);
 	}
 	
-	@DeleteMapping("/medicalRecord")
+	@DeleteMapping("/person")
 	public ResponseEntity<String> deletePerson(@RequestParam String firstName, String lastName) {
 		
 		logger.info("HTTP PUT request recieved at /DELETE/person URL");

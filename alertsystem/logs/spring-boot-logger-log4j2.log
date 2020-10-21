@@ -11091,3 +11091,370 @@ java.lang.NullPointerException: null
 2020-10-19 20:09:35,949 DEBUG o.s.w.s.m.m.a.AbstractMessageConverterMethodProcessor [http-nio-8080-exec-8] Using 'text/plain', given [*/*] and supported [text/plain, */*, text/plain, */*, application/json, application/*+json, application/json, application/*+json]
 2020-10-19 20:09:35,957 DEBUG o.s.c.l.LogFormatUtils [http-nio-8080-exec-8] Writing ["{"allergies":["WOOOOooOW"],"firstName":"Tessa","lastName":"Carman","birthdate":"06/06/1006","medica (truncated)...]
 2020-10-19 20:09:35,961 DEBUG o.s.w.s.FrameworkServlet [http-nio-8080-exec-8] Completed 200 OK
+2020-10-19 22:56:52,817 INFO c.s.a.AlertsystemApplication [main] Initializing SafetyNet app
+2020-10-19 22:56:53,189 INFO o.h.v.i.u.Version [background-preinit] HV000001: Hibernate Validator 6.1.6.Final
+2020-10-19 22:56:53,226 INFO o.s.b.StartupInfoLogger [main] Starting AlertsystemApplication using Java 1.8.0_251 on JCs-MacBook-Pro with PID 11643 (/Users/j.c./git/AlertSystem/alertsystem/target/classes started by j.c. in /Users/j.c./git/AlertSystem/alertsystem)
+2020-10-19 22:56:53,229 DEBUG o.s.b.StartupInfoLogger [main] Running with Spring Boot v2.4.0-SNAPSHOT, Spring v5.3.0-RC2
+2020-10-19 22:56:53,229 INFO o.s.b.SpringApplication [main] No active profile set, falling back to default profiles: default
+2020-10-19 22:56:54,148 INFO o.s.b.w.e.t.TomcatWebServer [main] Tomcat initialized with port(s): 8080 (http)
+2020-10-19 22:56:54,163 INFO o.a.j.l.DirectJDKLog [main] Initializing ProtocolHandler ["http-nio-8080"]
+2020-10-19 22:56:54,164 INFO o.a.j.l.DirectJDKLog [main] Starting service [Tomcat]
+2020-10-19 22:56:54,165 INFO o.a.j.l.DirectJDKLog [main] Starting Servlet engine: [Apache Tomcat/9.0.39]
+2020-10-19 22:56:54,222 INFO o.a.j.l.DirectJDKLog [main] Initializing Spring embedded WebApplicationContext
+2020-10-19 22:56:54,223 INFO o.s.b.w.s.c.ServletWebServerApplicationContext [main] Root WebApplicationContext: initialization completed in 956 ms
+2020-10-19 22:56:54,509 INFO o.s.s.c.ExecutorConfigurationSupport [main] Initializing ExecutorService 'applicationTaskExecutor'
+2020-10-19 22:56:54,538 DEBUG o.s.w.s.m.m.a.RequestMappingHandlerAdapter [main] ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2020-10-19 22:56:54,594 DEBUG o.s.w.s.h.AbstractHandlerMethodMapping [main] 14 mappings in 'requestMappingHandlerMapping'
+2020-10-19 22:56:54,598 INFO o.s.b.a.w.s.WelcomePageHandlerMapping [main] Adding welcome page template: index
+2020-10-19 22:56:54,616 DEBUG o.s.w.s.h.SimpleUrlHandlerMapping [main] Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2020-10-19 22:56:54,623 DEBUG o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver [main] ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2020-10-19 22:56:54,819 INFO o.s.b.a.e.w.EndpointLinksResolver [main] Exposing 5 endpoint(s) beneath base path '/actuator'
+2020-10-19 22:56:54,842 INFO o.a.j.l.DirectJDKLog [main] Starting ProtocolHandler ["http-nio-8080"]
+2020-10-19 22:56:54,865 INFO o.s.b.w.e.t.TomcatWebServer [main] Tomcat started on port(s): 8080 (http) with context path ''
+2020-10-19 22:56:54,879 INFO o.s.b.StartupInfoLogger [main] Started AlertsystemApplication in 1.988 seconds (JVM running for 2.697)
+2020-10-19 22:57:09,850 INFO o.a.j.l.DirectJDKLog [http-nio-8080-exec-1] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-10-19 22:57:09,851 INFO o.s.w.s.FrameworkServlet [http-nio-8080-exec-1] Initializing Servlet 'dispatcherServlet'
+2020-10-19 22:57:09,851 DEBUG o.s.w.s.DispatcherServlet [http-nio-8080-exec-1] Detected StandardServletMultipartResolver
+2020-10-19 22:57:09,852 DEBUG o.s.w.s.DispatcherServlet [http-nio-8080-exec-1] Detected AcceptHeaderLocaleResolver
+2020-10-19 22:57:09,852 DEBUG o.s.w.s.DispatcherServlet [http-nio-8080-exec-1] Detected FixedThemeResolver
+2020-10-19 22:57:09,853 DEBUG o.s.w.s.DispatcherServlet [http-nio-8080-exec-1] Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@3f0d6079
+2020-10-19 22:57:09,853 DEBUG o.s.w.s.DispatcherServlet [http-nio-8080-exec-1] Detected org.springframework.web.servlet.support.SessionFlashMapManager@1824733d
+2020-10-19 22:57:09,853 DEBUG o.s.w.s.FrameworkServlet [http-nio-8080-exec-1] enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+2020-10-19 22:57:09,854 INFO o.s.w.s.FrameworkServlet [http-nio-8080-exec-1] Completed initialization in 2 ms
+2020-10-19 22:57:09,862 DEBUG o.s.c.l.LogFormatUtils [http-nio-8080-exec-1] GET "/", parameters={}
+2020-10-19 22:57:09,875 DEBUG o.s.w.s.v.ContentNegotiatingViewResolver [http-nio-8080-exec-1] Selected 'text/html' given [text/html, application/xhtml+xml, image/avif, image/webp, image/apng, application/xml;q=0.9, application/signed-exchange;v=b3;q=0.9, */*;q=0.8]
+2020-10-19 22:57:10,026 DEBUG o.s.w.s.FrameworkServlet [http-nio-8080-exec-1] Completed 200 OK
+2020-10-19 22:57:10,710 DEBUG o.s.c.l.LogFormatUtils [http-nio-8080-exec-2] GET "/person", parameters={}
+2020-10-19 22:57:10,712 DEBUG o.s.w.s.h.AbstractHandlerMapping [http-nio-8080-exec-2] Mapped to com.safetynet.alertsystem.controller.AlertController#getPersonalInfo()
+2020-10-19 22:57:10,720 INFO c.s.a.c.AlertController [http-nio-8080-exec-2] HTTP GET request recieved at /person URL
+2020-10-19 22:57:11,994 DEBUG o.s.w.s.v.ContentNegotiatingViewResolver [http-nio-8080-exec-2] Selected 'text/html' given [text/html, application/xhtml+xml, image/avif, image/webp, image/apng, application/xml;q=0.9, application/signed-exchange;v=b3;q=0.9, */*;q=0.8]
+2020-10-19 22:57:12,189 DEBUG o.s.w.s.FrameworkServlet [http-nio-8080-exec-2] Completed 200 OK
+2020-10-19 22:57:18,534 DEBUG o.s.c.l.LogFormatUtils [http-nio-8080-exec-4] DELETE "/medicalRecord?firstName=John&lastName=Boyd", parameters={masked}
+2020-10-19 22:57:18,536 DEBUG o.s.w.s.h.AbstractHandlerMapping [http-nio-8080-exec-4] Mapped to com.safetynet.alertsystem.controller.MedicalRecordsController#deleteMedicalRecord(String, String)
+2020-10-19 22:57:18,554 INFO c.s.a.c.MedicalRecordsController [http-nio-8080-exec-4] HTTP PUT request recieved at /DELETE/medicalRecord URL
+2020-10-19 22:57:18,565 DEBUG o.s.w.s.m.m.a.AbstractMessageConverterMethodProcessor [http-nio-8080-exec-4] Using 'text/plain', given [*/*] and supported [text/plain, */*, text/plain, */*, application/json, application/*+json, application/json, application/*+json]
+2020-10-19 22:57:18,566 DEBUG o.s.c.l.LogFormatUtils [http-nio-8080-exec-4] Writing ["{"allergies":["nillacilan"],"firstName":"John","lastName":"Boyd","birthdate":"03/06/1984","medicati (truncated)...]
+2020-10-19 22:57:18,572 DEBUG o.s.w.s.FrameworkServlet [http-nio-8080-exec-4] Completed 200 OK
+2020-10-19 22:57:21,605 DEBUG o.s.c.l.LogFormatUtils [http-nio-8080-exec-5] POST "/medicalRecord", parameters={}
+2020-10-19 22:57:21,606 DEBUG o.s.w.s.h.AbstractHandlerMapping [http-nio-8080-exec-5] Mapped to com.safetynet.alertsystem.controller.MedicalRecordsController#postMedicalRecord(MedicalRecords)
+2020-10-19 22:57:21,681 DEBUG o.s.c.l.LogFormatUtils [http-nio-8080-exec-5] Read "application/json;charset=UTF-8" to [com.safetynet.alertsystem.model.MedicalRecords@5d1353fd]
+2020-10-19 22:57:21,685 INFO c.s.a.c.MedicalRecordsController [http-nio-8080-exec-5] HTTP POST request recieved at /POST/medicalRecord URL
+2020-10-19 22:57:21,686 DEBUG o.s.w.s.m.m.a.AbstractMessageConverterMethodProcessor [http-nio-8080-exec-5] Using 'text/plain', given [*/*] and supported [text/plain, */*, text/plain, */*, application/json, application/*+json, application/json, application/*+json]
+2020-10-19 22:57:21,686 DEBUG o.s.c.l.LogFormatUtils [http-nio-8080-exec-5] Writing ["{"allergies":["ZZZ"],"firstName":"John","lastName":"Boyd","birthdate":"03/06/1984","medications":[" (truncated)...]
+2020-10-19 22:57:21,687 DEBUG o.s.w.s.FrameworkServlet [http-nio-8080-exec-5] Completed 200 OK
+2020-10-19 22:57:25,421 DEBUG o.s.c.l.LogFormatUtils [http-nio-8080-exec-6] PUT "/medicalRecord", parameters={}
+2020-10-19 22:57:25,423 DEBUG o.s.w.s.h.AbstractHandlerMapping [http-nio-8080-exec-6] Mapped to com.safetynet.alertsystem.controller.MedicalRecordsController#putPersonInfoForm(MedicalRecords)
+2020-10-19 22:57:25,425 DEBUG o.s.c.l.LogFormatUtils [http-nio-8080-exec-6] Read "application/json;charset=UTF-8" to [com.safetynet.alertsystem.model.MedicalRecords@65c94401]
+2020-10-19 22:57:25,426 INFO c.s.a.c.MedicalRecordsController [http-nio-8080-exec-6] HTTP PUT request recieved at /PUT/medicalRecord URL
+2020-10-19 22:57:25,429 DEBUG o.s.w.s.m.m.a.AbstractMessageConverterMethodProcessor [http-nio-8080-exec-6] Using 'text/plain', given [*/*] and supported [text/plain, */*, text/plain, */*, application/json, application/*+json, application/json, application/*+json]
+2020-10-19 22:57:25,436 DEBUG o.s.c.l.LogFormatUtils [http-nio-8080-exec-6] Writing ["{"allergies":["WOOOOooOW"],"firstName":"Tessa","lastName":"Carman","birthdate":"06/06/1006","medica (truncated)...]
+2020-10-19 22:57:25,438 DEBUG o.s.w.s.FrameworkServlet [http-nio-8080-exec-6] Completed 200 OK
+2020-10-19 22:57:35,073 DEBUG o.s.c.l.LogFormatUtils [http-nio-8080-exec-7] DELETE "/medicalRecord?firstName=John&lastName=Boyd", parameters={masked}
+2020-10-19 22:57:35,074 DEBUG o.s.w.s.h.AbstractHandlerMapping [http-nio-8080-exec-7] Mapped to com.safetynet.alertsystem.controller.MedicalRecordsController#deleteMedicalRecord(String, String)
+2020-10-19 22:57:35,075 INFO c.s.a.c.MedicalRecordsController [http-nio-8080-exec-7] HTTP PUT request recieved at /DELETE/medicalRecord URL
+2020-10-19 22:57:35,076 DEBUG o.s.w.s.m.m.a.AbstractMessageConverterMethodProcessor [http-nio-8080-exec-7] Using 'text/plain', given [*/*] and supported [text/plain, */*, text/plain, */*, application/json, application/*+json, application/json, application/*+json]
+2020-10-19 22:57:35,077 DEBUG o.s.c.l.LogFormatUtils [http-nio-8080-exec-7] Writing ["{"allergies":["ZZZ"],"firstName":"John","lastName":"Boyd","birthdate":"03/06/1984","medications":[" (truncated)...]
+2020-10-19 22:57:35,077 DEBUG o.s.w.s.FrameworkServlet [http-nio-8080-exec-7] Completed 200 OK
+2020-10-19 23:14:38,111 INFO o.s.s.c.ExecutorConfigurationSupport [SpringContextShutdownHook] Shutting down ExecutorService 'applicationTaskExecutor'
+2020-10-19 23:14:44,405 INFO c.s.a.AlertsystemApplication [main] Initializing SafetyNet app
+2020-10-19 23:14:44,824 INFO o.h.v.i.u.Version [background-preinit] HV000001: Hibernate Validator 6.1.6.Final
+2020-10-19 23:14:44,852 INFO o.s.b.StartupInfoLogger [main] Starting AlertsystemApplication using Java 1.8.0_251 on JCs-MacBook-Pro with PID 11740 (/Users/j.c./git/AlertSystem/alertsystem/target/classes started by j.c. in /Users/j.c./git/AlertSystem/alertsystem)
+2020-10-19 23:14:44,855 DEBUG o.s.b.StartupInfoLogger [main] Running with Spring Boot v2.4.0-SNAPSHOT, Spring v5.3.0-RC2
+2020-10-19 23:14:44,855 INFO o.s.b.SpringApplication [main] No active profile set, falling back to default profiles: default
+2020-10-19 23:14:45,802 INFO o.s.b.w.e.t.TomcatWebServer [main] Tomcat initialized with port(s): 8080 (http)
+2020-10-19 23:14:45,816 INFO o.a.j.l.DirectJDKLog [main] Initializing ProtocolHandler ["http-nio-8080"]
+2020-10-19 23:14:45,817 INFO o.a.j.l.DirectJDKLog [main] Starting service [Tomcat]
+2020-10-19 23:14:45,817 INFO o.a.j.l.DirectJDKLog [main] Starting Servlet engine: [Apache Tomcat/9.0.39]
+2020-10-19 23:14:45,875 INFO o.a.j.l.DirectJDKLog [main] Initializing Spring embedded WebApplicationContext
+2020-10-19 23:14:45,876 INFO o.s.b.w.s.c.ServletWebServerApplicationContext [main] Root WebApplicationContext: initialization completed in 983 ms
+2020-10-19 23:14:46,145 INFO o.s.s.c.ExecutorConfigurationSupport [main] Initializing ExecutorService 'applicationTaskExecutor'
+2020-10-19 23:14:46,155 DEBUG o.s.w.s.m.m.a.RequestMappingHandlerAdapter [main] ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2020-10-19 23:14:46,209 DEBUG o.s.w.s.h.AbstractHandlerMethodMapping [main] 14 mappings in 'requestMappingHandlerMapping'
+2020-10-19 23:14:46,212 INFO o.s.b.a.w.s.WelcomePageHandlerMapping [main] Adding welcome page template: index
+2020-10-19 23:14:46,229 DEBUG o.s.w.s.h.SimpleUrlHandlerMapping [main] Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2020-10-19 23:14:46,236 DEBUG o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver [main] ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2020-10-19 23:14:46,427 INFO o.s.b.a.e.w.EndpointLinksResolver [main] Exposing 5 endpoint(s) beneath base path '/actuator'
+2020-10-19 23:14:46,450 INFO o.a.j.l.DirectJDKLog [main] Starting ProtocolHandler ["http-nio-8080"]
+2020-10-19 23:14:46,473 INFO o.s.b.w.e.t.TomcatWebServer [main] Tomcat started on port(s): 8080 (http) with context path ''
+2020-10-19 23:14:46,487 INFO o.s.b.StartupInfoLogger [main] Started AlertsystemApplication in 2.007 seconds (JVM running for 2.753)
+2020-10-19 23:14:54,732 INFO o.a.j.l.DirectJDKLog [http-nio-8080-exec-1] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-10-19 23:14:54,733 INFO o.s.w.s.FrameworkServlet [http-nio-8080-exec-1] Initializing Servlet 'dispatcherServlet'
+2020-10-19 23:14:54,733 DEBUG o.s.w.s.DispatcherServlet [http-nio-8080-exec-1] Detected StandardServletMultipartResolver
+2020-10-19 23:14:54,733 DEBUG o.s.w.s.DispatcherServlet [http-nio-8080-exec-1] Detected AcceptHeaderLocaleResolver
+2020-10-19 23:14:54,733 DEBUG o.s.w.s.DispatcherServlet [http-nio-8080-exec-1] Detected FixedThemeResolver
+2020-10-19 23:14:54,735 DEBUG o.s.w.s.DispatcherServlet [http-nio-8080-exec-1] Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@a0c62
+2020-10-19 23:14:54,735 DEBUG o.s.w.s.DispatcherServlet [http-nio-8080-exec-1] Detected org.springframework.web.servlet.support.SessionFlashMapManager@5c0bcca0
+2020-10-19 23:14:54,735 DEBUG o.s.w.s.FrameworkServlet [http-nio-8080-exec-1] enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+2020-10-19 23:14:54,735 INFO o.s.w.s.FrameworkServlet [http-nio-8080-exec-1] Completed initialization in 2 ms
+2020-10-19 23:14:54,743 DEBUG o.s.c.l.LogFormatUtils [http-nio-8080-exec-1] GET "/", parameters={}
+2020-10-19 23:14:54,754 DEBUG o.s.w.s.v.ContentNegotiatingViewResolver [http-nio-8080-exec-1] Selected 'text/html' given [text/html, application/xhtml+xml, image/avif, image/webp, image/apng, application/xml;q=0.9, application/signed-exchange;v=b3;q=0.9, */*;q=0.8]
+2020-10-19 23:14:54,905 DEBUG o.s.w.s.FrameworkServlet [http-nio-8080-exec-1] Completed 200 OK
+2020-10-19 23:14:55,890 DEBUG o.s.c.l.LogFormatUtils [http-nio-8080-exec-2] GET "/person", parameters={}
+2020-10-19 23:14:55,893 DEBUG o.s.w.s.h.AbstractHandlerMapping [http-nio-8080-exec-2] Mapped to com.safetynet.alertsystem.controller.AlertController#getPersonalInfo()
+2020-10-19 23:14:55,901 INFO c.s.a.c.AlertController [http-nio-8080-exec-2] HTTP GET request recieved at /person URL
+2020-10-19 23:14:57,081 DEBUG o.s.w.s.v.ContentNegotiatingViewResolver [http-nio-8080-exec-2] Selected 'text/html' given [text/html, application/xhtml+xml, image/avif, image/webp, image/apng, application/xml;q=0.9, application/signed-exchange;v=b3;q=0.9, */*;q=0.8]
+2020-10-19 23:14:57,269 DEBUG o.s.w.s.FrameworkServlet [http-nio-8080-exec-2] Completed 200 OK
+2020-10-19 23:15:03,685 DEBUG o.s.c.l.LogFormatUtils [http-nio-8080-exec-4] DELETE "/medicalRecord?firstName=John&lastName=Boyd", parameters={masked}
+2020-10-19 23:15:03,686 DEBUG o.s.w.s.h.AbstractHandlerMapping [http-nio-8080-exec-4] Mapped to com.safetynet.alertsystem.controller.RestEndController#deleteMedicalRecord(String, String)
+2020-10-19 23:15:03,704 INFO c.s.a.c.RestEndController [http-nio-8080-exec-4] HTTP PUT request recieved at /DELETE/medicalRecord URL
+2020-10-19 23:15:03,717 DEBUG o.s.w.s.m.m.a.AbstractMessageConverterMethodProcessor [http-nio-8080-exec-4] Using 'text/plain', given [*/*] and supported [text/plain, */*, text/plain, */*, application/json, application/*+json, application/json, application/*+json]
+2020-10-19 23:15:03,726 DEBUG o.s.c.l.LogFormatUtils [http-nio-8080-exec-4] Writing ["{"allergies":["nillacilan"],"firstName":"John","lastName":"Boyd","birthdate":"03/06/1984","medicati (truncated)...]
+2020-10-19 23:15:03,732 DEBUG o.s.w.s.FrameworkServlet [http-nio-8080-exec-4] Completed 200 OK
+2020-10-19 23:15:06,775 DEBUG o.s.c.l.LogFormatUtils [http-nio-8080-exec-5] POST "/medicalRecord", parameters={}
+2020-10-19 23:15:06,777 DEBUG o.s.w.s.h.AbstractHandlerMapping [http-nio-8080-exec-5] Mapped to com.safetynet.alertsystem.controller.RestEndController#postMedicalRecord(MedicalRecords)
+2020-10-19 23:15:06,859 DEBUG o.s.c.l.LogFormatUtils [http-nio-8080-exec-5] Read "application/json;charset=UTF-8" to [com.safetynet.alertsystem.model.MedicalRecords@6bd125b]
+2020-10-19 23:15:06,863 INFO c.s.a.c.RestEndController [http-nio-8080-exec-5] HTTP POST request recieved at /POST/medicalRecord URL
+2020-10-19 23:15:06,864 DEBUG o.s.w.s.m.m.a.AbstractMessageConverterMethodProcessor [http-nio-8080-exec-5] Using 'text/plain', given [*/*] and supported [text/plain, */*, text/plain, */*, application/json, application/*+json, application/json, application/*+json]
+2020-10-19 23:15:06,864 DEBUG o.s.c.l.LogFormatUtils [http-nio-8080-exec-5] Writing ["{"allergies":["ZZZ"],"firstName":"John","lastName":"Boyd","birthdate":"03/06/1984","medications":[" (truncated)...]
+2020-10-19 23:15:06,866 DEBUG o.s.w.s.FrameworkServlet [http-nio-8080-exec-5] Completed 200 OK
+2020-10-19 23:15:10,327 DEBUG o.s.c.l.LogFormatUtils [http-nio-8080-exec-6] PUT "/medicalRecord", parameters={}
+2020-10-19 23:15:10,328 DEBUG o.s.w.s.h.AbstractHandlerMapping [http-nio-8080-exec-6] Mapped to com.safetynet.alertsystem.controller.RestEndController#putPersonInfoForm(MedicalRecords)
+2020-10-19 23:15:10,330 DEBUG o.s.c.l.LogFormatUtils [http-nio-8080-exec-6] Read "application/json;charset=UTF-8" to [com.safetynet.alertsystem.model.MedicalRecords@6f4e0a5c]
+2020-10-19 23:15:10,339 INFO c.s.a.c.RestEndController [http-nio-8080-exec-6] HTTP PUT request recieved at /PUT/medicalRecord URL
+2020-10-19 23:15:10,340 DEBUG o.s.w.s.m.m.a.AbstractMessageConverterMethodProcessor [http-nio-8080-exec-6] Using 'text/plain', given [*/*] and supported [text/plain, */*, text/plain, */*, application/json, application/*+json, application/json, application/*+json]
+2020-10-19 23:15:10,341 DEBUG o.s.c.l.LogFormatUtils [http-nio-8080-exec-6] Writing ["{"allergies":["WOOOOooOW"],"firstName":"Tessa","lastName":"Carman","birthdate":"06/06/1006","medica (truncated)...]
+2020-10-19 23:15:10,342 DEBUG o.s.w.s.FrameworkServlet [http-nio-8080-exec-6] Completed 200 OK
+2020-10-19 23:36:05,021 INFO o.s.s.c.ExecutorConfigurationSupport [SpringContextShutdownHook] Shutting down ExecutorService 'applicationTaskExecutor'
+2020-10-19 23:36:11,174 INFO c.s.a.AlertsystemApplication [main] Initializing SafetyNet app
+2020-10-19 23:36:11,560 INFO o.h.v.i.u.Version [background-preinit] HV000001: Hibernate Validator 6.1.6.Final
+2020-10-19 23:36:11,599 INFO o.s.b.StartupInfoLogger [main] Starting AlertsystemApplication using Java 1.8.0_251 on JCs-MacBook-Pro with PID 11890 (/Users/j.c./git/AlertSystem/alertsystem/target/classes started by j.c. in /Users/j.c./git/AlertSystem/alertsystem)
+2020-10-19 23:36:11,604 DEBUG o.s.b.StartupInfoLogger [main] Running with Spring Boot v2.4.0-SNAPSHOT, Spring v5.3.0-RC2
+2020-10-19 23:36:11,605 INFO o.s.b.SpringApplication [main] No active profile set, falling back to default profiles: default
+2020-10-19 23:36:12,626 INFO o.s.b.w.e.t.TomcatWebServer [main] Tomcat initialized with port(s): 8080 (http)
+2020-10-19 23:36:12,638 INFO o.a.j.l.DirectJDKLog [main] Initializing ProtocolHandler ["http-nio-8080"]
+2020-10-19 23:36:12,639 INFO o.a.j.l.DirectJDKLog [main] Starting service [Tomcat]
+2020-10-19 23:36:12,640 INFO o.a.j.l.DirectJDKLog [main] Starting Servlet engine: [Apache Tomcat/9.0.39]
+2020-10-19 23:36:12,691 INFO o.a.j.l.DirectJDKLog [main] Initializing Spring embedded WebApplicationContext
+2020-10-19 23:36:12,692 INFO o.s.b.w.s.c.ServletWebServerApplicationContext [main] Root WebApplicationContext: initialization completed in 1035 ms
+2020-10-19 23:36:12,954 INFO o.s.s.c.ExecutorConfigurationSupport [main] Initializing ExecutorService 'applicationTaskExecutor'
+2020-10-19 23:36:12,977 DEBUG o.s.w.s.m.m.a.RequestMappingHandlerAdapter [main] ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2020-10-19 23:36:13,031 DEBUG o.s.w.s.h.AbstractHandlerMethodMapping [main] 15 mappings in 'requestMappingHandlerMapping'
+2020-10-19 23:36:13,034 INFO o.s.b.a.w.s.WelcomePageHandlerMapping [main] Adding welcome page template: index
+2020-10-19 23:36:13,052 DEBUG o.s.w.s.h.SimpleUrlHandlerMapping [main] Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2020-10-19 23:36:13,060 DEBUG o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver [main] ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2020-10-19 23:36:13,265 INFO o.s.b.a.e.w.EndpointLinksResolver [main] Exposing 5 endpoint(s) beneath base path '/actuator'
+2020-10-19 23:36:13,291 INFO o.a.j.l.DirectJDKLog [main] Starting ProtocolHandler ["http-nio-8080"]
+2020-10-19 23:36:13,314 INFO o.s.b.w.e.t.TomcatWebServer [main] Tomcat started on port(s): 8080 (http) with context path ''
+2020-10-19 23:36:13,329 INFO o.s.b.StartupInfoLogger [main] Started AlertsystemApplication in 2.059 seconds (JVM running for 2.935)
+2020-10-19 23:36:25,356 INFO o.a.j.l.DirectJDKLog [http-nio-8080-exec-1] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-10-19 23:36:25,356 INFO o.s.w.s.FrameworkServlet [http-nio-8080-exec-1] Initializing Servlet 'dispatcherServlet'
+2020-10-19 23:36:25,357 DEBUG o.s.w.s.DispatcherServlet [http-nio-8080-exec-1] Detected StandardServletMultipartResolver
+2020-10-19 23:36:25,357 DEBUG o.s.w.s.DispatcherServlet [http-nio-8080-exec-1] Detected AcceptHeaderLocaleResolver
+2020-10-19 23:36:25,357 DEBUG o.s.w.s.DispatcherServlet [http-nio-8080-exec-1] Detected FixedThemeResolver
+2020-10-19 23:36:25,358 DEBUG o.s.w.s.DispatcherServlet [http-nio-8080-exec-1] Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@687a8e1c
+2020-10-19 23:36:25,359 DEBUG o.s.w.s.DispatcherServlet [http-nio-8080-exec-1] Detected org.springframework.web.servlet.support.SessionFlashMapManager@1e15c329
+2020-10-19 23:36:25,359 DEBUG o.s.w.s.FrameworkServlet [http-nio-8080-exec-1] enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+2020-10-19 23:36:25,359 INFO o.s.w.s.FrameworkServlet [http-nio-8080-exec-1] Completed initialization in 2 ms
+2020-10-19 23:36:25,367 DEBUG o.s.c.l.LogFormatUtils [http-nio-8080-exec-1] GET "/", parameters={}
+2020-10-19 23:36:25,379 DEBUG o.s.w.s.v.ContentNegotiatingViewResolver [http-nio-8080-exec-1] Selected 'text/html' given [text/html, application/xhtml+xml, image/avif, image/webp, image/apng, application/xml;q=0.9, application/signed-exchange;v=b3;q=0.9, */*;q=0.8]
+2020-10-19 23:36:25,540 DEBUG o.s.w.s.FrameworkServlet [http-nio-8080-exec-1] Completed 200 OK
+2020-10-19 23:36:26,306 DEBUG o.s.c.l.LogFormatUtils [http-nio-8080-exec-2] GET "/person", parameters={}
+2020-10-19 23:36:26,309 DEBUG o.s.w.s.h.AbstractHandlerMapping [http-nio-8080-exec-2] Mapped to com.safetynet.alertsystem.controller.AlertController#getPersonalInfo()
+2020-10-19 23:36:26,317 INFO c.s.a.c.AlertController [http-nio-8080-exec-2] HTTP GET request recieved at /person URL
+2020-10-19 23:36:27,405 DEBUG o.s.w.s.v.ContentNegotiatingViewResolver [http-nio-8080-exec-2] Selected 'text/html' given [text/html, application/xhtml+xml, image/avif, image/webp, image/apng, application/xml;q=0.9, application/signed-exchange;v=b3;q=0.9, */*;q=0.8]
+2020-10-19 23:36:27,591 DEBUG o.s.w.s.FrameworkServlet [http-nio-8080-exec-2] Completed 200 OK
+2020-10-19 23:36:51,989 DEBUG o.s.c.l.LogFormatUtils [http-nio-8080-exec-4] POST "/person", parameters={}
+2020-10-19 23:36:51,999 DEBUG o.s.w.s.h.AbstractHandlerMapping [http-nio-8080-exec-4] Mapped to com.safetynet.alertsystem.controller.RestEndController#postPerson(PersonalInformation)
+2020-10-19 23:36:52,080 DEBUG o.s.c.l.LogFormatUtils [http-nio-8080-exec-4] Read "application/json;charset=UTF-8" to [com.safetynet.alertsystem.model.PersonalInformation@4f6a5417]
+2020-10-19 23:36:52,085 INFO c.s.a.c.RestEndController [http-nio-8080-exec-4] HTTP POST request recieved at /POST/person URL
+2020-10-19 23:36:52,091 DEBUG o.s.w.s.m.m.a.AbstractMessageConverterMethodProcessor [http-nio-8080-exec-4] Using 'text/plain', given [*/*] and supported [text/plain, */*, text/plain, */*, application/json, application/*+json, application/json, application/*+json]
+2020-10-19 23:36:52,092 DEBUG o.s.c.l.LogFormatUtils [http-nio-8080-exec-4] Writing ["{"zip":"606060606060","firstName":"Gary","lastName":"Goodspeed","address":"some road somewhere in t (truncated)...]
+2020-10-19 23:36:52,096 DEBUG o.s.w.s.FrameworkServlet [http-nio-8080-exec-4] Completed 200 OK
+2020-10-20 00:20:21,647 INFO o.s.s.c.ExecutorConfigurationSupport [SpringContextShutdownHook] Shutting down ExecutorService 'applicationTaskExecutor'
+2020-10-20 16:47:36,127 INFO c.s.a.AlertsystemApplication [main] Initializing SafetyNet app
+2020-10-20 16:47:36,535 INFO o.h.v.i.u.Version [background-preinit] HV000001: Hibernate Validator 6.1.6.Final
+2020-10-20 16:47:36,578 INFO o.s.b.StartupInfoLogger [main] Starting AlertsystemApplication using Java 1.8.0_251 on JCs-MacBook-Pro with PID 3156 (/Users/j.c./git/AlertSystem/alertsystem/target/classes started by j.c. in /Users/j.c./git/AlertSystem/alertsystem)
+2020-10-20 16:47:36,582 DEBUG o.s.b.StartupInfoLogger [main] Running with Spring Boot v2.4.0-SNAPSHOT, Spring v5.3.0-RC2
+2020-10-20 16:47:36,583 INFO o.s.b.SpringApplication [main] No active profile set, falling back to default profiles: default
+2020-10-20 16:47:37,657 INFO o.s.b.w.e.t.TomcatWebServer [main] Tomcat initialized with port(s): 8080 (http)
+2020-10-20 16:47:37,676 INFO o.a.j.l.DirectJDKLog [main] Initializing ProtocolHandler ["http-nio-8080"]
+2020-10-20 16:47:37,677 INFO o.a.j.l.DirectJDKLog [main] Starting service [Tomcat]
+2020-10-20 16:47:37,677 INFO o.a.j.l.DirectJDKLog [main] Starting Servlet engine: [Apache Tomcat/9.0.39]
+2020-10-20 16:47:37,745 INFO o.a.j.l.DirectJDKLog [main] Initializing Spring embedded WebApplicationContext
+2020-10-20 16:47:37,745 INFO o.s.b.w.s.c.ServletWebServerApplicationContext [main] Root WebApplicationContext: initialization completed in 1118 ms
+2020-10-20 16:47:38,043 INFO o.s.s.c.ExecutorConfigurationSupport [main] Initializing ExecutorService 'applicationTaskExecutor'
+2020-10-20 16:47:38,055 DEBUG o.s.w.s.m.m.a.RequestMappingHandlerAdapter [main] ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2020-10-20 16:47:38,133 WARN o.s.c.s.AbstractApplicationContext [main] Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'requestMappingHandlerMapping' defined in class path resource [org/springframework/boot/autoconfigure/web/servlet/WebMvcAutoConfiguration$EnableWebMvcConfiguration.class]: Invocation of init method failed; nested exception is java.lang.IllegalStateException: Ambiguous mapping. Cannot map 'restEndController' method 
+com.safetynet.alertsystem.controller.RestEndController#putPersonalInformation(PersonalInformation)
+to {PUT [/medicalRecord]}: There is already 'restEndController' bean method
+com.safetynet.alertsystem.controller.RestEndController#putMedicalRecord(MedicalRecords) mapped.
+2020-10-20 16:47:38,134 INFO o.s.s.c.ExecutorConfigurationSupport [main] Shutting down ExecutorService 'applicationTaskExecutor'
+2020-10-20 16:47:38,139 INFO o.a.j.l.DirectJDKLog [main] Stopping service [Tomcat]
+2020-10-20 16:47:38,157 INFO o.s.b.a.l.ConditionEvaluationReportLoggingListener [main] 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2020-10-20 16:47:38,172 ERROR o.s.b.SpringApplication [main] Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'requestMappingHandlerMapping' defined in class path resource [org/springframework/boot/autoconfigure/web/servlet/WebMvcAutoConfiguration$EnableWebMvcConfiguration.class]: Invocation of init method failed; nested exception is java.lang.IllegalStateException: Ambiguous mapping. Cannot map 'restEndController' method 
+com.safetynet.alertsystem.controller.RestEndController#putPersonalInformation(PersonalInformation)
+to {PUT [/medicalRecord]}: There is already 'restEndController' bean method
+com.safetynet.alertsystem.controller.RestEndController#putMedicalRecord(MedicalRecords) mapped.
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1788) ~[spring-beans-5.3.0-RC2.jar:5.3.0-RC2]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:609) ~[spring-beans-5.3.0-RC2.jar:5.3.0-RC2]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:531) ~[spring-beans-5.3.0-RC2.jar:5.3.0-RC2]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335) ~[spring-beans-5.3.0-RC2.jar:5.3.0-RC2]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-5.3.0-RC2.jar:5.3.0-RC2]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333) ~[spring-beans-5.3.0-RC2.jar:5.3.0-RC2]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208) ~[spring-beans-5.3.0-RC2.jar:5.3.0-RC2]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:944) ~[spring-beans-5.3.0-RC2.jar:5.3.0-RC2]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:925) ~[spring-context-5.3.0-RC2.jar:5.3.0-RC2]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:588) ~[spring-context-5.3.0-RC2.jar:5.3.0-RC2]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:144) ~[spring-boot-2.4.0-SNAPSHOT.jar:2.4.0-SNAPSHOT]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:767) ~[spring-boot-2.4.0-SNAPSHOT.jar:2.4.0-SNAPSHOT]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:759) [spring-boot-2.4.0-SNAPSHOT.jar:2.4.0-SNAPSHOT]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:426) [spring-boot-2.4.0-SNAPSHOT.jar:2.4.0-SNAPSHOT]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:326) [spring-boot-2.4.0-SNAPSHOT.jar:2.4.0-SNAPSHOT]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1309) [spring-boot-2.4.0-SNAPSHOT.jar:2.4.0-SNAPSHOT]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1298) [spring-boot-2.4.0-SNAPSHOT.jar:2.4.0-SNAPSHOT]
+	at com.safetynet.alertsystem.AlertsystemApplication.main(AlertsystemApplication.java:15) [classes/:?]
+Caused by: java.lang.IllegalStateException: Ambiguous mapping. Cannot map 'restEndController' method 
+com.safetynet.alertsystem.controller.RestEndController#putPersonalInformation(PersonalInformation)
+to {PUT [/medicalRecord]}: There is already 'restEndController' bean method
+com.safetynet.alertsystem.controller.RestEndController#putMedicalRecord(MedicalRecords) mapped.
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.validateMethodMapping(AbstractHandlerMethodMapping.java:644) ~[spring-webmvc-5.3.0-RC2.jar:5.3.0-RC2]
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.register(AbstractHandlerMethodMapping.java:611) ~[spring-webmvc-5.3.0-RC2.jar:5.3.0-RC2]
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.registerHandlerMethod(AbstractHandlerMethodMapping.java:316) ~[spring-webmvc-5.3.0-RC2.jar:5.3.0-RC2]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.registerHandlerMethod(RequestMappingHandlerMapping.java:395) ~[spring-webmvc-5.3.0-RC2.jar:5.3.0-RC2]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.registerHandlerMethod(RequestMappingHandlerMapping.java:76) ~[spring-webmvc-5.3.0-RC2.jar:5.3.0-RC2]
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.lambda$detectHandlerMethods$2(AbstractHandlerMethodMapping.java:286) ~[spring-webmvc-5.3.0-RC2.jar:5.3.0-RC2]
+	at java.util.LinkedHashMap.forEach(LinkedHashMap.java:684) ~[?:1.8.0_251]
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.detectHandlerMethods(AbstractHandlerMethodMapping.java:284) ~[spring-webmvc-5.3.0-RC2.jar:5.3.0-RC2]
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.processCandidateBean(AbstractHandlerMethodMapping.java:256) ~[spring-webmvc-5.3.0-RC2.jar:5.3.0-RC2]
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.initHandlerMethods(AbstractHandlerMethodMapping.java:215) ~[spring-webmvc-5.3.0-RC2.jar:5.3.0-RC2]
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.afterPropertiesSet(AbstractHandlerMethodMapping.java:203) ~[spring-webmvc-5.3.0-RC2.jar:5.3.0-RC2]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.afterPropertiesSet(RequestMappingHandlerMapping.java:206) ~[spring-webmvc-5.3.0-RC2.jar:5.3.0-RC2]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1847) ~[spring-beans-5.3.0-RC2.jar:5.3.0-RC2]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1784) ~[spring-beans-5.3.0-RC2.jar:5.3.0-RC2]
+	... 17 more
+2020-10-20 16:54:20,803 INFO c.s.a.AlertsystemApplication [main] Initializing SafetyNet app
+2020-10-20 16:54:21,181 INFO o.h.v.i.u.Version [background-preinit] HV000001: Hibernate Validator 6.1.6.Final
+2020-10-20 16:54:21,218 INFO o.s.b.StartupInfoLogger [main] Starting AlertsystemApplication using Java 1.8.0_251 on JCs-MacBook-Pro with PID 3202 (/Users/j.c./git/AlertSystem/alertsystem/target/classes started by j.c. in /Users/j.c./git/AlertSystem/alertsystem)
+2020-10-20 16:54:21,221 DEBUG o.s.b.StartupInfoLogger [main] Running with Spring Boot v2.4.0-SNAPSHOT, Spring v5.3.0-RC2
+2020-10-20 16:54:21,222 INFO o.s.b.SpringApplication [main] No active profile set, falling back to default profiles: default
+2020-10-20 16:54:22,254 INFO o.s.b.w.e.t.TomcatWebServer [main] Tomcat initialized with port(s): 8080 (http)
+2020-10-20 16:54:22,267 INFO o.a.j.l.DirectJDKLog [main] Initializing ProtocolHandler ["http-nio-8080"]
+2020-10-20 16:54:22,268 INFO o.a.j.l.DirectJDKLog [main] Starting service [Tomcat]
+2020-10-20 16:54:22,268 INFO o.a.j.l.DirectJDKLog [main] Starting Servlet engine: [Apache Tomcat/9.0.39]
+2020-10-20 16:54:22,319 INFO o.a.j.l.DirectJDKLog [main] Initializing Spring embedded WebApplicationContext
+2020-10-20 16:54:22,319 INFO o.s.b.w.s.c.ServletWebServerApplicationContext [main] Root WebApplicationContext: initialization completed in 1051 ms
+2020-10-20 16:54:22,613 INFO o.s.s.c.ExecutorConfigurationSupport [main] Initializing ExecutorService 'applicationTaskExecutor'
+2020-10-20 16:54:22,641 DEBUG o.s.w.s.m.m.a.RequestMappingHandlerAdapter [main] ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2020-10-20 16:54:22,709 DEBUG o.s.w.s.h.AbstractHandlerMethodMapping [main] 16 mappings in 'requestMappingHandlerMapping'
+2020-10-20 16:54:22,712 INFO o.s.b.a.w.s.WelcomePageHandlerMapping [main] Adding welcome page template: index
+2020-10-20 16:54:22,736 DEBUG o.s.w.s.h.SimpleUrlHandlerMapping [main] Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2020-10-20 16:54:22,745 DEBUG o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver [main] ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2020-10-20 16:54:22,979 INFO o.s.b.a.e.w.EndpointLinksResolver [main] Exposing 5 endpoint(s) beneath base path '/actuator'
+2020-10-20 16:54:23,003 INFO o.a.j.l.DirectJDKLog [main] Starting ProtocolHandler ["http-nio-8080"]
+2020-10-20 16:54:23,033 INFO o.s.b.w.e.t.TomcatWebServer [main] Tomcat started on port(s): 8080 (http) with context path ''
+2020-10-20 16:54:23,048 INFO o.s.b.StartupInfoLogger [main] Started AlertsystemApplication in 2.161 seconds (JVM running for 2.915)
+2020-10-20 16:54:34,801 INFO o.a.j.l.DirectJDKLog [http-nio-8080-exec-1] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-10-20 16:54:34,801 INFO o.s.w.s.FrameworkServlet [http-nio-8080-exec-1] Initializing Servlet 'dispatcherServlet'
+2020-10-20 16:54:34,802 DEBUG o.s.w.s.DispatcherServlet [http-nio-8080-exec-1] Detected StandardServletMultipartResolver
+2020-10-20 16:54:34,802 DEBUG o.s.w.s.DispatcherServlet [http-nio-8080-exec-1] Detected AcceptHeaderLocaleResolver
+2020-10-20 16:54:34,802 DEBUG o.s.w.s.DispatcherServlet [http-nio-8080-exec-1] Detected FixedThemeResolver
+2020-10-20 16:54:34,803 DEBUG o.s.w.s.DispatcherServlet [http-nio-8080-exec-1] Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@5ba33125
+2020-10-20 16:54:34,804 DEBUG o.s.w.s.DispatcherServlet [http-nio-8080-exec-1] Detected org.springframework.web.servlet.support.SessionFlashMapManager@3e40dd09
+2020-10-20 16:54:34,804 DEBUG o.s.w.s.FrameworkServlet [http-nio-8080-exec-1] enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+2020-10-20 16:54:34,804 INFO o.s.w.s.FrameworkServlet [http-nio-8080-exec-1] Completed initialization in 3 ms
+2020-10-20 16:54:34,815 DEBUG o.s.c.l.LogFormatUtils [http-nio-8080-exec-1] GET "/", parameters={}
+2020-10-20 16:54:34,829 DEBUG o.s.w.s.v.ContentNegotiatingViewResolver [http-nio-8080-exec-1] Selected 'text/html' given [text/html, application/xhtml+xml, image/avif, image/webp, image/apng, application/xml;q=0.9, application/signed-exchange;v=b3;q=0.9, */*;q=0.8]
+2020-10-20 16:54:35,056 DEBUG o.s.w.s.FrameworkServlet [http-nio-8080-exec-1] Completed 200 OK
+2020-10-20 16:54:35,188 DEBUG o.s.c.l.LogFormatUtils [http-nio-8080-exec-2] GET "/favicon.ico", parameters={}
+2020-10-20 16:54:35,191 DEBUG o.s.w.s.h.AbstractHandlerMapping [http-nio-8080-exec-2] Mapped to ResourceHttpRequestHandler ["classpath:/META-INF/resources/", "classpath:/resources/", "classpath:/static/", "classpath:/public/", "/"]
+2020-10-20 16:54:35,193 DEBUG o.s.w.s.r.ResourceHttpRequestHandler [http-nio-8080-exec-2] Resource not found
+2020-10-20 16:54:35,193 DEBUG o.s.w.s.FrameworkServlet [http-nio-8080-exec-2] Completed 404 NOT_FOUND
+2020-10-20 16:54:35,200 DEBUG o.s.c.l.LogFormatUtils [http-nio-8080-exec-2] "ERROR" dispatch for GET "/error", parameters={}
+2020-10-20 16:54:35,202 DEBUG o.s.w.s.h.AbstractHandlerMapping [http-nio-8080-exec-2] Mapped to com.safetynet.alertsystem.controller.CustomErrorController#handleError(HttpServletResponse)
+2020-10-20 16:54:35,214 ERROR c.s.a.c.CustomErrorController [http-nio-8080-exec-2] Error with the code 404 happened! damn...
+2020-10-20 16:54:35,217 DEBUG o.s.w.s.v.ContentNegotiatingViewResolver [http-nio-8080-exec-2] Selected '*/*;q=0.8' given [image/avif, image/webp, image/apng, image/*, */*;q=0.8]
+2020-10-20 16:54:35,224 DEBUG o.s.w.s.FrameworkServlet [http-nio-8080-exec-2] Exiting from "ERROR" dispatch, status 404
+2020-10-20 16:54:36,068 DEBUG o.s.c.l.LogFormatUtils [http-nio-8080-exec-3] GET "/person", parameters={}
+2020-10-20 16:54:36,070 DEBUG o.s.w.s.h.AbstractHandlerMapping [http-nio-8080-exec-3] Mapped to com.safetynet.alertsystem.controller.AlertController#getPersonalInfo()
+2020-10-20 16:54:36,072 INFO c.s.a.c.AlertController [http-nio-8080-exec-3] HTTP GET request recieved at /person URL
+2020-10-20 16:54:37,270 DEBUG o.s.w.s.v.ContentNegotiatingViewResolver [http-nio-8080-exec-3] Selected 'text/html' given [text/html, application/xhtml+xml, image/avif, image/webp, image/apng, application/xml;q=0.9, application/signed-exchange;v=b3;q=0.9, */*;q=0.8]
+2020-10-20 16:54:37,465 DEBUG o.s.w.s.FrameworkServlet [http-nio-8080-exec-3] Completed 200 OK
+2020-10-20 16:54:44,128 DEBUG o.s.c.l.LogFormatUtils [http-nio-8080-exec-4] DELETE "/medicalRecord?firstName=John&lastName=Boyd", parameters={masked}
+2020-10-20 16:54:44,131 DEBUG o.s.w.s.h.AbstractHandlerMapping [http-nio-8080-exec-4] Mapped to com.safetynet.alertsystem.controller.RestEndController#deleteMedicalRecord(String, String)
+2020-10-20 16:54:44,163 INFO c.s.a.c.RestEndController [http-nio-8080-exec-4] HTTP PUT request recieved at /DELETE/medicalRecord URL
+2020-10-20 16:54:44,201 DEBUG o.s.w.s.m.m.a.AbstractMessageConverterMethodProcessor [http-nio-8080-exec-4] Using 'text/plain', given [*/*] and supported [text/plain, */*, text/plain, */*, application/json, application/*+json, application/json, application/*+json]
+2020-10-20 16:54:44,204 DEBUG o.s.c.l.LogFormatUtils [http-nio-8080-exec-4] Writing ["{"allergies":["nillacilan"],"firstName":"John","lastName":"Boyd","birthdate":"03/06/1984","medicati (truncated)...]
+2020-10-20 16:54:44,216 DEBUG o.s.w.s.FrameworkServlet [http-nio-8080-exec-4] Completed 200 OK
+2020-10-20 16:54:49,224 DEBUG o.s.c.l.LogFormatUtils [http-nio-8080-exec-6] POST "/medicalRecord", parameters={}
+2020-10-20 16:54:49,225 DEBUG o.s.w.s.h.AbstractHandlerMapping [http-nio-8080-exec-6] Mapped to com.safetynet.alertsystem.controller.RestEndController#postMedicalRecord(MedicalRecords)
+2020-10-20 16:54:49,330 DEBUG o.s.c.l.LogFormatUtils [http-nio-8080-exec-6] Read "application/json;charset=UTF-8" to [com.safetynet.alertsystem.model.MedicalRecords@78b9ef03]
+2020-10-20 16:54:49,335 INFO c.s.a.c.RestEndController [http-nio-8080-exec-6] HTTP POST request recieved at /POST/medicalRecord URL
+2020-10-20 16:54:49,338 DEBUG o.s.w.s.m.m.a.AbstractMessageConverterMethodProcessor [http-nio-8080-exec-6] Using 'text/plain', given [*/*] and supported [text/plain, */*, text/plain, */*, application/json, application/*+json, application/json, application/*+json]
+2020-10-20 16:54:49,339 DEBUG o.s.c.l.LogFormatUtils [http-nio-8080-exec-6] Writing ["{"allergies":["ZZZ"],"firstName":"John","lastName":"Boyd","birthdate":"03/06/1984","medications":[" (truncated)...]
+2020-10-20 16:54:49,340 DEBUG o.s.w.s.FrameworkServlet [http-nio-8080-exec-6] Completed 200 OK
+2020-10-20 16:54:53,415 DEBUG o.s.c.l.LogFormatUtils [http-nio-8080-exec-7] PUT "/medicalRecord", parameters={}
+2020-10-20 16:54:53,417 DEBUG o.s.w.s.h.AbstractHandlerMapping [http-nio-8080-exec-7] Mapped to com.safetynet.alertsystem.controller.RestEndController#putMedicalRecord(MedicalRecords)
+2020-10-20 16:54:53,420 DEBUG o.s.c.l.LogFormatUtils [http-nio-8080-exec-7] Read "application/json;charset=UTF-8" to [com.safetynet.alertsystem.model.MedicalRecords@65ef28e6]
+2020-10-20 16:54:53,421 INFO c.s.a.c.RestEndController [http-nio-8080-exec-7] HTTP PUT request recieved at /PUT/medicalRecord URL
+2020-10-20 16:54:53,422 DEBUG o.s.w.s.m.m.a.AbstractMessageConverterMethodProcessor [http-nio-8080-exec-7] Using 'text/plain', given [*/*] and supported [text/plain, */*, text/plain, */*, application/json, application/*+json, application/json, application/*+json]
+2020-10-20 16:54:53,422 DEBUG o.s.c.l.LogFormatUtils [http-nio-8080-exec-7] Writing ["{"allergies":["WOOOOooOW"],"firstName":"Tessa","lastName":"Carman","birthdate":"06/06/1006","medica (truncated)...]
+2020-10-20 16:54:53,423 DEBUG o.s.w.s.FrameworkServlet [http-nio-8080-exec-7] Completed 200 OK
+2020-10-20 16:54:58,175 DEBUG o.s.c.l.LogFormatUtils [http-nio-8080-exec-8] POST "/person", parameters={}
+2020-10-20 16:54:58,175 DEBUG o.s.w.s.h.AbstractHandlerMapping [http-nio-8080-exec-8] Mapped to com.safetynet.alertsystem.controller.RestEndController#postPerson(PersonalInformation)
+2020-10-20 16:54:58,182 DEBUG o.s.c.l.LogFormatUtils [http-nio-8080-exec-8] Read "application/json;charset=UTF-8" to [com.safetynet.alertsystem.model.PersonalInformation@416ae54a]
+2020-10-20 16:54:58,184 INFO c.s.a.c.RestEndController [http-nio-8080-exec-8] HTTP POST request recieved at /POST/person URL
+2020-10-20 16:54:58,184 DEBUG o.s.w.s.m.m.a.AbstractMessageConverterMethodProcessor [http-nio-8080-exec-8] Using 'text/plain', given [*/*] and supported [text/plain, */*, text/plain, */*, application/json, application/*+json, application/json, application/*+json]
+2020-10-20 16:54:58,184 DEBUG o.s.c.l.LogFormatUtils [http-nio-8080-exec-8] Writing ["{"zip":"606060606060","firstName":"Gary","lastName":"Goodspeed","address":"some road somewhere in t (truncated)...]
+2020-10-20 16:54:58,185 DEBUG o.s.w.s.FrameworkServlet [http-nio-8080-exec-8] Completed 200 OK
+2020-10-20 16:55:02,137 DEBUG o.s.c.l.LogFormatUtils [http-nio-8080-exec-9] PUT "/medicalRecord", parameters={}
+2020-10-20 16:55:02,138 DEBUG o.s.w.s.h.AbstractHandlerMapping [http-nio-8080-exec-9] Mapped to com.safetynet.alertsystem.controller.RestEndController#putMedicalRecord(MedicalRecords)
+2020-10-20 16:55:02,140 DEBUG o.s.c.l.LogFormatUtils [http-nio-8080-exec-9] Read "application/json;charset=UTF-8" to [com.safetynet.alertsystem.model.MedicalRecords@39709548]
+2020-10-20 16:55:02,145 INFO c.s.a.c.RestEndController [http-nio-8080-exec-9] HTTP PUT request recieved at /PUT/medicalRecord URL
+2020-10-20 16:55:02,146 DEBUG o.s.w.s.m.m.a.AbstractMessageConverterMethodProcessor [http-nio-8080-exec-9] Using 'text/plain', given [*/*] and supported [text/plain, */*, text/plain, */*, application/json, application/*+json, application/json, application/*+json]
+2020-10-20 16:55:02,147 DEBUG o.s.c.l.LogFormatUtils [http-nio-8080-exec-9] Writing ["{}"]
+2020-10-20 16:55:02,149 DEBUG o.s.w.s.FrameworkServlet [http-nio-8080-exec-9] Completed 200 OK
+2020-10-20 16:59:22,248 DEBUG o.s.c.l.LogFormatUtils [http-nio-8080-exec-5] PUT "/medicalRecord", parameters={}
+2020-10-20 16:59:22,250 DEBUG o.s.w.s.h.AbstractHandlerMapping [http-nio-8080-exec-5] Mapped to com.safetynet.alertsystem.controller.RestEndController#putMedicalRecord(MedicalRecords)
+2020-10-20 16:59:22,251 DEBUG o.s.c.l.LogFormatUtils [http-nio-8080-exec-5] Read "application/json;charset=UTF-8" to [com.safetynet.alertsystem.model.MedicalRecords@56ec427]
+2020-10-20 16:59:22,252 INFO c.s.a.c.RestEndController [http-nio-8080-exec-5] HTTP PUT request recieved at /PUT/medicalRecord URL
+2020-10-20 16:59:22,256 DEBUG o.s.w.s.m.m.a.AbstractMessageConverterMethodProcessor [http-nio-8080-exec-5] Using 'text/plain', given [*/*] and supported [text/plain, */*, text/plain, */*, application/json, application/*+json, application/json, application/*+json]
+2020-10-20 16:59:22,256 DEBUG o.s.c.l.LogFormatUtils [http-nio-8080-exec-5] Writing ["{}"]
+2020-10-20 16:59:22,258 DEBUG o.s.w.s.FrameworkServlet [http-nio-8080-exec-5] Completed 200 OK
+2020-10-20 17:00:14,326 INFO o.s.s.c.ExecutorConfigurationSupport [SpringContextShutdownHook] Shutting down ExecutorService 'applicationTaskExecutor'
+2020-10-20 17:00:19,581 INFO c.s.a.AlertsystemApplication [main] Initializing SafetyNet app
+2020-10-20 17:00:19,942 INFO o.h.v.i.u.Version [background-preinit] HV000001: Hibernate Validator 6.1.6.Final
+2020-10-20 17:00:19,972 INFO o.s.b.StartupInfoLogger [main] Starting AlertsystemApplication using Java 1.8.0_251 on JCs-MacBook-Pro with PID 3223 (/Users/j.c./git/AlertSystem/alertsystem/target/classes started by j.c. in /Users/j.c./git/AlertSystem/alertsystem)
+2020-10-20 17:00:19,975 DEBUG o.s.b.StartupInfoLogger [main] Running with Spring Boot v2.4.0-SNAPSHOT, Spring v5.3.0-RC2
+2020-10-20 17:00:19,976 INFO o.s.b.SpringApplication [main] No active profile set, falling back to default profiles: default
+2020-10-20 17:00:20,882 INFO o.s.b.w.e.t.TomcatWebServer [main] Tomcat initialized with port(s): 8080 (http)
+2020-10-20 17:00:20,894 INFO o.a.j.l.DirectJDKLog [main] Initializing ProtocolHandler ["http-nio-8080"]
+2020-10-20 17:00:20,895 INFO o.a.j.l.DirectJDKLog [main] Starting service [Tomcat]
+2020-10-20 17:00:20,895 INFO o.a.j.l.DirectJDKLog [main] Starting Servlet engine: [Apache Tomcat/9.0.39]
+2020-10-20 17:00:20,951 INFO o.a.j.l.DirectJDKLog [main] Initializing Spring embedded WebApplicationContext
+2020-10-20 17:00:20,951 INFO o.s.b.w.s.c.ServletWebServerApplicationContext [main] Root WebApplicationContext: initialization completed in 934 ms
+2020-10-20 17:00:21,221 INFO o.s.s.c.ExecutorConfigurationSupport [main] Initializing ExecutorService 'applicationTaskExecutor'
+2020-10-20 17:00:21,242 DEBUG o.s.w.s.m.m.a.RequestMappingHandlerAdapter [main] ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2020-10-20 17:00:21,296 DEBUG o.s.w.s.h.AbstractHandlerMethodMapping [main] 16 mappings in 'requestMappingHandlerMapping'
+2020-10-20 17:00:21,300 INFO o.s.b.a.w.s.WelcomePageHandlerMapping [main] Adding welcome page template: index
+2020-10-20 17:00:21,317 DEBUG o.s.w.s.h.SimpleUrlHandlerMapping [main] Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2020-10-20 17:00:21,324 DEBUG o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver [main] ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2020-10-20 17:00:21,535 INFO o.s.b.a.e.w.EndpointLinksResolver [main] Exposing 5 endpoint(s) beneath base path '/actuator'
+2020-10-20 17:00:21,560 INFO o.a.j.l.DirectJDKLog [main] Starting ProtocolHandler ["http-nio-8080"]
+2020-10-20 17:00:21,583 INFO o.s.b.w.e.t.TomcatWebServer [main] Tomcat started on port(s): 8080 (http) with context path ''
+2020-10-20 17:00:21,598 INFO o.s.b.StartupInfoLogger [main] Started AlertsystemApplication in 1.936 seconds (JVM running for 2.878)
+2020-10-20 17:00:33,317 INFO o.a.j.l.DirectJDKLog [http-nio-8080-exec-2] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-10-20 17:00:33,319 INFO o.s.w.s.FrameworkServlet [http-nio-8080-exec-2] Initializing Servlet 'dispatcherServlet'
+2020-10-20 17:00:33,320 DEBUG o.s.w.s.DispatcherServlet [http-nio-8080-exec-2] Detected StandardServletMultipartResolver
+2020-10-20 17:00:33,321 DEBUG o.s.w.s.DispatcherServlet [http-nio-8080-exec-2] Detected AcceptHeaderLocaleResolver
+2020-10-20 17:00:33,322 DEBUG o.s.w.s.DispatcherServlet [http-nio-8080-exec-2] Detected FixedThemeResolver
+2020-10-20 17:00:33,328 DEBUG o.s.w.s.DispatcherServlet [http-nio-8080-exec-2] Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@619ccfae
+2020-10-20 17:00:33,329 DEBUG o.s.w.s.DispatcherServlet [http-nio-8080-exec-2] Detected org.springframework.web.servlet.support.SessionFlashMapManager@beec556
+2020-10-20 17:00:33,329 DEBUG o.s.w.s.FrameworkServlet [http-nio-8080-exec-2] enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+2020-10-20 17:00:33,330 INFO o.s.w.s.FrameworkServlet [http-nio-8080-exec-2] Completed initialization in 11 ms
+2020-10-20 17:00:33,339 DEBUG o.s.c.l.LogFormatUtils [http-nio-8080-exec-2] POST "/person", parameters={}
+2020-10-20 17:00:33,344 DEBUG o.s.w.s.h.AbstractHandlerMapping [http-nio-8080-exec-2] Mapped to com.safetynet.alertsystem.controller.RestEndController#postPerson(PersonalInformation)
+2020-10-20 17:00:33,423 DEBUG o.s.c.l.LogFormatUtils [http-nio-8080-exec-2] Read "application/json;charset=UTF-8" to [com.safetynet.alertsystem.model.PersonalInformation@3d2f7af0]
+2020-10-20 17:00:33,431 INFO c.s.a.c.RestEndController [http-nio-8080-exec-2] HTTP POST request recieved at /POST/person URL
+2020-10-20 17:00:33,451 DEBUG o.s.w.s.m.m.a.AbstractMessageConverterMethodProcessor [http-nio-8080-exec-2] Using 'text/plain', given [*/*] and supported [text/plain, */*, text/plain, */*, application/json, application/*+json, application/json, application/*+json]
+2020-10-20 17:00:33,453 DEBUG o.s.c.l.LogFormatUtils [http-nio-8080-exec-2] Writing ["{"zip":"606060606060","firstName":"Gary","lastName":"Goodspeed","address":"some road somewhere in t (truncated)...]
+2020-10-20 17:00:33,467 DEBUG o.s.w.s.FrameworkServlet [http-nio-8080-exec-2] Completed 201 CREATED
+2020-10-20 17:00:40,684 DEBUG o.s.c.l.LogFormatUtils [http-nio-8080-exec-3] PUT "/medicalRecord", parameters={}
+2020-10-20 17:00:40,686 DEBUG o.s.w.s.h.AbstractHandlerMapping [http-nio-8080-exec-3] Mapped to com.safetynet.alertsystem.controller.RestEndController#putMedicalRecord(MedicalRecords)
+2020-10-20 17:00:40,700 DEBUG o.s.c.l.LogFormatUtils [http-nio-8080-exec-3] Read "application/json;charset=UTF-8" to [com.safetynet.alertsystem.model.MedicalRecords@79496480]
+2020-10-20 17:00:40,700 INFO c.s.a.c.RestEndController [http-nio-8080-exec-3] HTTP PUT request recieved at /PUT/medicalRecord URL
+2020-10-20 17:00:40,702 DEBUG o.s.w.s.m.m.a.AbstractMessageConverterMethodProcessor [http-nio-8080-exec-3] Using 'text/plain', given [*/*] and supported [text/plain, */*, text/plain, */*, application/json, application/*+json, application/json, application/*+json]
+2020-10-20 17:00:40,702 DEBUG o.s.c.l.LogFormatUtils [http-nio-8080-exec-3] Writing ["{}"]
+2020-10-20 17:00:40,704 DEBUG o.s.w.s.FrameworkServlet [http-nio-8080-exec-3] Completed 202 ACCEPTED
