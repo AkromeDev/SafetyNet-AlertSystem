@@ -4,6 +4,7 @@ import org.json.JSONTokener;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import com.safetynet.alertsystem.model.FireStations;
 import com.safetynet.alertsystem.model.MedicalRecords;
 import com.safetynet.alertsystem.model.PersonalInformation;
 import com.safetynet.alertsystem.repository.RestRepository;
@@ -47,5 +48,20 @@ public class RestService {
 	public PersonalInformation deletePerson(String firstName, String lastName) {
 
 		return restRepo.deletePerson(firstName, lastName);
+	}
+
+	public FireStations saveFire(FireStations fire) {
+		
+		return restRepo.saveFire(fire);
+	}
+
+	public FireStations putFirestation(FireStations fire) {
+		
+		return restRepo.putFirestation(fire);
+	}
+
+	public FireStations deleteFirestation(String address, Integer station) {
+		
+		return restRepo.deleteFirestation(address, station);
 	}
 }
