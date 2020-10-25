@@ -8,16 +8,21 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMockMvc;
+import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
 import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.context.annotation.ComponentScan;
 import org.springframework.test.web.servlet.MockMvc;
 
+import com.safetynet.alertsystem.AlertsystemApplication;
 import com.safetynet.alertsystem.dao.ModelDAO;
 
-@SpringBootTest
-@AutoConfigureMockMvc
+@Tag("controllers")
+@ComponentScan(basePackages = "com.safetynet.alertsystem") 
+@WebMvcTest(value = AlertsystemApplication.class)
 public class PeopleControllerTest {
 
 	@Autowired
