@@ -47,9 +47,18 @@ class FireStationRepositoryTest {
 	}
 	
 	@Test
+	@DisplayName("Tests if findFireStationAreasByNumber() returned list isn't null")
 	void findFireStationByNumberTest() {
 		
 		assertNotNull(fireRepo.findFireStationAreasByNumber(list));
+	}
+	
+	@Test
+	@DisplayName("Tests if getHabitantsAndRecordsFromStation() returned list isn't null")
+	void getHabitantsAndRecordsFromStationTest() {
+		
+		assertNotNull(fireRepo.getHabitantsAndRecordsFromStation(list));
+		
 	}
 
 }
