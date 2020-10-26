@@ -27,7 +27,7 @@
                      <a class = "nav-link" href = "/">Home</a>
                   </li>
                   <li class = "nav-item active">
-                     <a class = "nav-link" href = "/person">Alerts</a>
+                     <a class = "nav-link" href = "/personRender">Alerts</a>
                   </li>
                   <li class = "nav-item ">
                      <a class = "nav-link" href = "/addPersonForm">Add new inhabitants</a>
@@ -51,15 +51,15 @@
 		        </tr>
 		    </thead>
 			<tbody>
-				<tr th:each="person: ${person}">
-		            <td th:text="${person.firstName}">The data</td>
-		            <td th:text="${person.lastName}">from the system</td>
-		            <td th:text="${person.address}">have not been</td>
-		            <td th:text="${person.city}">have not been</td>
-		            <td th:text="${person.zip}">have not been</td>
-		            <td th:text="${person.phone}">loaded to the page</td>
-		            <td th:text="${person.email}">have not been</td>
-					<td><a th:href="@{/addPersonForm(id=${person.id})}" href="#" class="btn btn-info" role="button">Update</a></td>
+				<tr th:each="personRender: ${personRender}">
+		            <td th:text="${personRender.firstName}">The data</td>
+		            <td th:text="${personRender.lastName}">from the system</td>
+		            <td th:text="${personRender.address}">have not been</td>
+		            <td th:text="${personRender.city}">have not been</td>
+		            <td th:text="${personRender.zip}">have not been</td>
+		            <td th:text="${personRender.phone}">loaded to the page</td>
+		            <td th:text="${personRender.email}">have not been</td>
+					<td><a th:href="@{/addPersonForm(id=${personRender.id})}" href="#" class="btn btn-info" role="button">Update</a></td>
 				</tr>
 			</tbody>
 		</table>
