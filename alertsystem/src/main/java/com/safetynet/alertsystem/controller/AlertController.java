@@ -35,16 +35,16 @@ public class AlertController {
 		this.alertService = alertService;
 	}
 	
-	@GetMapping("/person")
+	@GetMapping("/personRender")
 	public ModelAndView getPersonalInfo() throws ClientProtocolException, IOException {
 		
-		logger.info("HTTP GET request recieved at /person URL");
+		logger.info("HTTP GET request recieved at /personRender URL");
 		
-		String viewName = "person";
+		String viewName = "personRender";
 		
 		Map<String, Object> model = new HashMap<String, Object>();
 		
-		model.put("person", alertService.addDataFromJson());
+		model.put("personRender", alertService.addDataFromJson());
 		model.put("numberToSave", alertService.getListSize());
 		
 		return new ModelAndView(viewName, model);
@@ -84,7 +84,7 @@ public class AlertController {
 		alertService.addOrUpdtePersonInfo(personInfo);
 		
 		RedirectView redirect = new RedirectView();
-		redirect.setUrl("/person");
+		redirect.setUrl("/personRender");
 		
 		return new ModelAndView(redirect);
 	}

@@ -71,35 +71,39 @@ public class ModelDAO {
 		
 		loadDataFromJson();
 		
-		JSONArray persons = json.getJSONArray("persons");
+		if (peopleFromJson.size() < 2) {
 		
-		for(int i = 0; i < persons.length(); i++) {
-			JSONObject jsonPerson = persons.getJSONObject(i);
+			JSONArray persons = json.getJSONArray("persons");
 			
-			PersonalInformation personInfo = new PersonalInformation();
+			for(int i = 0; i < persons.length(); i++) {
+				JSONObject jsonPerson = persons.getJSONObject(i);
+				
+				PersonalInformation personInfo = new PersonalInformation();
+				
+				String firstName = jsonPerson.getString("firstName");
+				String lastName = jsonPerson.getString("lastName");
+				String address = jsonPerson.getString("address");
+				String city = jsonPerson.getString("city");
+				String zip = jsonPerson.getString("zip");
+				String phone = jsonPerson.getString("phone");
+				String email = jsonPerson.getString("email");
+				
+				// populate our model class with the information above
+				personInfo.setFirstName(firstName);
+				personInfo.setLastName(lastName);
+				personInfo.setAddress(address);
+				personInfo.setCity(city);
+				personInfo.setZip(zip);
+				personInfo.setPhone(phone);
+				personInfo.setEmail(email);
+				personInfo.setId(i);
+				
+				peopleFromJson.add(personInfo);
+			}
 			
-			String firstName = jsonPerson.getString("firstName");
-			String lastName = jsonPerson.getString("lastName");
-			String address = jsonPerson.getString("address");
-			String city = jsonPerson.getString("city");
-			String zip = jsonPerson.getString("zip");
-			String phone = jsonPerson.getString("phone");
-			String email = jsonPerson.getString("email");
-			
-			// populate our model class with the information above
-			personInfo.setFirstName(firstName);
-			personInfo.setLastName(lastName);
-			personInfo.setAddress(address);
-			personInfo.setCity(city);
-			personInfo.setZip(zip);
-			personInfo.setPhone(phone);
-			personInfo.setEmail(email);
-			personInfo.setId(i);
-			
-			peopleFromJson.add(personInfo);
+			addAllDataToLists();
+		
 		}
-		
-		addAllDataToLists();
 		
 		return peopleFromJson;
 	}

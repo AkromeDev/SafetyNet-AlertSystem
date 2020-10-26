@@ -1,5 +1,7 @@
 package com.safetynet.alertsystem.service;
 
+import java.util.ArrayList;
+
 import org.json.JSONTokener;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -35,6 +37,11 @@ public class RestService {
 		return restRepo.deleteMedicalRecord(firstName, lastName);
 	}
 	
+	public ArrayList<PersonalInformation> getPeople() {
+		
+		return restRepo.getPeople();
+	}
+	
 	public PersonalInformation savePerson(PersonalInformation person) {
 
 		return restRepo.savePerson(person);
@@ -64,4 +71,5 @@ public class RestService {
 		
 		return restRepo.deleteFirestation(address, station);
 	}
+
 }

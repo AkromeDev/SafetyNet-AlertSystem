@@ -1,5 +1,7 @@
 package com.safetynet.alertsystem.repository;
 
+import java.util.ArrayList;
+
 import org.json.JSONTokener;
 import org.springframework.stereotype.Repository;
 
@@ -40,6 +42,11 @@ public class RestRepository {
 		}
 	
 		return id + 1;
+	}
+	
+	public ArrayList<PersonalInformation> getPeople() {
+		
+		return ModelDAO.fetchPersonalInformationFromJson();
 	}
 	
 	public PersonalInformation savePerson(PersonalInformation person) {
@@ -98,5 +105,5 @@ public class RestRepository {
 		
 		return modelDAO.deleteFirestation(address, station);
 	}
-	
+
 	}

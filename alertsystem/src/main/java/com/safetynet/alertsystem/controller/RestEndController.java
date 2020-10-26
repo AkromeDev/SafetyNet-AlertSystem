@@ -2,12 +2,14 @@ package com.safetynet.alertsystem.controller;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+import org.json.JSONArray;
 import org.json.JSONObject;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.DeleteMapping;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -58,6 +60,15 @@ public class RestEndController {
 		JSONObject deleteMedicalRecord = new JSONObject(restService.deleteMedicalRecord(firstName, lastName));
 		
 		return new ResponseEntity<String>(deleteMedicalRecord.toString(), HttpStatus.OK);
+	}
+	
+	@GetMapping("/person")
+	public ResponseEntity<String> getPeople() {
+		logger.info("HTTP POST request recieved at /GET/person URL");		
+		
+		JSONArray postPerson = new JSONArray(restService.getPeople());
+		
+		return new ResponseEntity<String>(postPerson.toString(), HttpStatus.OK);
 	}
 	
 	@PostMapping("/person")
