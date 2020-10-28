@@ -39,14 +39,14 @@ public class AlertControllerTests {
 	
 	
 	@Test
-	@DisplayName("tests /person: if the controller send to the riht page/sucess status/Model size/view name")
+	@DisplayName("tests /personRender: if the controller send to the right page/sucess status/Model size/view name")
 	public void testGetPersonalInfo() throws Exception {
 		
-		mockMvc.perform(get("/person"))
+		mockMvc.perform(get("/personRender"))
 		.andExpect(status().is2xxSuccessful())
-		.andExpect(view().name("person"))
+		.andExpect(view().name("personRender"))
 		.andExpect(model().size(2))
-		.andExpect(model().attributeExists("person"))
+		.andExpect(model().attributeExists("personRender"))
 		.andExpect(model().attributeExists("numberToSave"));
 	}
 	
