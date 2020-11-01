@@ -20084,3 +20084,175 @@ java.lang.IllegalStateException: getReader() has already been called for this re
 2020-10-28 01:29:50,159 DEBUG o.s.w.s.m.m.a.AbstractMessageConverterMethodProcessor [http-nio-8080-exec-2] Using 'text/plain', given [*/*] and supported [text/plain, */*, text/plain, */*, application/json, application/*+json, application/json, application/*+json]
 2020-10-28 01:29:50,161 DEBUG o.s.c.l.LogFormatUtils [http-nio-8080-exec-2] Writing ["{"allergies":["ZZZ"],"firstName":"Nelson","lastName":"MandelaZZZ","birthdate":"03/06/1984","medicat (truncated)...]
 2020-10-28 01:29:50,175 DEBUG o.s.w.s.FrameworkServlet [http-nio-8080-exec-2] Completed 201 CREATED
+2020-10-28 14:01:18,374 INFO o.s.s.c.ExecutorConfigurationSupport [SpringContextShutdownHook] Shutting down ExecutorService 'applicationTaskExecutor'
+2020-10-28 14:01:27,091 INFO c.s.a.AlertsystemApplication [main] Initializing SafetyNet app
+2020-10-28 14:01:27,448 INFO o.h.v.i.u.Version [background-preinit] HV000001: Hibernate Validator 6.1.6.Final
+2020-10-28 14:01:27,469 INFO o.s.b.StartupInfoLogger [main] Starting AlertsystemApplication using Java 1.8.0_251 on JCs-MacBook-Pro with PID 26552 (/Users/j.c./git/AlertSystem/alertsystem/target/classes started by j.c. in /Users/j.c./git/AlertSystem/alertsystem)
+2020-10-28 14:01:27,472 DEBUG o.s.b.StartupInfoLogger [main] Running with Spring Boot v2.4.0-SNAPSHOT, Spring v5.3.0
+2020-10-28 14:01:27,473 INFO o.s.b.SpringApplication [main] No active profile set, falling back to default profiles: default
+2020-10-28 14:01:28,420 INFO o.s.b.w.e.t.TomcatWebServer [main] Tomcat initialized with port(s): 8080 (http)
+2020-10-28 14:01:28,439 INFO o.a.j.l.DirectJDKLog [main] Initializing ProtocolHandler ["http-nio-8080"]
+2020-10-28 14:01:28,440 INFO o.a.j.l.DirectJDKLog [main] Starting service [Tomcat]
+2020-10-28 14:01:28,440 INFO o.a.j.l.DirectJDKLog [main] Starting Servlet engine: [Apache Tomcat/9.0.39]
+2020-10-28 14:01:28,508 INFO o.a.j.l.DirectJDKLog [main] Initializing Spring embedded WebApplicationContext
+2020-10-28 14:01:28,508 INFO o.s.b.w.s.c.ServletWebServerApplicationContext [main] Root WebApplicationContext: initialization completed in 1000 ms
+2020-10-28 14:01:28,791 INFO o.s.s.c.ExecutorConfigurationSupport [main] Initializing ExecutorService 'applicationTaskExecutor'
+2020-10-28 14:01:28,801 DEBUG o.s.w.s.m.m.a.RequestMappingHandlerAdapter [main] ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2020-10-28 14:01:28,863 DEBUG o.s.w.s.h.AbstractHandlerMethodMapping [main] 21 mappings in 'requestMappingHandlerMapping'
+2020-10-28 14:01:28,867 INFO o.s.b.a.w.s.WelcomePageHandlerMapping [main] Adding welcome page template: index
+2020-10-28 14:01:28,884 DEBUG o.s.w.s.h.SimpleUrlHandlerMapping [main] Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2020-10-28 14:01:28,892 DEBUG o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver [main] ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2020-10-28 14:01:29,111 INFO o.s.b.a.e.w.EndpointLinksResolver [main] Exposing 2 endpoint(s) beneath base path '/actuator'
+2020-10-28 14:01:29,136 INFO o.a.j.l.DirectJDKLog [main] Starting ProtocolHandler ["http-nio-8080"]
+2020-10-28 14:01:29,160 INFO o.s.b.w.e.t.TomcatWebServer [main] Tomcat started on port(s): 8080 (http) with context path ''
+2020-10-28 14:01:29,174 INFO o.s.b.StartupInfoLogger [main] Started AlertsystemApplication in 2.004 seconds (JVM running for 2.827)
+2020-10-28 14:01:36,412 INFO o.a.j.l.DirectJDKLog [http-nio-8080-exec-1] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-10-28 14:01:36,413 INFO o.s.w.s.FrameworkServlet [http-nio-8080-exec-1] Initializing Servlet 'dispatcherServlet'
+2020-10-28 14:01:36,413 DEBUG o.s.w.s.DispatcherServlet [http-nio-8080-exec-1] Detected StandardServletMultipartResolver
+2020-10-28 14:01:36,414 DEBUG o.s.w.s.DispatcherServlet [http-nio-8080-exec-1] Detected AcceptHeaderLocaleResolver
+2020-10-28 14:01:36,414 DEBUG o.s.w.s.DispatcherServlet [http-nio-8080-exec-1] Detected FixedThemeResolver
+2020-10-28 14:01:36,416 DEBUG o.s.w.s.DispatcherServlet [http-nio-8080-exec-1] Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@1e7503b9
+2020-10-28 14:01:36,418 DEBUG o.s.w.s.DispatcherServlet [http-nio-8080-exec-1] Detected org.springframework.web.servlet.support.SessionFlashMapManager@77680211
+2020-10-28 14:01:36,418 DEBUG o.s.w.s.FrameworkServlet [http-nio-8080-exec-1] enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+2020-10-28 14:01:36,418 INFO o.s.w.s.FrameworkServlet [http-nio-8080-exec-1] Completed initialization in 5 ms
+2020-10-28 14:01:36,430 DEBUG o.s.c.l.LogFormatUtils [http-nio-8080-exec-1] POST "/medicalRecord", parameters={}
+2020-10-28 14:01:36,445 DEBUG o.s.w.s.h.AbstractHandlerMapping [http-nio-8080-exec-1] Mapped to com.safetynet.alertsystem.controller.RestEndController#postMedicalRecord(MedicalRecords)
+2020-10-28 14:01:36,641 DEBUG o.s.c.l.LogFormatUtils [http-nio-8080-exec-1] Read "application/json;charset=UTF-8" to [com.safetynet.alertsystem.model.MedicalRecords@7063fc3c]
+2020-10-28 14:01:36,650 INFO c.s.a.c.RestEndController [http-nio-8080-exec-1] HTTP POST request recieved at /POST/medicalRecord URL
+2020-10-28 14:01:36,664 DEBUG o.s.w.s.m.m.a.AbstractMessageConverterMethodProcessor [http-nio-8080-exec-1] Using 'text/plain', given [*/*] and supported [text/plain, */*, text/plain, */*, application/json, application/*+json, application/json, application/*+json]
+2020-10-28 14:01:36,665 DEBUG o.s.c.l.LogFormatUtils [http-nio-8080-exec-1] Writing ["{"allergies":["ZZZ"],"firstName":"Nelson","lastName":"MandelaZZZ","birthdate":"03/06/1984","medicat (truncated)...]
+2020-10-28 14:01:36,682 DEBUG o.s.w.s.FrameworkServlet [http-nio-8080-exec-1] Completed 201 CREATED
+2020-10-28 14:07:44,735 INFO o.s.s.c.ExecutorConfigurationSupport [SpringContextShutdownHook] Shutting down ExecutorService 'applicationTaskExecutor'
+2020-10-28 14:07:52,514 INFO c.s.a.AlertsystemApplication [main] Initializing SafetyNet app
+2020-10-28 14:07:52,849 INFO o.h.v.i.u.Version [background-preinit] HV000001: Hibernate Validator 6.1.6.Final
+2020-10-28 14:07:52,875 INFO o.s.b.StartupInfoLogger [main] Starting AlertsystemApplication using Java 1.8.0_251 on JCs-MacBook-Pro with PID 26612 (/Users/j.c./git/AlertSystem/alertsystem/target/classes started by j.c. in /Users/j.c./git/AlertSystem/alertsystem)
+2020-10-28 14:07:52,878 DEBUG o.s.b.StartupInfoLogger [main] Running with Spring Boot v2.4.0-SNAPSHOT, Spring v5.3.0
+2020-10-28 14:07:52,879 INFO o.s.b.SpringApplication [main] No active profile set, falling back to default profiles: default
+2020-10-28 14:07:53,753 INFO o.s.b.w.e.t.TomcatWebServer [main] Tomcat initialized with port(s): 8080 (http)
+2020-10-28 14:07:53,768 INFO o.a.j.l.DirectJDKLog [main] Initializing ProtocolHandler ["http-nio-8080"]
+2020-10-28 14:07:53,769 INFO o.a.j.l.DirectJDKLog [main] Starting service [Tomcat]
+2020-10-28 14:07:53,769 INFO o.a.j.l.DirectJDKLog [main] Starting Servlet engine: [Apache Tomcat/9.0.39]
+2020-10-28 14:07:53,820 INFO o.a.j.l.DirectJDKLog [main] Initializing Spring embedded WebApplicationContext
+2020-10-28 14:07:53,820 INFO o.s.b.w.s.c.ServletWebServerApplicationContext [main] Root WebApplicationContext: initialization completed in 905 ms
+2020-10-28 14:07:54,082 INFO o.s.s.c.ExecutorConfigurationSupport [main] Initializing ExecutorService 'applicationTaskExecutor'
+2020-10-28 14:07:54,090 DEBUG o.s.w.s.m.m.a.RequestMappingHandlerAdapter [main] ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2020-10-28 14:07:54,141 DEBUG o.s.w.s.h.AbstractHandlerMethodMapping [main] 21 mappings in 'requestMappingHandlerMapping'
+2020-10-28 14:07:54,144 INFO o.s.b.a.w.s.WelcomePageHandlerMapping [main] Adding welcome page template: index
+2020-10-28 14:07:54,162 DEBUG o.s.w.s.h.SimpleUrlHandlerMapping [main] Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2020-10-28 14:07:54,169 DEBUG o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver [main] ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2020-10-28 14:07:54,373 INFO o.s.b.a.e.w.EndpointLinksResolver [main] Exposing 2 endpoint(s) beneath base path '/actuator'
+2020-10-28 14:07:54,396 INFO o.a.j.l.DirectJDKLog [main] Starting ProtocolHandler ["http-nio-8080"]
+2020-10-28 14:07:54,418 INFO o.s.b.w.e.t.TomcatWebServer [main] Tomcat started on port(s): 8080 (http) with context path ''
+2020-10-28 14:07:54,432 INFO o.s.b.StartupInfoLogger [main] Started AlertsystemApplication in 1.842 seconds (JVM running for 2.562)
+2020-10-28 14:08:00,166 INFO o.a.j.l.DirectJDKLog [http-nio-8080-exec-2] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-10-28 14:08:00,167 INFO o.s.w.s.FrameworkServlet [http-nio-8080-exec-2] Initializing Servlet 'dispatcherServlet'
+2020-10-28 14:08:00,168 DEBUG o.s.w.s.DispatcherServlet [http-nio-8080-exec-2] Detected StandardServletMultipartResolver
+2020-10-28 14:08:00,168 DEBUG o.s.w.s.DispatcherServlet [http-nio-8080-exec-2] Detected AcceptHeaderLocaleResolver
+2020-10-28 14:08:00,169 DEBUG o.s.w.s.DispatcherServlet [http-nio-8080-exec-2] Detected FixedThemeResolver
+2020-10-28 14:08:00,170 DEBUG o.s.w.s.DispatcherServlet [http-nio-8080-exec-2] Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@6e7cfc90
+2020-10-28 14:08:00,171 DEBUG o.s.w.s.DispatcherServlet [http-nio-8080-exec-2] Detected org.springframework.web.servlet.support.SessionFlashMapManager@23c0027b
+2020-10-28 14:08:00,172 DEBUG o.s.w.s.FrameworkServlet [http-nio-8080-exec-2] enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+2020-10-28 14:08:00,172 INFO o.s.w.s.FrameworkServlet [http-nio-8080-exec-2] Completed initialization in 4 ms
+2020-10-28 14:08:00,190 DEBUG o.s.c.l.LogFormatUtils [http-nio-8080-exec-2] POST "/medicalRecord", parameters={}
+2020-10-28 14:08:00,201 DEBUG o.s.w.s.h.AbstractHandlerMapping [http-nio-8080-exec-2] Mapped to com.safetynet.alertsystem.controller.RestEndController#postMedicalRecord(MedicalRecords)
+2020-10-28 14:08:00,396 DEBUG o.s.c.l.LogFormatUtils [http-nio-8080-exec-2] Read "application/json;charset=UTF-8" to [com.safetynet.alertsystem.model.MedicalRecords@62f44ede]
+2020-10-28 14:08:00,410 INFO c.s.a.c.RestEndController [http-nio-8080-exec-2] HTTP POST request recieved at /POST/medicalRecord URL
+2020-10-28 14:08:00,421 DEBUG o.s.w.s.m.m.a.AbstractMessageConverterMethodProcessor [http-nio-8080-exec-2] Using 'text/plain', given [*/*] and supported [text/plain, */*, text/plain, */*, application/json, application/*+json, application/json, application/*+json]
+2020-10-28 14:08:00,422 DEBUG o.s.c.l.LogFormatUtils [http-nio-8080-exec-2] Writing ["{"allergies":["ZZZ"],"firstName":"Nelson","lastName":"MandelaZZZ","birthdate":"03/06/1984","medicat (truncated)...]
+2020-10-28 14:08:00,435 DEBUG o.s.w.s.FrameworkServlet [http-nio-8080-exec-2] Completed 201 CREATED
+2020-10-28 14:08:43,463 DEBUG o.s.c.l.LogFormatUtils [http-nio-8080-exec-3] POST "/person", parameters={}
+2020-10-28 14:08:43,464 DEBUG o.s.w.s.h.AbstractHandlerMapping [http-nio-8080-exec-3] Mapped to com.safetynet.alertsystem.controller.RestEndController#postPerson(PersonalInformation)
+2020-10-28 14:08:43,473 DEBUG o.s.c.l.LogFormatUtils [http-nio-8080-exec-3] Read "application/json;charset=UTF-8" to [com.safetynet.alertsystem.model.PersonalInformation@752ee856]
+2020-10-28 14:08:43,473 INFO c.s.a.c.RestEndController [http-nio-8080-exec-3] HTTP POST request recieved at /POST/person URL
+2020-10-28 14:08:43,474 DEBUG o.s.w.s.m.m.a.AbstractMessageConverterMethodProcessor [http-nio-8080-exec-3] Using 'text/plain', given [*/*] and supported [text/plain, */*, text/plain, */*, application/json, application/*+json, application/json, application/*+json]
+2020-10-28 14:08:43,475 DEBUG o.s.c.l.LogFormatUtils [http-nio-8080-exec-3] Writing ["{"zip":"606060","firstName":"Gary","lastName":"Goodspeed","address":"some road somewhere in the wor (truncated)...]
+2020-10-28 14:08:43,476 DEBUG o.s.w.s.FrameworkServlet [http-nio-8080-exec-3] Completed 201 CREATED
+2020-10-28 14:10:58,198 INFO o.s.s.c.ExecutorConfigurationSupport [SpringContextShutdownHook] Shutting down ExecutorService 'applicationTaskExecutor'
+2020-10-28 14:11:06,236 INFO c.s.a.AlertsystemApplication [main] Initializing SafetyNet app
+2020-10-28 14:11:06,567 INFO o.h.v.i.u.Version [background-preinit] HV000001: Hibernate Validator 6.1.6.Final
+2020-10-28 14:11:06,597 INFO o.s.b.StartupInfoLogger [main] Starting AlertsystemApplication using Java 1.8.0_251 on JCs-MacBook-Pro with PID 26684 (/Users/j.c./git/AlertSystem/alertsystem/target/classes started by j.c. in /Users/j.c./git/AlertSystem/alertsystem)
+2020-10-28 14:11:06,600 DEBUG o.s.b.StartupInfoLogger [main] Running with Spring Boot v2.4.0-SNAPSHOT, Spring v5.3.0
+2020-10-28 14:11:06,600 INFO o.s.b.SpringApplication [main] No active profile set, falling back to default profiles: default
+2020-10-28 14:11:07,538 INFO o.s.b.w.e.t.TomcatWebServer [main] Tomcat initialized with port(s): 8080 (http)
+2020-10-28 14:11:07,554 INFO o.a.j.l.DirectJDKLog [main] Initializing ProtocolHandler ["http-nio-8080"]
+2020-10-28 14:11:07,555 INFO o.a.j.l.DirectJDKLog [main] Starting service [Tomcat]
+2020-10-28 14:11:07,555 INFO o.a.j.l.DirectJDKLog [main] Starting Servlet engine: [Apache Tomcat/9.0.39]
+2020-10-28 14:11:07,611 INFO o.a.j.l.DirectJDKLog [main] Initializing Spring embedded WebApplicationContext
+2020-10-28 14:11:07,611 INFO o.s.b.w.s.c.ServletWebServerApplicationContext [main] Root WebApplicationContext: initialization completed in 976 ms
+2020-10-28 14:11:07,895 INFO o.s.s.c.ExecutorConfigurationSupport [main] Initializing ExecutorService 'applicationTaskExecutor'
+2020-10-28 14:11:07,956 INFO o.s.b.a.w.s.WelcomePageHandlerMapping [main] Adding welcome page template: index
+2020-10-28 14:11:08,177 INFO o.s.b.a.e.w.EndpointLinksResolver [main] Exposing 2 endpoint(s) beneath base path '/actuator'
+2020-10-28 14:11:08,200 INFO o.a.j.l.DirectJDKLog [main] Starting ProtocolHandler ["http-nio-8080"]
+2020-10-28 14:11:08,222 INFO o.s.b.w.e.t.TomcatWebServer [main] Tomcat started on port(s): 8080 (http) with context path ''
+2020-10-28 14:11:08,237 INFO o.s.b.StartupInfoLogger [main] Started AlertsystemApplication in 1.924 seconds (JVM running for 2.657)
+2020-10-28 14:11:14,194 INFO o.a.j.l.DirectJDKLog [http-nio-8080-exec-1] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-10-28 14:11:14,195 INFO o.s.w.s.FrameworkServlet [http-nio-8080-exec-1] Initializing Servlet 'dispatcherServlet'
+2020-10-28 14:11:14,198 INFO o.s.w.s.FrameworkServlet [http-nio-8080-exec-1] Completed initialization in 3 ms
+2020-10-28 14:11:14,321 INFO c.s.a.c.RestEndController [http-nio-8080-exec-1] HTTP POST request recieved at /POST/person URL
+2020-10-28 14:13:13,418 INFO o.s.s.c.ExecutorConfigurationSupport [SpringContextShutdownHook] Shutting down ExecutorService 'applicationTaskExecutor'
+2020-10-28 14:13:22,456 INFO c.s.a.AlertsystemApplication [main] Initializing SafetyNet app
+2020-10-28 14:13:22,800 INFO o.h.v.i.u.Version [background-preinit] HV000001: Hibernate Validator 6.1.6.Final
+2020-10-28 14:13:22,830 INFO o.s.b.StartupInfoLogger [main] Starting AlertsystemApplication using Java 1.8.0_251 on JCs-MacBook-Pro with PID 26711 (/Users/j.c./git/AlertSystem/alertsystem/target/classes started by j.c. in /Users/j.c./git/AlertSystem/alertsystem)
+2020-10-28 14:13:22,832 DEBUG o.s.b.StartupInfoLogger [main] Running with Spring Boot v2.4.0-SNAPSHOT, Spring v5.3.0
+2020-10-28 14:13:22,833 INFO o.s.b.SpringApplication [main] No active profile set, falling back to default profiles: default
+2020-10-28 14:13:23,752 INFO o.s.b.w.e.t.TomcatWebServer [main] Tomcat initialized with port(s): 8080 (http)
+2020-10-28 14:13:23,765 INFO o.a.j.l.DirectJDKLog [main] Initializing ProtocolHandler ["http-nio-8080"]
+2020-10-28 14:13:23,766 INFO o.a.j.l.DirectJDKLog [main] Starting service [Tomcat]
+2020-10-28 14:13:23,766 INFO o.a.j.l.DirectJDKLog [main] Starting Servlet engine: [Apache Tomcat/9.0.39]
+2020-10-28 14:13:23,820 INFO o.a.j.l.DirectJDKLog [main] Initializing Spring embedded WebApplicationContext
+2020-10-28 14:13:23,820 INFO o.s.b.w.s.c.ServletWebServerApplicationContext [main] Root WebApplicationContext: initialization completed in 950 ms
+2020-10-28 14:13:24,085 INFO o.s.s.c.ExecutorConfigurationSupport [main] Initializing ExecutorService 'applicationTaskExecutor'
+2020-10-28 14:13:24,155 INFO o.s.b.a.w.s.WelcomePageHandlerMapping [main] Adding welcome page template: index
+2020-10-28 14:13:24,457 INFO o.s.b.a.e.w.EndpointLinksResolver [main] Exposing 2 endpoint(s) beneath base path '/actuator'
+2020-10-28 14:13:24,481 INFO o.a.j.l.DirectJDKLog [main] Starting ProtocolHandler ["http-nio-8080"]
+2020-10-28 14:13:24,506 INFO o.s.b.w.e.t.TomcatWebServer [main] Tomcat started on port(s): 8080 (http) with context path ''
+2020-10-28 14:13:24,522 INFO o.s.b.StartupInfoLogger [main] Started AlertsystemApplication in 1.989 seconds (JVM running for 2.704)
+2020-10-28 14:13:28,199 INFO o.a.j.l.DirectJDKLog [http-nio-8080-exec-1] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-10-28 14:13:28,201 INFO o.s.w.s.FrameworkServlet [http-nio-8080-exec-1] Initializing Servlet 'dispatcherServlet'
+2020-10-28 14:13:28,203 INFO o.s.w.s.FrameworkServlet [http-nio-8080-exec-1] Completed initialization in 2 ms
+2020-10-28 14:13:28,421 INFO c.s.a.c.RestEndController [http-nio-8080-exec-1] HTTP POST request recieved at /POST/person URL
+2020-10-28 14:14:40,225 INFO o.s.s.c.ExecutorConfigurationSupport [SpringContextShutdownHook] Shutting down ExecutorService 'applicationTaskExecutor'
+2020-10-28 14:14:48,235 INFO c.s.a.AlertsystemApplication [main] Initializing SafetyNet app
+2020-10-28 14:14:48,560 INFO o.h.v.i.u.Version [background-preinit] HV000001: Hibernate Validator 6.1.6.Final
+2020-10-28 14:14:48,588 INFO o.s.b.StartupInfoLogger [main] Starting AlertsystemApplication using Java 1.8.0_251 on JCs-MacBook-Pro with PID 26735 (/Users/j.c./git/AlertSystem/alertsystem/target/classes started by j.c. in /Users/j.c./git/AlertSystem/alertsystem)
+2020-10-28 14:14:48,590 DEBUG o.s.b.StartupInfoLogger [main] Running with Spring Boot v2.4.0-SNAPSHOT, Spring v5.3.0
+2020-10-28 14:14:48,591 INFO o.s.b.SpringApplication [main] No active profile set, falling back to default profiles: default
+2020-10-28 14:14:49,485 INFO o.s.b.w.e.t.TomcatWebServer [main] Tomcat initialized with port(s): 8080 (http)
+2020-10-28 14:14:49,497 INFO o.a.j.l.DirectJDKLog [main] Initializing ProtocolHandler ["http-nio-8080"]
+2020-10-28 14:14:49,498 INFO o.a.j.l.DirectJDKLog [main] Starting service [Tomcat]
+2020-10-28 14:14:49,498 INFO o.a.j.l.DirectJDKLog [main] Starting Servlet engine: [Apache Tomcat/9.0.39]
+2020-10-28 14:14:49,548 INFO o.a.j.l.DirectJDKLog [main] Initializing Spring embedded WebApplicationContext
+2020-10-28 14:14:49,548 INFO o.s.b.w.s.c.ServletWebServerApplicationContext [main] Root WebApplicationContext: initialization completed in 921 ms
+2020-10-28 14:14:49,829 INFO o.s.s.c.ExecutorConfigurationSupport [main] Initializing ExecutorService 'applicationTaskExecutor'
+2020-10-28 14:14:49,896 INFO o.s.b.a.w.s.WelcomePageHandlerMapping [main] Adding welcome page template: index
+2020-10-28 14:14:50,123 INFO o.s.b.a.e.w.EndpointLinksResolver [main] Exposing 2 endpoint(s) beneath base path '/actuator'
+2020-10-28 14:14:50,147 INFO o.a.j.l.DirectJDKLog [main] Starting ProtocolHandler ["http-nio-8080"]
+2020-10-28 14:14:50,171 INFO o.s.b.w.e.t.TomcatWebServer [main] Tomcat started on port(s): 8080 (http) with context path ''
+2020-10-28 14:14:50,185 INFO o.s.b.StartupInfoLogger [main] Started AlertsystemApplication in 1.879 seconds (JVM running for 2.604)
+2020-10-28 14:14:54,554 INFO o.a.j.l.DirectJDKLog [http-nio-8080-exec-2] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-10-28 14:14:54,555 INFO o.s.w.s.FrameworkServlet [http-nio-8080-exec-2] Initializing Servlet 'dispatcherServlet'
+2020-10-28 14:14:54,559 INFO o.s.w.s.FrameworkServlet [http-nio-8080-exec-2] Completed initialization in 4 ms
+2020-10-28 14:14:54,706 INFO c.s.a.c.RestEndController [http-nio-8080-exec-2] HTTP POST request recieved at /POST/person URL
+2020-10-28 14:21:39,459 INFO o.s.s.c.ExecutorConfigurationSupport [SpringContextShutdownHook] Shutting down ExecutorService 'applicationTaskExecutor'
+2020-10-28 14:21:48,163 INFO c.s.a.AlertsystemApplication [main] Initializing SafetyNet app
+2020-10-28 14:21:48,498 INFO o.h.v.i.u.Version [background-preinit] HV000001: Hibernate Validator 6.1.6.Final
+2020-10-28 14:21:48,525 INFO o.s.b.StartupInfoLogger [main] Starting AlertsystemApplication using Java 1.8.0_251 on JCs-MacBook-Pro with PID 26827 (/Users/j.c./git/AlertSystem/alertsystem/target/classes started by j.c. in /Users/j.c./git/AlertSystem/alertsystem)
+2020-10-28 14:21:48,527 DEBUG o.s.b.StartupInfoLogger [main] Running with Spring Boot v2.4.0-SNAPSHOT, Spring v5.3.0
+2020-10-28 14:21:48,528 INFO o.s.b.SpringApplication [main] No active profile set, falling back to default profiles: default
+2020-10-28 14:21:49,425 INFO o.s.b.w.e.t.TomcatWebServer [main] Tomcat initialized with port(s): 8080 (http)
+2020-10-28 14:21:49,437 INFO o.a.j.l.DirectJDKLog [main] Initializing ProtocolHandler ["http-nio-8080"]
+2020-10-28 14:21:49,438 INFO o.a.j.l.DirectJDKLog [main] Starting service [Tomcat]
+2020-10-28 14:21:49,438 INFO o.a.j.l.DirectJDKLog [main] Starting Servlet engine: [Apache Tomcat/9.0.39]
+2020-10-28 14:21:49,486 INFO o.a.j.l.DirectJDKLog [main] Initializing Spring embedded WebApplicationContext
+2020-10-28 14:21:49,486 INFO o.s.b.w.s.c.ServletWebServerApplicationContext [main] Root WebApplicationContext: initialization completed in 922 ms
+2020-10-28 14:21:49,754 INFO o.s.s.c.ExecutorConfigurationSupport [main] Initializing ExecutorService 'applicationTaskExecutor'
+2020-10-28 14:21:49,816 INFO o.s.b.a.w.s.WelcomePageHandlerMapping [main] Adding welcome page template: index
+2020-10-28 14:21:50,035 INFO o.s.b.a.e.w.EndpointLinksResolver [main] Exposing 2 endpoint(s) beneath base path '/actuator'
+2020-10-28 14:21:50,062 INFO o.a.j.l.DirectJDKLog [main] Starting ProtocolHandler ["http-nio-8080"]
+2020-10-28 14:21:50,088 INFO o.s.b.w.e.t.TomcatWebServer [main] Tomcat started on port(s): 8080 (http) with context path ''
+2020-10-28 14:21:50,103 INFO o.s.b.StartupInfoLogger [main] Started AlertsystemApplication in 1.866 seconds (JVM running for 2.591)
+2020-10-28 14:21:54,552 INFO o.a.j.l.DirectJDKLog [http-nio-8080-exec-2] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-10-28 14:21:54,552 INFO o.s.w.s.FrameworkServlet [http-nio-8080-exec-2] Initializing Servlet 'dispatcherServlet'
+2020-10-28 14:21:54,556 INFO o.s.w.s.FrameworkServlet [http-nio-8080-exec-2] Completed initialization in 3 ms
+2020-10-28 14:21:54,732 INFO c.s.a.c.RestEndController [http-nio-8080-exec-2] HTTP POST request recieved at /POST/person URL
+2020-10-28 14:31:00,038 INFO o.s.s.c.ExecutorConfigurationSupport [SpringContextShutdownHook] Shutting down ExecutorService 'applicationTaskExecutor'
